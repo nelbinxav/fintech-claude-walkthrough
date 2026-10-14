@@ -7,7 +7,7 @@
 <title>FINTECH Circle - Claude Project Walkthrough</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@400;700&display=swap">
 <style>
-:root{--navy:#1d293d;--navy2:#26354d;--navy3:#34466a;--ocean:#0060de;--ocean2:#3b82f6;--sun:#fea152;--sky:#2bc7cb;--dusk:#6f46b7;--paper:#f7f6f1;--card:#fffefb;--line:#dfdcd0;--text:#1d293d;--muted:#4a5568;--on-dark:#f7f6f1;--on-dark2:#c5cedd;--shadow:0 10px 30px -12px rgba(29,41,61,.25)}
+:root{--navy:#1d293d;--navy2:#26354d;--navy3:#34466a;--ocean:#0060de;--ocean2:#3b82f6;--sun:#fea152;--sky:#2bc7cb;--dusk:#6f46b7;--paper:#f7f6f1;--card:#fffefb;--line:#dfdcd0;--text:#1d293d;--muted:#4a5568;--on-dark:#f7f6f1;--on-dark2:#c5cedd;--shadow:0 1px 3px rgba(29,41,61,.12)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;background:var(--paper);color:var(--text);font-family:'DM Sans',Arial,sans-serif;font-size:18px;line-height:1.6}
@@ -17,14 +17,14 @@ p{margin:0}
 a{color:var(--ocean)}
 .wrap{max-width:1120px;margin:0 auto}
 /* nav */
-nav{position:sticky;top:0;z-index:20;background:rgba(29,41,61,.95);backdrop-filter:blur(8px);padding:10px 24px;display:flex;gap:4px;flex-wrap:wrap;align-items:center}
+nav{position:sticky;top:0;z-index:20;background:#1d293d;padding:10px 24px;display:flex;gap:4px;flex-wrap:wrap;align-items:center}
 nav b{color:var(--sun);margin-right:14px;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
-nav a{color:var(--on-dark2);text-decoration:none;font-size:14px;padding:6px 12px;border-radius:999px;transition:.2s}
+nav a{color:var(--on-dark2);text-decoration:none;font-size:14px;padding:6px 12px;border-radius:999px}
 nav a:hover{background:var(--navy2);color:#fff}
 nav a.on{background:var(--ocean);color:#fff}
-.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--sun),var(--sky));width:0;z-index:30}
+.progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--sun),var(--sky));width:100%;transform:scaleX(0);transform-origin:0 50%;z-index:30}
 /* hero */
-.hero{position:relative;overflow:hidden;background:radial-gradient(1200px 500px at 85% -10%,#2b4a86 0%,transparent 60%),radial-gradient(800px 400px at 0% 110%,#3a2a73 0%,transparent 60%),var(--navy);color:var(--on-dark);padding:92px 24px 70px}
+.hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#1d293d 0%,#27407a 60%,#3a2a73 100%);color:var(--on-dark);padding:92px 24px 70px}
 .hero .eyebrow{color:var(--sun)}
 .hero h1{font-size:clamp(34px,5.2vw,62px);max-width:880px}
 .hero .lead{font-size:22px;color:var(--on-dark2);max-width:700px;margin-top:20px}
@@ -36,7 +36,7 @@ nav a.on{background:var(--ocean);color:#fff}
 .flow i{font-style:normal;font-size:13px;font-weight:700;letter-spacing:.04em;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:7px 14px;border-radius:999px}
 .flow em{color:var(--sun);font-style:normal}
 /* generic */
-section{padding:84px 24px}
+section{padding:84px 24px;content-visibility:auto;contain-intrinsic-size:auto 900px}
 section.alt{background:#efede3}
 section.dark{background:var(--navy);color:var(--on-dark)}
 .eyebrow{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ocean);margin-bottom:10px;display:flex;align-items:center;gap:10px}
@@ -47,8 +47,7 @@ h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:12px}
 .intro{color:var(--muted);max-width:780px;margin-bottom:34px;font-size:19px}
 .dark .intro{color:var(--on-dark2)}
 .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr))}
-.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 26px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s}
-.card:hover{transform:translateY(-3px)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:24px 26px;box-shadow:var(--shadow)}
 .card p,.card li{color:var(--muted)}
 .card ul{margin:10px 0 0;padding-left:20px}
 .card li{margin:4px 0}
@@ -70,7 +69,7 @@ code{background:#ece9dc;border-radius:6px;padding:1px 7px;font-size:13.5px;font-
 details{background:var(--card);border:1px solid var(--line);border-radius:16px;margin-bottom:12px;overflow:hidden;box-shadow:var(--shadow)}
 details summary{cursor:pointer;list-style:none;padding:18px 22px;display:flex;gap:16px;align-items:center;font-weight:700;font-size:19px}
 details summary::-webkit-details-marker{display:none}
-details summary:after{content:'+';margin-left:auto;font-size:26px;color:var(--ocean);transition:.2s}
+details summary:after{content:'+';margin-left:auto;font-size:26px;color:var(--ocean)}
 details[open] summary:after{transform:rotate(45deg)}
 details .body{padding:0 22px 22px;display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
 details .body h4{margin:0 0 4px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--ocean)}
@@ -79,7 +78,7 @@ details .body ul{margin:0;padding-left:18px}
 summary .ico{margin:0;width:40px;height:40px;font-size:14px}
 /* chips */
 .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px}
-.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 16px;font:inherit;font-size:15px;cursor:pointer;color:var(--text);transition:.2s}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:8px 16px;font:inherit;font-size:15px;cursor:pointer;color:var(--text)}
 .chip:hover{border-color:var(--ocean)}
 .chip.on{background:var(--ocean);border-color:var(--ocean);color:#fff}
 .dark .chip{background:var(--navy2);border-color:var(--navy3);color:var(--on-dark)}
@@ -144,8 +143,8 @@ img.avatar{display:block}
 .bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--ocean),var(--sky));transition:width .3s}
 .note{padding:18px 22px;border-radius:14px;background:#fde8cf;color:#5a2e00;margin-top:20px;font-size:17px}
 .note.blue{background:#e6f0ff;color:#0b3d91}
-.reveal{opacity:0;transform:translateY(16px);transition:.6s}
-.reveal.in{opacity:1;transform:none}
+.reveal{opacity:0;transition:opacity .35s}
+.reveal.in{opacity:1}
 footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:15px}
 @media(max-width:640px){section{padding:56px 18px}.hero{padding:64px 18px 50px}nav{padding:8px 12px;overflow-x:auto;flex-wrap:nowrap}nav a{white-space:nowrap}}
 @media print{nav,.progress{display:none}.reveal{opacity:1;transform:none}details{break-inside:avoid}}
@@ -164,7 +163,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 <div class="stats">
 <div class="stat"><b>20</b><span>knowledge files, 00 to 19</span></div>
 <div class="stat"><b>32</b><span>connector tools</span></div>
-<div class="stat"><b>10</b><span>workflows you run from chat</span></div>
+<div class="stat"><b>11</b><span>workflows you run from chat</span></div>
 <div class="stat"><b>10</b><span>approved content formats</span></div>
 <div class="stat"><b>3</b><span>safety levels on every action</span></div>
 </div>
@@ -259,8 +258,18 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 
 <section id="workflows" class="alt"><div class="wrap">
 <p class="eyebrow"><span class="n">5</span>Automate it from chat</p>
-<h2>Ten workflows you run by typing</h2>
+<h2>Eleven workflows you run by typing</h2>
 <p class="intro">Each card shows what to type, what Claude does behind the scenes, and what you get back. Blue steps run on their own; orange steps stop and wait for your go or send now; purple steps are yours.</p>
+<h3 style="margin:8px 0 8px;font-size:26px">First: where do the leads come from?</h3>
+<p class="intro" style="margin-bottom:20px">A wave can only invite people who are already in the Master Outreach Sheet. The sheet has one tab per webinar, and each lead is stamped once invited. So every send starts with a lead question. There are three routes, and they differ in what chat can do on its own today.</p>
+<div class="grid" style="margin-bottom:34px">
+<div class="card"><span class="tag t-auto">Works in chat today</span><h3>Route A · Use the pool already in the sheet</h3><p>Ask: "Is there enough unused list for another wave?" Claude reads each tab's stamped and unstamped counts and says yes or no. If yes, it goes straight to the wave plan.</p><ul><li>Skips anyone stamped on any tab</li><li>Skips anyone already contacted in Tantra or Instantly</li><li>Skips RSVPs, attendees, suppressed people and blocked domains</li><li>Skips excluded countries and job-title words</li></ul><p style="margin-top:10px"><b>You get:</b> the exact count available and the plan card for the wave.</p></div>
+<div class="card"><span class="tag t-go">Chat + a person</span><h3>Route B · A new list from Susanne or the team</h3><p>Attach the file in the chat and ask Claude to check it. Claude can count rows, find duplicate and missing emails, spot non-financial industries and wrong countries, and flag other clients' contacts. It then writes a precise brief for the operations team.</p><ul><li>Operations cleans it with the standard lead pipeline: de-duplicate by email, keep the nine financial industries, remove engaged and suppressed people, re-attach LinkedIn</li><li>Operations loads the cleaned rows into the webinar tab</li><li>Back in chat, <code>sheet_tabs</code> shows the new unstamped count and the wave can be planned</li></ul><p style="margin-top:10px"><b>You get:</b> a checked list, a ready brief, and a loaded tab.</p></div>
+<div class="card"><span class="tag t-auto">Works in chat today</span><h3>Route C · Cold email from any sheet</h3><p>For Instantly only, the leads can sit in any Google Sheet tab with a header row, shared with the connector's Google account. Ask: "Preview the leads in this tab for the cold-email campaign."</p><ul><li>Claude removes suppressed, blocked and previously contacted people</li><li>You see the plan, then say go to load, in batches of 1,000</li></ul><p style="margin-top:10px"><b>You get:</b> a clean Instantly campaign without touching the master sheet.</p></div>
+</div>
+<div class="note blue" style="margin-bottom:34px"><b>Can she upload a list in chat and have it added to the master sheet?</b> Not yet. No connector tool writes lead rows into the sheet today, which is why loading is a person's step in Route B. Chat can check the list and create the empty tab, but the rows are loaded by operations.<br><br><b>Option to build:</b> a <code>sheet_add_leads</code> tool. She would attach the list and say "add this to the master sheet and create the campaign". Claude would clean it, show a plan card (rows in, rows removed and why), load the tab after "go", then plan the wave. It would need building and testing, so it goes through the plan-card process first. <b>Also possible:</b> a search over the whole lead pool, so chat could pick the best unused leads without a hand-off.</div>
+<div class="note" style="margin-bottom:34px"><b>"Go through all the lead lists we have":</b> the full set of collated lists is held in the operations workspace, where it is cleaned and filtered. Chat cannot open those files directly. Today it sees the result through the sheet tabs. A pool-search tool, above, would let chat go through the whole pool itself.</div>
+<h3 style="margin:8px 0 14px;font-size:26px">The workflows</h3>
 <div class="legend"><span class="a">Claude does</span><span class="g">Waits for your go / send now</span><span class="m">A person does</span></div>
 <div class="grid" id="wfgrid"></div>
 </div></section>
@@ -411,16 +420,17 @@ document.getElementById("toolsearch").oninput=function(){tq=this.value.toLowerCa
 drawTools();
 
 var WF=[
-{t:"1 · Set up a new webinar",ask:"Is the next webinar set up, and do we have enough list?",s:[["c","Checks WebinarGeek for a broadcast on the event date"],["g","If missing, shows a plan card and creates it after your go"],["c","Counts unused leads per tab in the Master Outreach Sheet"],["g","Creates the next WEB tab after your go"],["m","A person loads new leads if the pool is short"]],get:"A confirmed event date, a ready sheet tab, and a clear yes or no on whether the list is enough."},
-{t:"2 · Send a calendar-invite wave",ask:"Plan the next wave for the upcoming webinar.",s:[["c","Picks unused leads, minus RSVPs, attendees, suppressed and blocked domains"],["c","Shows the plan card: counts, copy variation, schedule, geo mix, skipped leads"],["g","On send now, creates the campaigns, balanced and in London time"],["c","Confirms each campaign is ready, then marks only those leads as used"]],get:"A reviewed plan before anything moves, then invites sent, verified and recorded so nobody is invited twice."},
-{t:"3 · Launch the cold email",ask:"Set up the Instantly campaign for the next webinar.",s:[["c","Reads the latest campaign and proposes the date and time changes"],["g","Copies it as a new draft after your go; refuses if an old date remains"],["c","Previews the leads with everyone already contacted removed"],["g","Loads the leads after your go"],["m","You review the draft together"],["g","Starts sending only on send now"]],get:"A clean, correctly dated campaign built in minutes, with no repeat contacts and nothing live until you say so."},
-{t:"4 · Report the numbers",ask:"How many yes or maybe, how many registered, and how are the campaigns doing?",s:[["c","Reads RSVPs from the calendar, registrations and attendance from WebinarGeek"],["c","Reads campaign analytics from Instantly and revenue from GoHighLevel"],["c","Reports each figure from its own source, not from a vendor counter"]],get:"One plain-language summary with the real figures and where each came from."},
-{t:"5 · Retarget the no-shows",ask:"Tag last webinar's yes and maybe no-shows for retargeting.",s:[["c","Finds the no-show group from WebinarGeek and GoHighLevel"],["g","Tags them after your go; first lists any workflow the tag would trigger"],["m","You choose the retarget message"],["g","Enrols or sends only on send now"]],get:"A tagged, ready-to-contact audience without accidentally firing a workflow."},
-{t:"6 · Protect the list",ask:"This company asked to be removed. Block them everywhere.",s:[["c","Finds the removal request or hostile reply"],["g","Blocks the whole domain in Instantly and unsubscribes every Tantra record, after your go"],["c","Every later lead preview excludes them automatically"],["m","GDPR deletion also needs the row removed and a reply sent"]],get:"The domain blocked in every channel, and a suppression list that grows with each complaint."},
-{t:"7 · Look up a person",ask:"What do we know about jane@example.com?",s:[["c","Looks up the contact in GoHighLevel: tags, source, created date, do-not-disturb"],["c","Checks WebinarGeek for registration and attendance"],["c","Checks the suppression list"]],get:"A one-glance history: where they came from, what they did, and whether they can be contacted."},
-{t:"8 · Register someone to the webinar",ask:"Register this person for the next webinar.",s:[["c","Confirms the broadcast and that the person is not already registered"],["g","Registers them after your go, which triggers their confirmation email"]],get:"The person registered with their own join link, and WebinarGeek's emails start for them."},
-{t:"9 · Create an email template",ask:"Create an email template for the follow-up.",s:[["c","Drafts the copy and HTML in the FINTECH style"],["g","Creates it in GoHighLevel after your go"],["m","A person adds it to the workflow step in the GHL screen"]],get:"A finished, named template waiting in GoHighLevel."},
-{t:"10 · Write a week of LinkedIn content",ask:"Write a framework carousel on becoming board-ready, ending on the webinar.",s:[["m","Susanne gives the format, topic, source notes, call to action and date"],["c","Drafts the post, first comment, slide text and design brief in her voice"],["c","Checks it against the approval checklist and fixes any failure"],["m","Susanne signs off; the team designs and schedules"]],get:"A sign-off-ready post and slide text that already follows her voice rules, plus the design brief."}
+{t:"1 · Set up a new webinar",ask:"Is the next webinar set up, and do we have enough list?",s:[["c","Checks WebinarGeek for a broadcast on the event date"],["g","If missing, shows a plan card and creates it after your go"],["c","Counts unused leads per tab in the Master Outreach Sheet"],["g","Creates the next WEB tab after your go"],["m","If the pool is short, a person loads more leads (see Route B)"]],get:"A confirmed event date, a ready sheet tab, and a clear yes or no on whether the list is enough."},
+{t:"2 · Bring in a new lead list",ask:"I am attaching a new list. Check it and tell me what is usable for the next webinar.",s:[["c","Counts rows, finds duplicate and missing emails, and checks industries and countries against the target"],["c","Flags contacts that belong to other clients, and anyone already suppressed or contacted"],["c","Writes a brief for the operations team: source, row counts, what to remove, which tab"],["m","Operations cleans the list and loads it into the webinar tab"],["c","Re-checks the tab and reports the new unused count"]],get:"A clear picture of how many leads are really usable, and a loaded tab ready for the wave. Uploading straight to the sheet from chat is the option above."},
+{t:"3 · Send a calendar-invite wave",ask:"Plan the next wave for the upcoming webinar.",s:[["c","Picks unused leads, minus RSVPs, attendees, suppressed and blocked domains"],["c","Shows the plan card: counts, copy variation, schedule, geo mix, skipped leads"],["g","On send now, creates the campaigns, balanced and in London time"],["c","Confirms each campaign is ready, then marks only those leads as used"]],get:"A reviewed plan before anything moves, then invites sent, verified and recorded so nobody is invited twice."},
+{t:"4 · Launch the cold email",ask:"Set up the Instantly campaign for the next webinar.",s:[["c","Reads the latest campaign and proposes the date and time changes"],["g","Copies it as a new draft after your go; refuses if an old date remains"],["c","Previews the leads with everyone already contacted removed"],["g","Loads the leads after your go"],["m","You review the draft together"],["g","Starts sending only on send now"]],get:"A clean, correctly dated campaign built in minutes, with no repeat contacts and nothing live until you say so."},
+{t:"5 · Report the numbers",ask:"How many yes or maybe, how many registered, and how are the campaigns doing?",s:[["c","Reads RSVPs from the calendar, registrations and attendance from WebinarGeek"],["c","Reads campaign analytics from Instantly and revenue from GoHighLevel"],["c","Reports each figure from its own source, not from a vendor counter"]],get:"One plain-language summary with the real figures and where each came from."},
+{t:"6 · Retarget the no-shows",ask:"Tag last webinar's yes and maybe no-shows for retargeting.",s:[["c","Finds the no-show group from WebinarGeek and GoHighLevel"],["g","Tags them after your go; first lists any workflow the tag would trigger"],["m","You choose the retarget message"],["g","Enrols or sends only on send now"]],get:"A tagged, ready-to-contact audience without accidentally firing a workflow."},
+{t:"7 · Protect the list",ask:"This company asked to be removed. Block them everywhere.",s:[["c","Finds the removal request or hostile reply"],["g","Blocks the whole domain in Instantly and unsubscribes every Tantra record, after your go"],["c","Every later lead preview excludes them automatically"],["m","GDPR deletion also needs the row removed and a reply sent"]],get:"The domain blocked in every channel, and a suppression list that grows with each complaint."},
+{t:"8 · Look up a person",ask:"What do we know about jane@example.com?",s:[["c","Looks up the contact in GoHighLevel: tags, source, created date, do-not-disturb"],["c","Checks WebinarGeek for registration and attendance"],["c","Checks the suppression list"]],get:"A one-glance history: where they came from, what they did, and whether they can be contacted."},
+{t:"9 · Register someone to the webinar",ask:"Register this person for the next webinar.",s:[["c","Confirms the broadcast and that the person is not already registered"],["g","Registers them after your go, which triggers their confirmation email"]],get:"The person registered with their own join link, and WebinarGeek's emails start for them."},
+{t:"10 · Create an email template",ask:"Create an email template for the follow-up.",s:[["c","Drafts the copy and HTML in the FINTECH style"],["g","Creates it in GoHighLevel after your go"],["m","A person adds it to the workflow step in the GHL screen"]],get:"A finished, named template waiting in GoHighLevel."},
+{t:"11 · Write a week of LinkedIn content",ask:"Write a framework carousel on becoming board-ready, ending on the webinar.",s:[["m","Susanne gives the format, topic, source notes, call to action and date"],["c","Drafts the post, first comment, slide text and design brief in her voice"],["c","Checks it against the approval checklist and fixes any failure"],["m","Susanne signs off; the team designs and schedules"]],get:"A sign-off-ready post and slide text that already follows her voice rules, plus the design brief."}
 ];
 function drawWf(){
  var h="";
@@ -437,6 +447,7 @@ var TASKS=[
 ["Walk through the playbook","The documents that record the whole funnel, and the three rules behind them."],
 ["Walk through the tools, one system at a time","Tantra, Instantly, GoHighLevel, WebinarGeek, the sheet and suppression, with the safety levels."],
 ["Walk through the content workflow","Formats, her voice rules, and the weekly routine, as described in the Slack message."],
+["Decide how new lead lists get in","Today operations loads them. Decide whether to build a chat upload and pool-search tool."],
 ["Agree the weekly content routine","Posts per week, who briefs, who signs off, who designs and schedules."],
 ["Tantra: confirm the subscription renewal","[Renewal date and plan - to confirm]. The calendar-invite waves run on Tantra, so the renewal keeps them going."],
 ["Offer additional support","[Scope, hours and terms - to confirm]. Agree what is included and how requests reach the team."],
@@ -461,15 +472,20 @@ document.getElementById("tasklist").onchange=function(e){
 };
 drawTasks();
 
-// scroll effects
-var secs=[].slice.call(document.querySelectorAll("section[id]")),links=[].slice.call(document.querySelectorAll("#nav a"));
-function onScroll(){
+// scroll effects (cached offsets, one update per frame)
+var secs=[].slice.call(document.querySelectorAll("section[id]")),links=[].slice.call(document.querySelectorAll("#nav a")),tops=[],ticking=false,curId=null;
+function measure(){tops=secs.map(function(x){return x.offsetTop})}
+function update(){
+ ticking=false;
  var y=window.scrollY,h=document.documentElement.scrollHeight-window.innerHeight;
- document.getElementById("progress").style.width=(h>0?y/h*100:0)+"%";
- var cur=null;secs.forEach(function(s){if(s.offsetTop-120<=y)cur=s.id});
- links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+cur)});
+ document.getElementById("progress").style.transform="scaleX("+(h>0?y/h:0)+")";
+ var cur=null;for(var i=0;i<secs.length;i++){if(tops[i]-120<=y)cur=secs[i].id}
+ if(cur!==curId){curId=cur;links.forEach(function(a){a.classList.toggle("on",a.getAttribute("href")==="#"+cur)})}
 }
-window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+window.addEventListener("scroll",function(){if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});
+window.addEventListener("resize",function(){measure();update()});
+window.addEventListener("load",function(){measure();update()});
+measure();update();
 if("IntersectionObserver" in window){
  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.08});
  [].forEach.call(document.querySelectorAll(".reveal"),function(el){io.observe(el)});
