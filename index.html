@@ -153,7 +153,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 <body>
 <div class="progress" id="progress"></div>
 <nav id="nav"><b>FINTECH Circle</b>
-<a href="#overview">Overview</a><a href="#funnel">Funnel</a><a href="#playbook">Playbook</a><a href="#tools">Tools</a><a href="#workflows">Chat workflows</a><a href="#automation">Automation</a><a href="#content">Content</a><a href="#team">Team</a><a href="#tasks">Call plan</a></nav>
+<a href="#overview">Overview</a><a href="#funnel">Funnel</a><a href="#playbook">Playbook</a><a href="#tools">Tools</a><a href="#workflows">Chat workflows</a><a href="#limits">Can &amp; cannot</a><a href="#automation">Automation</a><a href="#content">Content</a><a href="#team">Team</a><a href="#next">Next step</a><a href="#tasks">Call plan</a></nav>
 
 <header class="hero" id="top"><div class="wrap">
 <p class="eyebrow">Walkthrough for Susanne</p>
@@ -163,7 +163,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 <div class="stats">
 <div class="stat"><b>20</b><span>knowledge files, 00 to 19</span></div>
 <div class="stat"><b>32</b><span>connector tools</span></div>
-<div class="stat"><b>11</b><span>workflows you run from chat</span></div>
+<div class="stat"><b>12</b><span>workflows run from chat</span></div>
 <div class="stat"><b>10</b><span>approved content formats</span></div>
 <div class="stat"><b>3</b><span>safety levels on every action</span></div>
 </div>
@@ -261,7 +261,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 
 <section id="workflows" class="alt"><div class="wrap">
 <p class="eyebrow"><span class="n">5</span>Automate it from chat</p>
-<h2>Eleven workflows the team runs by typing</h2>
+<h2>Twelve workflows the team runs by typing</h2>
 <p class="intro">Susanne can ask Claude about any of these at any time. The team runs them. Each card shows what the team types, what Claude does behind the scenes, and what comes back. Blue steps run on their own; orange steps stop and wait for the team's go or send now; purple steps are done by a person.</p>
 <h3 style="margin:8px 0 8px;font-size:26px">First: where do the leads come from?</h3>
 <p class="intro" style="margin-bottom:20px">A wave can only invite people who are already in the Master Outreach Sheet. The sheet has one tab per webinar, and each lead is stamped once invited. So every send starts with a lead question. There are three routes, and they differ in what chat can do on its own today.</p>
@@ -277,8 +277,27 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 <div class="grid" id="wfgrid"></div>
 </div></section>
 
+<section id="limits"><div class="wrap">
+<p class="eyebrow"><span class="n">6</span>What it can and cannot do</p>
+<h2>Today, honestly</h2>
+<p class="intro">How it works: the team types a request in the chat. Claude reads the knowledge files, calls the connector tools, and shows a plan before anything changes. Anything that reaches people waits for a typed "send now".</p>
+<div class="grid reveal">
+<div class="card"><span class="tag t-auto">Can do now</span><h3>Read and report</h3><ul><li>RSVPs, registrations, attendance and revenue, read live from the source</li><li>Campaign status and analytics</li><li>Unused leads per webinar tab</li><li>A person's history across WebinarGeek, GoHighLevel and suppression</li></ul></div>
+<div class="card"><span class="tag t-auto">Can do now</span><h3>Plan and send</h3><ul><li>Plan, send and verify calendar-invite waves</li><li>Create the next broadcast and sheet tab</li><li>Build the cold-email campaign and load leads</li><li>Register a person to a webinar</li></ul></div>
+<div class="card"><span class="tag t-auto">Can do now</span><h3>Manage contacts and the list</h3><ul><li>Tag contacts and enrol them in a published workflow</li><li>Create email templates in GoHighLevel</li><li>Block a person or whole domain in every channel</li><li>Check an uploaded list and brief the team</li></ul></div>
+<div class="card"><span class="tag t-auto">Can do now</span><h3>Write</h3><ul><li>LinkedIn posts, carousels and cheatsheets in Susanne's voice</li><li>Invite titles, cold-email steps and email templates</li><li>Change requests for the landing page</li><li>Briefs and checklists</li></ul></div>
+</div>
+<h3 style="margin:44px 0 14px;font-size:26px">What it cannot do yet</h3>
+<div class="grid reveal">
+<div class="card"><span class="tag t-send">Not yet</span><h3>Leads</h3><ul><li>Add lead rows to the master sheet from chat</li><li>Search the whole lead pool by country, title or headcount</li><li>Count leads used across several webinars</li><li>Count unique attendees across all webinars</li></ul></div>
+<div class="card"><span class="tag t-send">Not yet</span><h3>Editing other tools</h3><ul><li>Build or edit GoHighLevel workflows, or read their steps</li><li>Edit WebinarGeek emails, polls and call-to-action buttons</li><li>Read invoices or call metrics (not allowed by the access token)</li></ul></div>
+<div class="card"><span class="tag t-send">Not yet</span><h3>Running code</h3><ul><li>Deploy the landing page or run the scripts</li><li>Rebuild the dashboard</li><li>Build the new tools above</li></ul><p style="margin-top:8px">These need Claude Code, which is the next step.</p></div>
+<div class="card"><span class="tag t-send">Not yet</span><h3>Gaps being worked</h3><ul><li>Replies to calendar invites are not read by anyone yet</li><li>GHL unsubscribes do not reach Instantly</li><li>Erasing a person's data: blocking is not deletion</li><li>Instantly reply counts under-report, so replies are checked another way</li></ul></div>
+</div>
+</div></section>
+
 <section id="automation" class="dark"><div class="wrap">
-<p class="eyebrow"><span class="n">6</span>Already automatic</p>
+<p class="eyebrow"><span class="n">7</span>Already automatic</p>
 <h2>What happens after someone registers</h2>
 <p class="intro">Two channels that never cross. WebinarGeek owns email. GoHighLevel owns WhatsApp. A Cloudflare Worker is the only thing that writes between them.</p>
 <div class="channels reveal">
@@ -299,7 +318,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 </div></section>
 
 <section id="content"><div class="wrap">
-<p class="eyebrow"><span class="n">7</span>Content workflow</p>
+<p class="eyebrow"><span class="n">8</span>Content workflow</p>
 <h2>From idea to scheduled LinkedIn post</h2>
 <p class="intro">Susanne asks for a piece in one of the approved formats and Claude produces it in her voice, ready for design and sign-off. Videos are out of scope for now.</p>
 <div class="grid reveal" style="margin-bottom:30px"><div class="card"><span class="tag t-person">At the centre</span><h3>Susanne is the source of the content</h3><p>Every post starts from her own thinking, so the content sounds like her and carries her authority.</p><ul><li>Her LinkedIn posts and tone-of-voice answers</li><li>The webinar deck and its testimonials</li><li>The FINTECH Book series and fintechcircle.com</li><li>Her experience in financial services and on boards</li></ul></div>
@@ -334,7 +353,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 </div></section>
 
 <section id="team" class="alt"><div class="wrap">
-<p class="eyebrow"><span class="n">8</span>Team</p>
+<p class="eyebrow"><span class="n">9</span>Team</p>
 <h2>Who does what</h2>
 <p class="intro">fintechcircle.com publicly names one team member, Susanne Chishti. The role cards beside her describe how the work is split: Susanne asks and approves, and the team runs the tasks.</p>
 <div class="team reveal">
@@ -354,8 +373,26 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 <p class="note blue reveal">Add named staff to this section when the website or the team lists them. Only Susanne is currently public.</p>
 </div></section>
 
+<section id="next" class="alt"><div class="wrap">
+<p class="eyebrow"><span class="n">10</span>The next step</p>
+<h2>Move the codebase to GitHub and add Claude Code</h2>
+<p class="intro">Chat covers questions and the live systems. Claude Code works on the code itself, so it can run scripts, edit the landing page, rebuild the dashboard and build the missing tools. Putting the codebase on GitHub makes all of that shared, versioned and easy to reach.</p>
+<div class="line reveal" style="margin-bottom:34px">
+<div class="it" style="background:var(--card);border-color:var(--line);color:var(--text)"><b>1 · Create the GitHub home</b><span style="color:var(--muted)">One FINTECH-owned GitHub account or organisation, with the team added as members.</span></div>
+<div class="it" style="background:var(--card);border-color:var(--line);color:var(--text)"><b>2 · Create a private repository</b><span style="color:var(--muted)">Private, because it holds the method and client scripts.</span></div>
+<div class="it" style="background:var(--card);border-color:var(--line);color:var(--text)"><b>3 · Add the codebase</b><span style="color:var(--muted)">Scripts, playbook, templates, the knowledge pack and the connector source. Keep out passwords, API keys, service-account files, raw lead lists and exports.</span></div>
+<div class="it" style="background:var(--card);border-color:var(--line);color:var(--text)"><b>4 · Add Claude Code</b><span style="color:var(--muted)">Open the repository in Claude Code with the same rules file and knowledge layer, so it follows the same playbook as the chat.</span></div>
+<div class="it me" style="background:var(--card);border-color:var(--line);color:var(--text)"><b>5 · Work through changes</b><span style="color:var(--muted)">Edits go on a branch, are reviewed, then merged, so every change has a history and can be undone.</span></div>
+</div>
+<div class="grid reveal">
+<div class="card"><span class="tag t-auto">Unlocks</span><h3>What Claude Code adds</h3><ul><li>Landing page edits: preview first, then publish, with rollback</li><li>The daily dashboard and monitoring scripts</li><li>Building the lead upload and pool-search tools</li><li>New outreach and email templates kept under version control</li></ul></div>
+<div class="card"><span class="tag t-go">Safe by design</span><h3>Guardrails</h3><ul><li>Private repository, team access only</li><li>Secrets stay in each system's own settings, never in the repository</li><li>One client per repository, so data cannot mix</li><li>Anything live still waits for a plan card and a typed go</li></ul></div>
+<div class="card"><span class="tag t-person">Decide</span><h3>Open choices</h3><ul><li>Account or organisation, and who owns it</li><li>Who gets access</li><li>Whether the landing page repository stays where it is, shared with the developer</li></ul></div>
+</div>
+</div></section>
+
 <section id="tasks" class="dark"><div class="wrap">
-<p class="eyebrow"><span class="n">9</span>Call plan and notes</p>
+<p class="eyebrow"><span class="n">11</span>Call plan and notes</p>
 <h2>What we cover on the call</h2>
 <div class="grid reveal">
 <div class="card"><h3>Keep in mind</h3><ul><li>Ask for numbers any time; they are read live, not remembered.</li><li>Anything that reaches people waits for a typed "send now".</li><li>The webinar email drafts in GHL stay unpublished.</li><li>Blocking an address is not erasing it. Deletion requests also need the row removed.</li><li>Susanne signs off every post before it is scheduled.</li></ul></div>
@@ -435,7 +472,8 @@ var WF=[
 {t:"8 · Look up a person",ask:"What do we know about jane@example.com?",s:[["c","Looks up the contact in GoHighLevel: tags, source, created date, do-not-disturb"],["c","Checks WebinarGeek for registration and attendance"],["c","Checks the suppression list"]],get:"A one-glance history: where they came from, what they did, and whether they can be contacted."},
 {t:"9 · Register someone to the webinar",ask:"Register this person for the next webinar.",s:[["c","Confirms the broadcast and that the person is not already registered"],["g","Registers them after the team's go, which triggers their confirmation email"]],get:"The person registered with their own join link, and WebinarGeek's emails start for them."},
 {t:"10 · Create an email template",ask:"Create an email template for the follow-up.",s:[["c","Drafts the copy and HTML in the FINTECH style"],["g","Creates it in GoHighLevel after the team's go"],["m","A person adds it to the workflow step in the GHL screen"]],get:"A finished, named template waiting in GoHighLevel."},
-{t:"11 · Write a week of LinkedIn content",ask:"Write a framework carousel on becoming board-ready, ending on the webinar.",s:[["m","The team gives the format, topic or Susanne's notes, call to action and date"],["c","Drafts the post, first comment, slide text and design brief in her voice"],["c","Checks it against the approval checklist and fixes any failure"],["m","Susanne signs off; the team designs and schedules"]],get:"A sign-off-ready post and slide text that already follows Susanne's voice rules, plus the design brief."}
+{t:"11 · Write new outreach copy",ask:"Write five new invite titles and a three-step cold email for the next webinar.",s:[["c","Reads the approved invite variations and the copy rules (location link, no first-name tags, one tag per variation)"],["c","Drafts new titles and email steps in the FINTECH voice, with the correct date and time"],["m","The team reviews and approves the wording"],["g","The team places it in the campaign, and the date check blocks any stale date"]],get:"New invite titles and cold-email steps that follow the rules, ready to review."},
+{t:"12 · Write a week of LinkedIn content",ask:"Write a framework carousel on becoming board-ready, ending on the webinar.",s:[["m","The team gives the format, topic or Susanne's notes, call to action and date"],["c","Drafts the post, first comment, slide text and design brief in her voice"],["c","Checks it against the approval checklist and fixes any failure"],["m","Susanne signs off; the team designs and schedules"]],get:"A sign-off-ready post and slide text that already follows Susanne's voice rules, plus the design brief."}
 ];
 function drawWf(){
  var h="";
@@ -452,6 +490,7 @@ var TASKS=[
 ["Walk through the playbook","The documents that record the whole funnel, and the three rules behind them."],
 ["Walk through the tools, one system at a time","Tantra, Instantly, GoHighLevel, WebinarGeek, the sheet and suppression, with the safety levels."],
 ["Walk through the content workflow","Formats, her voice rules, and the weekly routine, as described in the Slack message."],
+["Agree the next step: GitHub and Claude Code","Create the account and private repository, add the codebase, then add Claude Code. Decide who owns it and who has access."],
 ["Decide how new lead lists get in","Today operations loads them. Decide whether to build a chat upload and pool-search tool."],
 ["Agree the weekly content routine","Posts per week. The team briefs and produces, Susanne signs off."],
 ["Tantra: confirm the subscription renewal","[Renewal date and plan - to confirm]. The calendar-invite waves run on Tantra, so the renewal keeps them going."],
