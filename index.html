@@ -153,7 +153,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 <body>
 <div class="progress" id="progress"></div>
 <nav id="nav"><b>FINTECH Circle</b>
-<a href="#overview">Overview</a><a href="#funnel">Funnel</a><a href="#playbook">Playbook</a><a href="#tools">Tools</a><a href="#workflows">Chat workflows</a><a href="#limits">Can &amp; cannot</a><a href="#automation">Automation</a><a href="#content">Content</a><a href="#team">Team</a><a href="#next">Next step</a><a href="#tasks">Call plan</a></nav>
+<a href="#overview">Overview</a><a href="#funnel">Funnel</a><a href="#playbook">Playbook</a><a href="#tools">Tools</a><a href="#workflows">Chat workflows</a><a href="#limits">Can &amp; cannot</a><a href="#inputs">Inputs</a><a href="#automation">Automation</a><a href="#content">Content</a><a href="#team">Team</a><a href="#next">Next step</a><a href="#tasks">Call plan</a></nav>
 
 <header class="hero" id="top"><div class="wrap">
 <p class="eyebrow">Walkthrough for Susanne</p>
@@ -296,8 +296,33 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 </div>
 </div></section>
 
+<section id="inputs" class="dark"><div class="wrap">
+<p class="eyebrow"><span class="n">7</span>What goes in</p>
+<h2>The details Claude uses for content and outreach</h2>
+<p class="intro">Claude does not guess. Every post, invite and email is built from the same stored inputs, so the output follows Susanne's voice and the approved rules. These are the inputs, grouped by what they control.</p>
+<h3 style="margin:0 0 14px;font-size:26px">For content</h3>
+<div class="grid reveal">
+<div class="card"><span class="tag t-go">Per piece</span><h3>The brief</h3><ul><li>Format: one of the ten approved</li><li>Topic or Susanne's own notes</li><li>Source material: a link, notes, a post or the webinar deck</li><li>Call to action: webinar or follow</li><li>Publish date</li></ul></div>
+<div class="card"><span class="tag t-person">Her voice</span><h3>Tone and rules</h3><ul><li>Her tone-of-voice questionnaire: friendly, knowledgeable, positive</li><li>First person, authority lived and never claimed</li><li>Structure: hook, tension, three numbered points, stakes, one call to action</li><li>Her approved posts as the quality bar</li><li>The always and never lists, in British English</li></ul></div>
+<div class="card"><span class="tag t-read">Substance</span><h3>What she can speak about</h3><ul><li>Her career, board roles, books and proof points</li><li>The Board Programme: the offer and its nine modules</li><li>The webinar headline and what it covers</li><li>Testimonials, used only with permission</li></ul></div>
+<div class="card"><span class="tag t-read">Audience</span><h3>Who it is for</h3><ul><li>The UK portfolio finance leader: 15 to 30+ years in banking, insurance, asset management, fintech or consulting</li><li>Moving to a portfolio career: board, NED, advisory or fractional roles</li><li>What they want, what they fear, and the problem they face</li></ul></div>
+<div class="card"><span class="tag t-auto">Design</span><h3>Look and format</h3><ul><li>Brand colours, type and the identity chip on every slide</li><li>The named template for each format</li><li>The craft rules for layout and imagery</li><li>Finished example carousels as structure references</li></ul></div>
+<div class="card"><span class="tag t-send">Check</span><h3>The approval checklist</h3><ul><li>Real statistics and cases only</li><li>Permission for any testimonial or case study</li><li>One call to action, and no closing question</li><li>Nothing market-sensitive, and no named listed bank</li></ul></div>
+</div>
+<h3 style="margin:48px 0 14px;font-size:26px">For outreach</h3>
+<div class="grid reveal">
+<div class="card"><span class="tag t-go">Who</span><h3>Audience and targeting</h3><ul><li>The same persona, plus country and job-title filters</li><li>The nine financial industries only</li><li>Exclusions: attendees, RSVPs, applicants, customers, suppressed people and blocked domains</li><li>Anyone already invited on any tab, or contacted in Tantra or Instantly</li></ul></div>
+<div class="card"><span class="tag t-read">When</span><h3>The event</h3><ul><li>Webinar title, date and time in London time</li><li>The WebinarGeek broadcast it is linked to</li><li>The registration link used in every invite</li><li>Send 3 to 7 days before the event</li></ul></div>
+<div class="card"><span class="tag t-person">What we say</span><h3>The copy</h3><ul><li>Five approved invite titles and the invite body</li><li>Cold-email steps in two angles, Personal and Value</li><li>A retarget sequence for the last webinar's no-shows</li><li>Rules: no first-name tags, one variation tag, no stale dates</li></ul></div>
+<div class="card"><span class="tag t-auto">How we send</span><h3>Sending rules</h3><ul><li>Balanced across the sender mailboxes</li><li>About 1,000 invites per campaign</li><li>Registrations from calendar replies linked automatically</li><li>Leads marked as used only after the campaign is confirmed ready</li></ul></div>
+<div class="card"><span class="tag t-read">What worked</span><h3>Results history</h3><ul><li>Yes rates by invite title and by segment across past webinars</li><li>Bounce rates, so weak lists are not reused</li><li>The best countries and seniority levels</li></ul></div>
+<div class="card"><span class="tag t-send">Guardrails</span><h3>Protection</h3><ul><li>The suppression list across all channels</li><li>A removal request blocks the whole domain</li><li>A plan card before any send</li></ul></div>
+</div>
+<p class="intro" style="margin-top:26px">All of this is stored in the Claude Project's knowledge files (business and persona, outreach system, leads and targeting, Content Studio, webinar skeleton), and the exclusion data refreshes daily. To change how Claude writes or targets, change the input and every future answer follows.</p>
+</div></section>
+
 <section id="automation" class="dark"><div class="wrap">
-<p class="eyebrow"><span class="n">7</span>Already automatic</p>
+<p class="eyebrow"><span class="n">8</span>Already automatic</p>
 <h2>What happens after someone registers</h2>
 <p class="intro">Two channels that never cross. WebinarGeek owns email. GoHighLevel owns WhatsApp. A Cloudflare Worker is the only thing that writes between them.</p>
 <div class="channels reveal">
@@ -318,7 +343,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 </div></section>
 
 <section id="content"><div class="wrap">
-<p class="eyebrow"><span class="n">8</span>Content workflow</p>
+<p class="eyebrow"><span class="n">9</span>Content workflow</p>
 <h2>From idea to scheduled LinkedIn post</h2>
 <p class="intro">Susanne asks for a piece in one of the approved formats and Claude produces it in her voice, ready for design and sign-off. Videos are out of scope for now.</p>
 <div class="grid reveal" style="margin-bottom:30px"><div class="card"><span class="tag t-person">At the centre</span><h3>Susanne is the source of the content</h3><p>Every post starts from her own thinking, so the content sounds like her and carries her authority.</p><ul><li>Her LinkedIn posts and tone-of-voice answers</li><li>The webinar deck and its testimonials</li><li>The FINTECH Book series and fintechcircle.com</li><li>Her experience in financial services and on boards</li></ul></div>
@@ -353,7 +378,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 </div></section>
 
 <section id="team" class="alt"><div class="wrap">
-<p class="eyebrow"><span class="n">9</span>Team</p>
+<p class="eyebrow"><span class="n">10</span>Team</p>
 <h2>Who does what</h2>
 <p class="intro">fintechcircle.com publicly names one team member, Susanne Chishti. The role cards beside her describe how the work is split: Susanne asks and approves, and the team runs the tasks.</p>
 <div class="team reveal">
@@ -365,8 +390,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 </div>
 <div style="display:grid;gap:16px">
 <div class="card"><span class="tag t-person">Asks and approves</span><h3>Founder &amp; Chair</h3><ul><li>Asks Claude questions about the funnel and the numbers</li><li>The centre of the content: her voice and experience are the source</li><li>Signs off every LinkedIn post and approves the formats and design</li><li>Sets Accepted or Rejected on Board Programme applications</li></ul></div>
-<div class="card"><span class="tag t-read">Runs the tasks</span><h3>Operations team (GrowthClub)</h3><ul><li>Runs every task in this deck through the chat and the connector</li><li>Holds the connector passphrase and the service accounts</li><li>Loads leads, builds GHL workflows and WebinarGeek content</li></ul></div>
-<div class="card"><span class="tag t-auto">Builds</span><h3>Landing page developer</h3><ul><li>Applies landing page change requests written in chat</li><li>Previews each change before it goes live</li></ul></div>
+<div class="card"><span class="tag t-read">Runs the tasks</span><h3>Operations team</h3><ul><li>Runs every task in this deck through the chat and the connector</li><li>Holds the connector passphrase and the service accounts</li><li>Loads leads, builds GHL workflows and WebinarGeek content</li></ul></div>
 <div class="card"><span class="tag t-go">Assists</span><h3>Claude</h3><ul><li>Answers Susanne's questions from live data</li><li>Plans, drafts and checks for the team</li><li>Runs the tools, always behind a plan card</li></ul></div>
 </div>
 </div>
@@ -374,7 +398,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 </div></section>
 
 <section id="next" class="alt"><div class="wrap">
-<p class="eyebrow"><span class="n">10</span>The next step</p>
+<p class="eyebrow"><span class="n">11</span>The next step</p>
 <h2>Move the codebase to GitHub and add Claude Code</h2>
 <p class="intro">Chat covers questions and the live systems. Claude Code works on the code itself, so it can run scripts, edit the landing page, rebuild the dashboard and build the missing tools. Putting the codebase on GitHub makes all of that shared, versioned and easy to reach.</p>
 <div class="line reveal" style="margin-bottom:34px">
@@ -387,12 +411,18 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 <div class="grid reveal">
 <div class="card"><span class="tag t-auto">Unlocks</span><h3>What Claude Code adds</h3><ul><li>Landing page edits: preview first, then publish, with rollback</li><li>The daily dashboard and monitoring scripts</li><li>Building the lead upload and pool-search tools</li><li>New outreach and email templates kept under version control</li></ul></div>
 <div class="card"><span class="tag t-go">Safe by design</span><h3>Guardrails</h3><ul><li>Private repository, team access only</li><li>Secrets stay in each system's own settings, never in the repository</li><li>One client per repository, so data cannot mix</li><li>Anything live still waits for a plan card and a typed go</li></ul></div>
-<div class="card"><span class="tag t-person">Decide</span><h3>Open choices</h3><ul><li>Account or organisation, and who owns it</li><li>Who gets access</li><li>Whether the landing page repository stays where it is, shared with the developer</li></ul></div>
+<div class="card"><span class="tag t-person">Decide</span><h3>Open choices</h3><ul><li>Account or organisation, and who owns it</li><li>Who gets access</li><li>Which repository holds the landing page</li></ul></div>
 </div>
+<h3 style="margin:48px 0 14px;font-size:26px">Can everything be automated in chat right now?</h3>
+<div class="grid reveal">
+<div class="card"><span class="tag t-auto">Chat now</span><h3>When someone asks</h3><ul><li>All 12 workflows run as soon as the team types the request</li><li>Live numbers, plans, drafts and checks</li><li>Gated sends: nothing goes without a typed "send now"</li></ul></div>
+<div class="card"><span class="tag t-send">Needs GitHub and Claude Code</span><h3>To run on its own</h3><ul><li>Anything on a timer: daily dashboard, weekly deliverability report, a reply sweep before every wave</li><li>The lead upload and pool-search tools</li><li>Landing page changes and other code</li><li>Syncing unsubscribes between GoHighLevel and Instantly</li><li>Reading calendar-invite replies</li></ul></div>
+</div>
+<div class="note blue reveal"><b>The short answer:</b> chat only acts when someone types. It cannot run on a schedule or change code. To automate everything properly, the codebase goes into GitHub and Claude Code works on it. Today some timed jobs run from one machine, and GitHub makes them shared and recoverable. That is the next step.</div>
 </div></section>
 
 <section id="tasks" class="dark"><div class="wrap">
-<p class="eyebrow"><span class="n">11</span>Call plan and notes</p>
+<p class="eyebrow"><span class="n">12</span>Call plan and notes</p>
 <h2>What we cover on the call</h2>
 <div class="grid reveal">
 <div class="card"><h3>Keep in mind</h3><ul><li>Ask for numbers any time; they are read live, not remembered.</li><li>Anything that reaches people waits for a typed "send now".</li><li>The webinar email drafts in GHL stay unpublished.</li><li>Blocking an address is not erasing it. Deletion requests also need the row removed.</li><li>Susanne signs off every post before it is scheduled.</li></ul></div>
