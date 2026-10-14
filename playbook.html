@@ -1,0 +1,753 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>FINTECH Circle Playbook</title><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@400;700&display=swap"><style>
+:root{--navy:#1d293d;--ocean:#0060de;--paper:#f7f6f1;--line:#dfdcd0}
+body{font-family:'DM Sans',Arial,sans-serif;background:var(--paper);color:var(--navy);line-height:1.6;margin:0;font-size:17px}
+main{max-width:980px;margin:0 auto;padding:48px 24px 96px}
+h1{font-family:'Libre Baskerville',Georgia,serif;font-size:34px;border-top:6px solid var(--ocean);padding-top:22px;margin-top:64px}
+main>h1:first-child{border-top:none;margin-top:0;font-size:44px}
+h2{font-family:'Libre Baskerville',Georgia,serif;font-size:26px;margin-top:44px;color:var(--ocean)}
+h3{font-size:20px;margin-top:30px}
+table{border-collapse:collapse;width:100%;margin:16px 0;font-size:15px;background:#fffefb}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:#ece9dc}
+code{background:#ece9dc;padding:1px 6px;border-radius:5px;font-size:13.5px}
+blockquote{border-left:5px solid #fea152;background:#fff;margin:18px 0;padding:8px 18px;color:#3d4a5e}
+hr{border:none;border-top:1px solid var(--line);margin:40px 0}
+@media print{body{background:#fff;font-size:12px}main{padding:0}h1{page-break-before:always}main>h1:first-child{page-break-before:avoid}table{page-break-inside:avoid}}
+</style></head><body><main><h1 id="fintech-circle-playbook">FINTECH Circle Playbook</h1>
+<h3 id="the-webinar-funnel-from-start-to-finish-how-the-claude-project-runs-it-and-the-next-steps">The webinar funnel from start to finish, how the Claude Project runs it, and the next steps</h3>
+<p><strong>Version:</strong> 14 October 2026   <strong>For:</strong> Susanne Chishti and the operations team   <strong>Contains:</strong> no passwords, keys or live figures</p>
+<blockquote>
+<p><strong>How to use this document.</strong> Part A explains the business and the funnel. Part B is the webinar cycle step by step, with what
+to type in the Claude Project chat at each step. Part C is the reference: tools, automation, content, rules and traps.
+Part D is the next steps, including the move to GitHub and Claude Code. Live numbers (RSVPs, revenue, lead counts, campaign
+status) are never written here; the chat reads them from the source each time.</p>
+</blockquote>
+<hr />
+<h1 id="part-a-the-business-and-the-funnel">Part A. The business and the funnel</h1>
+<h2 id="a1-what-the-funnel-is-for">A1. What the funnel is for</h2>
+<p>FINTECH Circle runs a free live webinar for senior financial-services leaders who want board, non-executive, advisory or
+fractional roles in UK fintech. The webinar leads to an application, a call and, for those accepted, enrolment in the Board Programme.</p>
+<ul>
+<li><strong>Webinar headline in use:</strong> <em>The Insider Roadmap to Access Top UK Fintech Board Seats in 2026</em></li>
+<li><strong>Who it is for ("UK Portfolio Finance Leader"):</strong> 15 to 30+ years in banking, insurance, asset management, fintech or top-tier
+  consulting and audit. Current or former C-suite, board member, NED or partner, moving away from a full-time role.</li>
+<li><em>Wants:</em> paid part-time strategic work, a meaningful title, to give back, intellectual engagement.</li>
+<li><em>Fears:</em> regulatory and reputational risk, and paying for courses that do not lead to roles.</li>
+<li><em>Core problem:</em> UK board seats are mostly filled through networks and headhunter shortlists before they are advertised.</li>
+<li><strong>Who is at the centre:</strong> Susanne Chishti, Founder &amp; Chair of FINTECH Circle, nearly three decades in financial services, FTSE
+  board member, co-editor of the FINTECH Book and its five companion titles. Her voice and experience are the source of the content.</li>
+</ul>
+<h2 id="a2-the-funnel-in-six-elements">A2. The funnel in six elements</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Element</th>
+<th>What it does</th>
+<th>Owned by</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Leads</strong></td>
+<td>One cleaned, de-duplicated financial-services pool, minus anyone already engaged</td>
+<td>Master Outreach Sheet (one tab per webinar)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Outreach</strong></td>
+<td>Calendar invites and cold email, both pointing to the webinar</td>
+<td>Tantra (invites) · Instantly (cold email)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Landing page</strong></td>
+<td><code>webinar.fintechcircle.com</code> captures the registration in four places at once</td>
+<td>The landing page and the Cloudflare Worker</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>WebinarGeek</strong></td>
+<td>Hosts the broadcast; gives each registrant a join link; sends confirmation, reminder, follow-up and replay <strong>emails</strong></td>
+<td>WebinarGeek</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>GoHighLevel (GHL)</strong></td>
+<td>CRM of record: contacts, tags, custom fields and all <strong>WhatsApp</strong> messages</td>
+<td>GHL</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>Applications and calls</strong></td>
+<td>Board Programme applications, approval emails, then a Calendly call</td>
+<td>Google Sheets + Apps Script · Calendly</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The one rule that keeps it untangled: WebinarGeek owns email, GHL owns WhatsApp, and a Cloudflare Worker is the only thing that
+writes between them.</strong> The two channels never cross, so nobody is messaged twice.</p>
+<h2 id="a3-who-does-what">A3. Who does what</h2>
+<table>
+<thead>
+<tr>
+<th>Who</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Susanne</strong></td>
+<td>Asks Claude any question about the funnel and the numbers. Is the centre of the content. Signs off <strong>every</strong> LinkedIn post. Sets Accepted or Rejected on Board Programme applications.</td>
+</tr>
+<tr>
+<td><strong>The operations team</strong></td>
+<td>Runs every task in this playbook through the chat and the connector: webinar setup, waves, cold email, lead lists, list protection, GHL tagging, and designing and scheduling approved content.</td>
+</tr>
+<tr>
+<td><strong>Claude</strong></td>
+<td>Answers Susanne from live data. Plans, drafts and checks for the team. Runs the tools, always behind a plan card.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="a4-how-a-request-runs-and-the-three-safety-levels">A4. How a request runs, and the three safety levels</h2>
+<ol>
+<li>The team types the request in the chat.</li>
+<li>Claude reads the knowledge files (the rules and traps) and calls the connector tools (live data).</li>
+<li>Claude shows a <strong>plan card</strong>: what was found now, what it will change, what it will not touch, risks, rollback, how it will verify.</li>
+<li>The team replies <strong>"go"</strong> (level 2) or <strong>"send now"</strong> (level 3).</li>
+<li>Claude reports each figure from its own source, in the turn it read it.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Typed word</th>
+<th>What it covers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Read</strong></td>
+<td>none</td>
+<td>Numbers, lists, status, previews. Changes nothing.</td>
+</tr>
+<tr>
+<td><strong>Change</strong></td>
+<td><strong>"go"</strong></td>
+<td>Creating a draft, a tab, a tag, a broadcast, a template; editing a draft or paused campaign; blocking a domain.</td>
+</tr>
+<tr>
+<td><strong>Reaches people</strong></td>
+<td><strong>"send now"</strong></td>
+<td>Sending invites, activating a campaign, enrolling contacts in a live workflow, registering a person, cancelling a wave, editing an <em>active</em> campaign. Irreversible, so never assumed.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Truth rules.</strong> (1) A claim about a live system is valid only in the turn it was read. (2) Vendor counters are not proof of
+delivery; outcomes are confirmed at the system that did the work. (3) Procedure lives in code, not in reminders; anything that
+says "remember to" is enforced by a tool instead.</p>
+<hr />
+<h1 id="part-b-the-webinar-cycle-step-by-step">Part B. The webinar cycle, step by step</h1>
+<p>Each step shows <strong>what happens</strong>, <strong>what to type</strong>, <strong>who gates it</strong> and <strong>what you get</strong>. Timing rule of thumb: calendar invites go
+out <strong>3 to 7 days before</strong> the event, and results are judged at <strong>day 3 to 4</strong>, not day 1, because RSVPs accrue over time.</p>
+<h2 id="b1-set-up-the-webinar">B1. Set up the webinar</h2>
+<p><strong>What happens.</strong> Confirm the event exists in WebinarGeek and that the outreach sheet has a tab for it.
+<strong>Type:</strong> <em>"New webinar on 16 October at 12:00. What exists already and what is missing?"</em>
+1. Claude finds the next broadcast on the existing webinar. If one exists at that time it is reused, never duplicated.
+2. If it is missing, Claude shows a plan card and creates it on <strong>"go"</strong> (60-minute duration, London time).
+3. Claude lists the sheet tabs. If the tab for this webinar is missing, it creates <code>WEB #&lt;n&gt; &lt;Mon D&gt;</code> on <strong>"go"</strong>, copying the header row.
+4. Claude checks unused leads on the tab and says plainly whether the pool is enough.
+<strong>You get:</strong> a confirmed event, a ready sheet tab, and a yes or no on whether the list is enough.
+<strong>Still by a person:</strong> WebinarGeek emails, reminder times, call-to-action buttons and polls (login-only tasks), the LinkedIn event, banners and deck dates.</p>
+<h2 id="b2-get-the-leads-in">B2. Get the leads in</h2>
+<p>A wave can only invite people who are already in the Master Outreach Sheet. There are three routes.</p>
+<table>
+<thead>
+<tr>
+<th>Route</th>
+<th>When</th>
+<th>What happens today</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A. Use the pool already in the sheet</strong></td>
+<td>The tab has unused leads</td>
+<td>Chat counts them and plans the wave. Works now.</td>
+</tr>
+<tr>
+<td><strong>B. A new list from the team</strong></td>
+<td>The pool is short or a new buy arrives</td>
+<td>The team attaches the list in chat. Claude counts rows, finds duplicate and missing emails, checks industries and countries against the target, flags other clients' contacts and anyone suppressed or already contacted, then writes an <strong>operations brief</strong>. Operations cleans and loads the tab; the chat then sees the new count.</td>
+</tr>
+<tr>
+<td><strong>C. Cold email only</strong></td>
+<td>Leads sit in any Google Sheet tab with a header row</td>
+<td>Share the sheet with the connector's Google account. Claude previews the leads, removes suppressed and already-contacted people, and loads them into Instantly on <strong>"go"</strong>. Works now.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The standard cleaning rules.</strong> De-duplicate by email (lowercase, trimmed). Keep only the nine financial industries: Accounting,
+Banking, Capital Markets, Financial Services, Insurance, Investment Banking, Investment Management, Venture Capital &amp; Private
+Equity, Management Consulting. Remove webinar subscribers, attendees, RSVP responders, applicants and paying customers. Strip
+contacts that belong to other clients. Normalise countries (England, Scotland, Wales and Northern Ireland become United Kingdom).</p>
+<p><strong>Not yet in chat:</strong> adding lead rows to the sheet, searching the whole lead pool by country, title or headcount, and counting
+leads used across several webinars. These are the planned lead tools (Part D).</p>
+<h2 id="b3-send-the-calendar-invites-tantra">B3. Send the calendar invites (Tantra)</h2>
+<p><strong>What happens.</strong> Tantra creates a Google Calendar event and adds the leads as attendees from 20 warmed mailboxes. <strong>Creating a
+calendar campaign is the send.</strong> There is no draft and no pause.
+<strong>Type:</strong> <em>"Plan the next wave for the upcoming webinar."</em>
+1. Claude selects leads: unused only, never stamped on any tab, never contacted in Tantra or Instantly, minus RSVPs, attendees,
+   suppressed people, blocked domains and excluded countries and titles.
+2. Claude shows the <strong>plan card</strong>: counts per wave, the invite variation per wave, the schedule, the geo mix and why leads were skipped.
+3. On <strong>"send now"</strong>, Claude creates each campaign with the required settings, confirms each reads <code>ready</code>, then marks <strong>only those leads</strong> as used.
+4. If any wave is not ready, Claude re-checks a few minutes later. Delivery truth comes from the calendar RSVPs and the next day's dashboard.</p>
+<p><strong>Settings enforced on every wave:</strong> balanced distribution across mailboxes; London time for the event; about 1,000 invites per
+campaign; WebinarGeek broadcast linked and yes/maybe auto-registered; invite location is always the registration link with its
+tracking tag, never the WebinarGeek page; one <code>variationN</code> tag; no first-name placeholders in titles; stale dates blocked.
+<strong>The five invite titles</strong> (V1 to V5) are fixed and never renumbered; their results are tracked and used to pick the next wave's mix.
+<strong>Fixing a mistake:</strong> <code>wave_cancel</code> removes a wave. It first says whether the invites are still scheduled (cancelling should stop
+them) or already delivered (cancelling cannot recall them). It needs "send now", and it leaves the leads stamped as used.</p>
+<h2 id="b4-launch-the-cold-email-instantly">B4. Launch the cold email (Instantly)</h2>
+<p><strong>Type:</strong> <em>"Set up the Instantly campaign for the next webinar."</em>
+1. Claude lists campaigns (ids change every webinar) and reads the latest one.
+2. It proposes the date and time replacements as a plan card.
+3. On <strong>"go"</strong> it copies the campaign into a <strong>new draft</strong>; it refuses if any old date or time is left in the copy.
+4. It previews the leads, with suppressed, blocked and previously contacted people removed, then loads them in batches on <strong>"go"</strong>.
+5. The team reviews the draft together. Claude can edit any step (subject, body, delay), the name, daily limit or end date; it shows the exact before and after and blocks stale dates.
+6. The campaign starts only on <strong>"send now"</strong>.
+<strong>Current pattern:</strong> two cold variants A/B-testing a <em>Personal</em> and a <em>Value</em> angle, plus a retarget campaign aimed at the previous webinar's yes/maybe no-shows.
+<strong>Trap:</strong> a campaign name can say "DRAFT" while its status is active. Trust the status field, never the name.</p>
+<h2 id="b5-check-the-landing-page-and-the-automations">B5. Check the landing page and the automations</h2>
+<p>Before the invites land, confirm the registration page shows the new date and that the registration path works end to end.
+- The page reads the upcoming broadcast from the backend; verify the date shown.
+- Test one registration: a confirmation email arrives from WebinarGeek, and (if a phone number is given) the WhatsApp join-link and reminder path starts.
+- <strong>Timezone must agree in two places:</strong> the page and the Worker both use Europe/London. Nothing enforces this, so check it when the schedule changes.
+- Landing page changes: Claude writes a precise change request (page, section, old text to new text, and why). The operations team applies it, previews it, and publishes only after a test registration and a "go".</p>
+<h2 id="b6-what-happens-when-someone-registers-automatic">B6. What happens when someone registers (automatic)</h2>
+<ol>
+<li><strong>The registration form</strong> sends one submit to four places at once: WebinarGeek (the only one that can fail the registration), a Google Sheet, GoHighLevel, and the thank-you page.</li>
+<li><strong>WebinarGeek</strong> sends the confirmation immediately and the reminders on schedule.</li>
+<li><strong>The thank-you page asks the registrant to WhatsApp "send me my join link".</strong> That inbound message opens WhatsApp's 24-hour window, which is why the confirmation can be a free-form message. This ask is load-bearing; do not remove it.</li>
+<li><strong>GoHighLevel</strong> replies with the join link, then sends four timed WhatsApp reminders anchored on the broadcast date. The morning reminder sits 4.5 hours before the broadcast.</li>
+<li><strong>The Worker</strong> keeps GHL up to date from WebinarGeek events (registered, unsubscribed, watched live, watched replay, no-show) by setting state tags.</li>
+<li>A registrant <strong>without a phone number</strong> still gets the full WebinarGeek email journey; they just do not get WhatsApp.</li>
+</ol>
+<h2 id="b7-after-the-event">B7. After the event</h2>
+<p><strong>Type:</strong> <em>"How did the webinar do?"</em> · <em>"Tag last webinar's yes and maybe no-shows for retargeting."</em>
+- <strong>Attendance:</strong> registrations, unsubscribes, attendees and show rate, read from WebinarGeek per broadcast.
+- <strong>No-shows:</strong> the Worker's tags identify them; Claude tags them for retargeting on <strong>"go"</strong> (and first lists any published workflow the tag would trigger). Enrolling them in a live workflow, which can send WhatsApp or email, needs <strong>"send now"</strong>.
+- <strong>Follow-up and replay</strong> go out as WebinarGeek email. There is no WhatsApp follow-up sequence.
+- <strong>Applications:</strong> applicants fill the form; Susanne sets the decision in the sheet; the email goes out automatically (see C5).</p>
+<h2 id="b8-review-and-learn">B8. Review and learn</h2>
+<ul>
+<li>Read RSVPs from the calendar (not Tantra's sent counter, which reads zero for calendar campaigns that did send).</li>
+<li>Compare cold-email performance, bounce rates and revenue by tier.</li>
+<li>Feed what worked (invite titles, countries, seniority) into the next wave's mix. Weak or high-bounce lists are not reused.</li>
+</ul>
+<h2 id="b9-protect-the-list-at-any-time">B9. Protect the list at any time</h2>
+<p><strong>Type:</strong> <em>"This company asked to be removed. Block them everywhere."</em>
+Claude blocks the whole domain in Instantly, marks every record at that domain as unsubscribed in Tantra (contacts are duplicated per list, so every record is patched), and adds it to the shared suppression list. Every later lead preview then excludes them. It never blocks a free email provider or one of our own sending domains. <strong>Blocking is not erasure:</strong> a deletion request also needs the row removed from the sheets and a reply sent.</p>
+<hr />
+<h1 id="part-c-reference">Part C. Reference</h1>
+<h2 id="c1-the-tools-34-in-five-systems">C1. The tools (34, in five systems)</h2>
+<p>Level key: <strong>R</strong> read · <strong>G</strong> plan card then "go" · <strong>S</strong> "send now".</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th>Tool</th>
+<th>Level</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tantra</td>
+<td><code>wave_preview</code></td>
+<td>R</td>
+<td>Builds the exact wave plan (the plan card); saves it for 48 hours</td>
+</tr>
+<tr>
+<td></td>
+<td><code>wave_send</code></td>
+<td>S</td>
+<td>Creates the campaigns from the saved plan</td>
+</tr>
+<tr>
+<td></td>
+<td><code>wave_status</code></td>
+<td>G</td>
+<td>Re-verifies a sent plan and stamps the sheet for waves that are ready</td>
+</tr>
+<tr>
+<td></td>
+<td><code>wave_cancel</code></td>
+<td>S</td>
+<td>Cancels a wave; says first whether invites are scheduled or delivered</td>
+</tr>
+<tr>
+<td></td>
+<td><code>tantra_senders</code></td>
+<td>R</td>
+<td>Sender mailboxes and their state</td>
+</tr>
+<tr>
+<td></td>
+<td><code>tantra_campaign_rsvps</code></td>
+<td>R</td>
+<td>Yes / maybe / no / waiting per campaign</td>
+</tr>
+<tr>
+<td>Instantly</td>
+<td><code>instantly_campaigns</code></td>
+<td>R</td>
+<td>All campaigns with real status</td>
+</tr>
+<tr>
+<td></td>
+<td><code>instantly_campaign</code></td>
+<td>R</td>
+<td>One campaign in full, every step</td>
+</tr>
+<tr>
+<td></td>
+<td><code>instantly_campaign_analytics</code></td>
+<td>R</td>
+<td>Sent, bounce and reply analytics</td>
+</tr>
+<tr>
+<td></td>
+<td><code>instantly_duplicate_campaign</code></td>
+<td>G</td>
+<td>New draft from the latest, with date replacements</td>
+</tr>
+<tr>
+<td></td>
+<td><code>instantly_update_campaign</code></td>
+<td>G / S</td>
+<td>Edit steps, name, limit, end date; preview first; active needs S</td>
+</tr>
+<tr>
+<td></td>
+<td><code>instantly_leads_preview</code></td>
+<td>R</td>
+<td>Plan leads with all exclusions applied</td>
+</tr>
+<tr>
+<td></td>
+<td><code>instantly_add_leads</code></td>
+<td>G (S if active)</td>
+<td>Load the previewed leads</td>
+</tr>
+<tr>
+<td></td>
+<td><code>instantly_activate</code></td>
+<td>S</td>
+<td>Start sending</td>
+</tr>
+<tr>
+<td></td>
+<td><code>instantly_pause</code></td>
+<td>G</td>
+<td>Stop sending</td>
+</tr>
+<tr>
+<td>GoHighLevel</td>
+<td><code>ghl_contacts</code></td>
+<td>R</td>
+<td>Look up contacts, tags, source, do-not-disturb</td>
+</tr>
+<tr>
+<td></td>
+<td><code>ghl_tags</code> · <code>ghl_workflows</code> · <code>ghl_email_templates</code></td>
+<td>R</td>
+<td>Tags, workflows with status, templates</td>
+</tr>
+<tr>
+<td></td>
+<td><code>ghl_create_email_template</code></td>
+<td>G</td>
+<td>New HTML template</td>
+</tr>
+<tr>
+<td></td>
+<td><code>ghl_tag_contacts</code></td>
+<td>G</td>
+<td>Add a tag (never removes); lists any workflow it would trigger</td>
+</tr>
+<tr>
+<td></td>
+<td><code>ghl_add_to_workflow</code></td>
+<td>S</td>
+<td>Enrol contacts in a published workflow</td>
+</tr>
+<tr>
+<td></td>
+<td><code>ghl_revenue_summary</code> · <code>ghl_revenue_by_tier</code></td>
+<td>R</td>
+<td>Live revenue and paying customers</td>
+</tr>
+<tr>
+<td>WebinarGeek</td>
+<td><code>webinargeek_webinars</code> · <code>_broadcasts</code> · <code>_attendance</code> · <code>_subscribers</code></td>
+<td>R</td>
+<td>Webinars, broadcasts, attendance, registrations</td>
+</tr>
+<tr>
+<td></td>
+<td><code>webinargeek_create_broadcast</code></td>
+<td>G</td>
+<td>Create the next broadcast (reuses an existing one)</td>
+</tr>
+<tr>
+<td></td>
+<td><code>webinargeek_register</code></td>
+<td>S</td>
+<td>Register a person to a broadcast</td>
+</tr>
+<tr>
+<td>Sheet</td>
+<td><code>sheet_tabs</code></td>
+<td>R</td>
+<td>Master Outreach Sheet tabs: stamped and unstamped</td>
+</tr>
+<tr>
+<td></td>
+<td><code>sheet_create_tab</code></td>
+<td>G</td>
+<td>Create the next <code>WEB #</code> tab</td>
+</tr>
+<tr>
+<td>Suppression</td>
+<td><code>suppress</code></td>
+<td>G</td>
+<td>Block a person or domain in Instantly and Tantra</td>
+</tr>
+<tr>
+<td></td>
+<td><code>suppression_list</code></td>
+<td>R</td>
+<td>Who is blocked, and why</td>
+</tr>
+</tbody>
+</table>
+<h2 id="c2-the-14-tasks-the-team-runs-from-chat">C2. The 14 tasks the team runs from chat</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Task</th>
+<th>Example to type</th>
+<th>What you get</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Set up a new webinar</td>
+<td><em>"Is the next webinar set up, and do we have enough list?"</em></td>
+<td>Confirmed date, ready tab, list yes/no</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Bring in a new lead list</td>
+<td><em>"I am attaching a new list. Check it and tell me what is usable."</em></td>
+<td>Counts, issues, an operations brief</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Send an invite wave</td>
+<td><em>"Plan the next wave for the upcoming webinar."</em></td>
+<td>Reviewed plan, then verified and recorded invites</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Launch the cold email</td>
+<td><em>"Set up the Instantly campaign for the next webinar."</em></td>
+<td>Correctly dated draft, clean leads, nothing live until "send now"</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Report the numbers</td>
+<td><em>"How many yes or maybe, and how are the campaigns doing?"</em></td>
+<td>One summary, each figure from its source</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Retarget no-shows</td>
+<td><em>"Tag last webinar's yes and maybe no-shows for retargeting."</em></td>
+<td>A tagged audience, no accidental workflow</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Protect the list</td>
+<td><em>"Block this company everywhere."</em></td>
+<td>Domain blocked in every channel</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Look up a person</td>
+<td><em>"What do we know about this email?"</em></td>
+<td>History, tags, registration, suppression</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Register someone</td>
+<td><em>"Register this person for the next webinar."</em></td>
+<td>Registered with a join link</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Create an email template</td>
+<td><em>"Create an email template for the follow-up."</em></td>
+<td>A named template waiting in GHL</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Edit a campaign</td>
+<td><em>"Change the first subject and replace 16 October with 23 October."</em></td>
+<td>Corrected copy, exact before/after, no stale dates</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Fix a wrong wave</td>
+<td><em>"Cancel the wave scheduled for tomorrow and plan a corrected one."</em></td>
+<td>Stopped before it lands, corrected plan</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Write outreach copy</td>
+<td><em>"Write five new invite titles and a three-step cold email."</em></td>
+<td>Copy that follows the rules, ready to review</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Write the week's LinkedIn content</td>
+<td><em>"Write a framework carousel on becoming board-ready."</em></td>
+<td>A sign-off-ready post, slide text and design brief</td>
+</tr>
+</tbody>
+</table>
+<h2 id="c3-calendar-and-cold-email-rules-breaking-these-breaks-sends">C3. Calendar and cold-email rules (breaking these breaks sends)</h2>
+<ul>
+<li>Calendar invites: balanced distribution, never fill-first; event time in London; about 1,000 per campaign; broadcast linked; auto-register on; location is the registration link; send 3 to 7 days before. Capacity is limited by the shared Google quota, about 1,500 invites per service account per day.</li>
+<li>Creating a calendar campaign is the send. Only name and tags can be edited afterwards; to change anything else, cancel and recreate.</li>
+<li>Cold email: one campaign per webinar named <code>Webinar &lt;n&gt; - &lt;D Month&gt;</code>; stays a draft until "send now"; ids change every webinar so always list.</li>
+<li>A decline of a calendar invite is treated as an opt-out.</li>
+</ul>
+<h2 id="c4-automation-that-is-already-running">C4. Automation that is already running</h2>
+<ul>
+<li><strong>Email (WebinarGeek):</strong> confirmation, reminders, follow-up, replay. <strong>WhatsApp (GHL):</strong> join link on request, four timed reminders.</li>
+<li><strong>Worker:</strong> <code>POST /webinargeek/ghl</code> verifies a signature, upserts the contact on email, fills the webinar fields, sets state tags. It reads state from the subscription data, not the event name, so a retried or dropped webhook cannot corrupt a record.</li>
+<li><strong>State tags the Worker sets:</strong> <code>webinar registrant</code> · <code>webinar attended</code> · <code>live webinar watched</code> · <code>watched webinar replay</code> · <code>live webinar not watched</code> · <code>webinar unsubscribed</code> · <code>clicked webinar CTA</code>. Post-webinar tags are cleared on re-registration so the next webinar re-fires workflows. Use only these names; older hyphenated duplicates are historical and must not be used in new filters.</li>
+<li><strong>Fields the reminders depend on:</strong> <code>webinar_broadcast_date</code> (the anchor), <code>watch_link_webinargeek</code>, <code>readable_webinar_date</code>, <code>readable_webinar_time</code>.</li>
+<li><strong>GHL workflows:</strong> 18 exist, 5 are published (the WhatsApp reminders, the inbound join-link reply, the CISI applicants flow, and two course-access flows). The draft webinar-email workflows must stay unpublished, because publishing one would double-send against WebinarGeek.</li>
+<li><strong>Daily dashboard:</strong> rebuilt automatically each day and published; a second check re-runs it if the day has no successful run.</li>
+<li><strong>Weekly deliverability report</strong> on the sending domains.</li>
+</ul>
+<h2 id="c5-applications">C5. Applications</h2>
+<p>Three application forms feed Google Sheets: our own, a partner (CISI) form with its own sheet and Calendly, and a future-cohort form. When Susanne sets <strong>Approval (column Q)</strong> to Accepted or Rejected, an installable trigger sends the matching email from <code>boards@fintechcircle.com</code>, BCCs the team and writes the send into <strong>column R</strong>. An hourly sweep catches anything missed. Any non-empty value in column R counts as handled, which prevents duplicate sends. Never re-run "Setup Spreadsheet" on a live sheet, and remember that saving an Apps Script is not deploying it.</p>
+<h2 id="c6-the-content-workflow">C6. The content workflow</h2>
+<p><strong>Susanne is the source; the team produces; Susanne approves.</strong>
+1. <strong>Brief</strong> (the team): format, topic or Susanne's notes, source material, call to action (webinar or follow), date.
+2. <strong>Claude drafts:</strong> post copy in her voice, first-comment text, slide-by-slide text with a layout note, a design brief naming the template.
+3. <strong>Claude checks</strong> against the approval checklist and fixes any failure.
+4. <strong>Susanne signs off every post.</strong> Recorded in the Content Calendar tab of the Work Tracker.
+5. <strong>Design and schedule</strong> (the team): finished in the named template, scheduled in Metricool or LinkedIn.</p>
+<p><strong>Ten approved formats.</strong> Image: Experiential · Thought leadership · Quotes · Cheatsheet. Carousel: Framework deck · Comparison deck · Checklist deck · Illustrated story · Book or resource · Case study (real, permissioned cases only). Videos are out of scope for now.</p>
+<p><strong>What goes in (inputs).</strong>
+- <em>Her voice:</em> her tone-of-voice questionnaire (friendly, knowledgeable, positive; nothing negative or controversial); first person, authority lived and never claimed; structure of hook, tension, three numbered points, stakes, one call to action; her approved posts as the quality bar; British English.
+- <em>Substance:</em> her career and boards, the FINTECH Book series, the Board Programme and its nine modules, the webinar headline, testimonials only with permission.
+- <em>Audience:</em> the persona in A1.
+- <em>Design:</em> brand palette (ocean, navy, dusk, sky, sun), the identity chip, page numbers and footer logo on every slide, the craft rules, the named template per format, finished example carousels as structure references only.
+- <em>CTA rules:</em> webinar posts put the registration link in the <strong>first comment</strong> and end with "Link in the first comment." Follow posts end with the follow line. One call to action per post and the post ends on it.</p>
+<p><strong>Never:</strong> hype words, manufactured urgency, "comment and I'll DM", a closing question to the reader, invented statistics, clients or quotes, anything negative or critical, anything market-sensitive or confidential, investment advice, another client's content, the long dash (use a short hyphen), and the name of the listed bank she sits on.</p>
+<p><strong>Weekly routine:</strong> the team sends the brief → Claude returns the draft, already checked → Susanne approves or edits → the team designs and schedules → log it in Content Calendar. <strong>Target volume: [__ posts per week - to confirm].</strong></p>
+<h2 id="c7-outreach-inputs-what-claude-uses-to-target-and-write">C7. Outreach inputs (what Claude uses to target and write)</h2>
+<ul>
+<li><em>Who:</em> the persona; the nine financial industries; country and title filters; exclusions for attendees, RSVPs, applicants, customers, suppressed people, blocked domains and other clients; anyone already invited on any tab or contacted in Tantra or Instantly.</li>
+<li><em>When:</em> webinar title, date and time in London; the WebinarGeek broadcast; the registration link; 3 to 7 days before the event.</li>
+<li><em>What we say:</em> the five invite titles and body; cold-email steps in two angles; a retarget sequence.</li>
+<li><em>How we send:</em> balanced across mailboxes; leads stamped only after the campaign reads <code>ready</code>.</li>
+<li><em>What worked:</em> yes rates by invite title and segment, bounce rates, best countries and seniority.</li>
+</ul>
+<h2 id="c8-what-the-chat-cannot-do-yet">C8. What the chat cannot do yet</h2>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Cannot do</th>
+<th>Instead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Leads</td>
+<td>Add lead rows to the master sheet; search the whole pool; count leads used across webinars; count unique attendees across webinars</td>
+<td>Check the list, write the operations brief; operations loads the tab</td>
+</tr>
+<tr>
+<td>GHL</td>
+<td>Create or edit workflows, or read their steps (API limit)</td>
+<td>Claude writes the exact spec; the team builds it in GHL</td>
+</tr>
+<tr>
+<td>WebinarGeek</td>
+<td>Edit emails, polls, call-to-action buttons</td>
+<td>Login steps, done by a person</td>
+</tr>
+<tr>
+<td>Tantra</td>
+<td>Edit a wave in place (name and tags only)</td>
+<td>Cancel and recreate</td>
+</tr>
+<tr>
+<td>Reporting</td>
+<td>Invoices and call metrics (token scope)</td>
+<td>Not available</td>
+</tr>
+<tr>
+<td>Code</td>
+<td>Deploy the landing page, run scripts, run on a timer</td>
+<td>Needs Claude Code (Part D)</td>
+</tr>
+<tr>
+<td>Replies</td>
+<td>Read replies to calendar invites; sync GHL unsubscribes to Instantly</td>
+<td>Open items (D3)</td>
+</tr>
+<tr>
+<td>Data</td>
+<td>Erase a person's data</td>
+<td>Remove the row, reply to the person</td>
+</tr>
+</tbody>
+</table>
+<h2 id="c9-known-traps-where-wrong-answers-come-from">C9. Known traps (where wrong answers come from)</h2>
+<ul>
+<li>Tantra under-reports outreach (deleted campaigns are invisible) and its <code>sentCount</code> is 0 for calendar campaigns. Use the calendar RSVPs.</li>
+<li>Instantly analytics under-report replies badly and show 0 opens (tracking is off). Do not quote them as real.</li>
+<li>Master sheets for early webinars are lead lists with an empty tracking scaffold: they show who was targeted, never what was sent.</li>
+<li>Early "applications" and "paid customers" files are stale exports. Revenue comes live from GHL payments.</li>
+<li>Some raw lists store first and last names swapped; cross-check against the email before trusting a first name.</li>
+<li>A calendar campaign created without the broadcast link can never be linked afterwards (the field is create-only).</li>
+<li>Never judge a wave on day 1; RSVPs accrue.</li>
+</ul>
+<hr />
+<h1 id="part-d-next-steps">Part D. Next steps</h1>
+<h2 id="d1-build-the-lead-tools-planned-not-live">D1. Build the lead tools (planned, not live)</h2>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>What it will let the team do</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>leads_check</code> + <code>sheet_add_leads</code></td>
+<td>Attach a list in chat; Claude cleans it (duplicates, industries, exclusions, UK or 5,000+ headcount filters), shows a plan card (rows in, rows removed and why), appends the clean rows to the chosen tab on "go", then plans the wave</td>
+</tr>
+<tr>
+<td><code>pool_search</code></td>
+<td>Ask for "UK board-level people at companies over 5,000" and get counts and a preview across the whole pool, then load the sheet</td>
+</tr>
+</tbody>
+</table>
+<p>Constraints: chat cannot hand an attachment to the connector, so Claude reads it and sends batches of a few hundred rows (very large lists go via a Google Sheet link). The pool search needs the pool published to the connector, which is a <strong>data-protection decision</strong> (roughly the whole contact pool would be stored in the cloud service); store only the fields the search needs. Each tool goes through a plan card before it is built, then a test tab, then live.</p>
+<h2 id="d2-move-the-codebase-to-github-and-add-claude-code">D2. Move the codebase to GitHub and add Claude Code</h2>
+<p><strong>Why.</strong> Chat acts only when someone types. It cannot run on a timer or change code. For everything to be automated properly, the code must be in a shared, versioned home where Claude Code can work on it.</p>
+<p><strong>What Claude Code unlocks.</strong> Landing page edits (preview, then publish, with rollback) · scheduled jobs (daily dashboard, weekly deliverability report, a reply sweep before each wave) · building the lead tools in D1 · the unsubscribe sync between GHL and Instantly · reading calendar-invite replies · version-controlled outreach and email templates · reviewed, reversible changes.</p>
+<h3 id="step-by-step">Step by step</h3>
+<ol>
+<li><strong>Create the GitHub home.</strong> One FINTECH-owned GitHub account or organisation, with at least two owners (so access is never lost with one person), two-factor authentication on, and team members added by role. <em>Decision: account or organisation, and who owns it.</em></li>
+<li><strong>Create a private repository.</strong> Private always; one client per repository so data can never mix. Suggested name: <code>fintech-circle-automation</code>.</li>
+<li><strong>Add the codebase.</strong> Suggested layout:
+   - <code>method/</code> : the playbook, scripts and templates that are client-agnostic
+   - <code>scripts/</code> : the wave, dashboard and monitoring scripts
+   - <code>connector/</code> : the Cloudflare Worker that powers the chat tools
+   - <code>mcp-server/</code> : the Tantra tool server
+   - <code>knowledge/</code> : the Claude Project knowledge files (00 to 20) and the documentation
+   - <code>monitoring/</code> : the deliverability reports
+   - <code>CLAUDE.md</code> : the rules file Claude Code reads first (client identity, standing rules, the truth rules, the plan-card rule)</li>
+<li><strong>Keep these OUT of the repository</strong> (enforced by a <code>.gitignore</code> and a pre-commit check): passwords and API keys (<code>.env</code>), service-account files and the secrets folder, raw and processed lead lists, engaged-people and suppression exports, generated state files and anything with personal data, <code>.DS_Store</code> and local caches. Secrets live only in each system's own settings (for example the Worker's secret store) and are never committed.</li>
+<li><strong>Keep related repositories separate.</strong> The landing page and the technology ecosystem page already have their own repositories and stay there. A method-only skeleton repository (no client data) already exists and can seed the shared method.</li>
+<li><strong>Add Claude Code.</strong> Open the repository in Claude Code with the same rules file and knowledge layer so it follows this playbook. Give it only the access it needs; secrets are supplied at run time, not stored.</li>
+<li><strong>Work through changes.</strong> Every change goes on a <strong>branch</strong>, is reviewed, then <strong>merged</strong>. Nothing goes live from an unreviewed branch. Every change has a history and can be undone.</li>
+<li><strong>Add automation.</strong> Scheduled jobs and checks run from the repository (for example daily and weekly jobs), with failures reported to the team.</li>
+<li><strong>Document and hand over.</strong> A short README for the team: how to ask for a change, how a change is reviewed, how to roll back.</li>
+</ol>
+<h3 id="guardrails">Guardrails</h3>
+<ul>
+<li>Private repository, team access only, two owners.</li>
+<li>Secrets never enter the repository; a secret scan runs before every commit.</li>
+<li>Anything live (campaigns, sends, GHL) still waits for a plan card and a typed "go" or "send now", even from Claude Code.</li>
+<li>Previews before publishing; rollback is promoting the previous version.</li>
+<li>One client per repository.</li>
+</ul>
+<h3 id="decisions-needed">Decisions needed</h3>
+<ul>
+<li>GitHub account or organisation, and who owns it.</li>
+<li>Who gets access, and at what level.</li>
+<li>Which repository holds the landing page.</li>
+<li>Whether the pool is stored in the cloud for chat search (D1).</li>
+</ul>
+<h2 id="d3-open-items-to-close">D3. Open items to close</h2>
+<ol>
+<li>GHL unsubscribes do not reach Instantly; the two suppression lists are not synced.</li>
+<li>Replies to calendar invites land in the 20 sender mailboxes and nobody reads them yet.</li>
+<li>The consent basis for the WhatsApp channel is not documented.</li>
+<li>Six unused draft email workflows in GHL: delete them or prefix them <code>zz-</code> so none is published by accident.</li>
+<li>A template, "Courses - Offer Access", exists twice under different ids.</li>
+<li>Confirm <code>webinar_broadcast_date</code> on one live contact record (the highest-value five minutes: it closes the open question on reminder timing).</li>
+<li>Nobody reviews the Worker logs on a schedule yet.</li>
+<li>DMARC on the calendar domains is reporting-only; raise it to enforcement only after the reports show every sender aligned.</li>
+<li>The content design system draft and the template design files are waiting for approval and linking.</li>
+<li>Early webinar tabs (WEB #7 and WEB #8) are in the sheet but not registered with the pipeline, so their stamping is unknown.</li>
+</ol>
+<h2 id="d4-commercial-items-for-the-call">D4. Commercial items for the call</h2>
+<ul>
+<li><strong>Tantra subscription renewal:</strong> the calendar-invite waves run on Tantra, so the renewal keeps them going. <em>[Renewal date and plan - to confirm.]</em></li>
+<li><strong>Additional support:</strong> an offer of extra help alongside the system, so requests have a clear route. <em>[Scope, hours and terms - to confirm.]</em></li>
+</ul>
+<h2 id="d5-call-plan-suggested-order">D5. Call plan (suggested order)</h2>
+<ol>
+<li>Show examples of tasks Claude can do (live: a read-only question, the wave plan preview, a content draft; nothing is sent).</li>
+<li>Walk through the playbook (this document).</li>
+<li>Walk through the tools, one system at a time, with the safety levels.</li>
+<li>Walk through the content workflow and agree the weekly routine. <em>[Posts per week - to confirm.]</em></li>
+<li>Decide how new lead lists get in (today operations loads them; decide on the lead tools).</li>
+<li>Agree the next step: GitHub and Claude Code, owner and access.</li>
+<li>Tantra renewal and additional support.</li>
+<li>Next steps and owners.</li>
+</ol>
+<hr />
+<h1 id="appendices">Appendices</h1>
+<h2 id="e1-prompts-to-try">E1. Prompts to try</h2>
+<ul>
+<li><em>"What is the next webinar, and how many have registered?"</em></li>
+<li><em>"Is there enough unused list for another wave?"</em></li>
+<li><em>"Show the plan for the next invite wave."</em> (preview only; nothing is sent)</li>
+<li><em>"How are the cold email campaigns performing?"</em></li>
+<li><em>"Write a framework carousel on becoming board-ready, ending on the webinar."</em></li>
+<li><em>"Check this draft against the approval checklist."</em></li>
+</ul>
+<h2 id="e2-operations-brief-for-a-new-lead-list">E2. Operations brief (for a new lead list)</h2>
+<p>Source and date of the list · row counts (total, duplicates, missing email, off-industry, other-client, suppressed, already contacted) · filters wanted (countries, titles, headcount) · target tab name · expected clean count · anything unusual.</p>
+<h2 id="e3-ghl-workflow-spec-the-team-builds-it-in-ghl">E3. GHL workflow spec (the team builds it in GHL)</h2>
+<p>Name (<code>FC - &lt;purpose&gt;</code>) · trigger (a tag added; never the premium Inbound Webhook) · conditions and the has-a-phone check · each step with its wait (reminders use wait-until anchored on <code>webinar_broadcast_date</code>) · the template or WhatsApp template used · exit and failure branches (Undelivered, STOP, Time Out) · which tags it reads and writes (current names only) · how to test.</p>
+<h2 id="e4-glossary">E4. Glossary</h2>
+<ul>
+<li><strong>Plan card:</strong> the reviewed summary Claude shows before any change.</li>
+<li><strong>Wave:</strong> one Tantra calendar campaign of about 1,000 invites.</li>
+<li><strong>Stamp:</strong> marking a lead as used in the outreach sheet, only after its campaign is confirmed ready.</li>
+<li><strong>Broadcast:</strong> one scheduled showing of the webinar in WebinarGeek.</li>
+<li><strong>Connector:</strong> the service that lets the chat read and act on the live systems.</li>
+<li><strong>Suppression list:</strong> everyone who must not be contacted, shared across channels.</li>
+<li><strong>Worker:</strong> the small cloud program that links WebinarGeek to GHL and keeps tags in sync.</li>
+</ul>
+<h2 id="e5-the-claude-project-knowledge-files">E5. The Claude Project knowledge files</h2>
+<p>00 Project instructions · 01 Business, offer and persona · 02 Funnel map · 03 Outreach system · 04 Leads and targeting · 05 Webinars and results · 06 Revenue, CRM and dashboard · 07 Infrastructure · 08 Known traps · 09 Access and open items · 10 Links and sources · 11 How-to guides · 12 Content Studio · 13 Integrations and tools · 14 Webinar skeleton · 15 Funnel architecture and change protocol · 16 New webinar and UI guides · 17 Connector tools and landing page · 18 Connector tools for Instantly, GHL, Tantra and WebinarGeek · 19 Automation and workflows · 20 Chat capabilities, inputs and next steps.</p></main></body></html>
