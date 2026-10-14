@@ -154,7 +154,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 <body>
 <div class="progress" id="progress"></div>
 <nav id="nav"><b>FINTECH Circle</b>
-<a href="#overview">Overview</a><a href="#funnel">Funnel</a><a href="#playbook">Playbook</a><a href="#tools">Tools</a><a href="#workflows">Workflows</a><a href="#automation">Automation</a><a href="#content">Content</a><a href="#team">Team</a><a href="#tasks">Notes &amp; tasks</a></nav>
+<a href="#overview">Overview</a><a href="#funnel">Funnel</a><a href="#playbook">Playbook</a><a href="#tools">Tools</a><a href="#workflows">Chat workflows</a><a href="#automation">Automation</a><a href="#content">Content</a><a href="#team">Team</a><a href="#tasks">Call plan</a></nav>
 
 <header class="hero" id="top"><div class="wrap">
 <p class="eyebrow">Walkthrough for Susanne</p>
@@ -164,7 +164,7 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 <div class="stats">
 <div class="stat"><b>20</b><span>knowledge files, 00 to 19</span></div>
 <div class="stat"><b>32</b><span>connector tools</span></div>
-<div class="stat"><b>12</b><span>workflows Claude can run</span></div>
+<div class="stat"><b>10</b><span>workflows you run from chat</span></div>
 <div class="stat"><b>10</b><span>approved content formats</span></div>
 <div class="stat"><b>3</b><span>safety levels on every action</span></div>
 </div>
@@ -173,10 +173,10 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 <section id="overview"><div class="wrap">
 <p class="eyebrow"><span class="n">1</span>Overview</p>
 <h2>One project that knows the whole funnel</h2>
-<p class="intro">The Claude Project holds 20 numbered knowledge files. Claude reads them before answering, so every answer follows the same rules, traps and procedures the team uses. Three parts work together:</p>
+<p class="intro">Everything on this page is done by typing in the Claude Project chat. The Project holds 20 numbered knowledge files that Claude reads before answering, and a connector that lets it read and act on the live systems. Three parts work together:</p>
 <div class="grid reveal">
 <div class="card"><div class="ico">CP</div><h3>Claude Project (claude.ai)</h3><p>The everyday chat. Ask questions, plan, draft content and run connector tools.</p><ul><li>Answers from the 20 knowledge files</li><li>Reads live data through the connector</li><li>Writes only after a plan card and a typed go</li></ul></div>
-<div class="card"><div class="ico s">CC</div><h3>Claude Code (operations)</h3><p>The workspace that runs scripts, built from the same documentation.</p><ul><li>Wave, dashboard and monitoring scripts</li><li>Landing page edits, previewed before live</li><li>Daily dashboard rebuild</li></ul></div>
+<div class="card"><div class="ico s">20</div><h3>The knowledge files</h3><p>The playbook, rules and known traps, written down once.</p><ul><li>Business, funnel, outreach, leads</li><li>Content Studio and voice rules</li><li>Automation and workflows</li></ul></div>
 <div class="card"><div class="ico o">MCP</div><h3>The connector</h3><p>The bridge between chat and the live systems (Tantra, Instantly, GoHighLevel, WebinarGeek, Google Sheets).</p><ul><li>32 tools in five systems</li><li>Safety rules are built into the tools, not left to memory</li></ul></div>
 </div>
 <div class="note blue reveal"><b>How to read this page:</b> each section opens with what the element is, then what Claude can do with it, then what stays with a person. Click the + on any element to expand it.</div>
@@ -199,8 +199,8 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 
 <details><summary><span class="ico o">3</span>Landing page</summary><div class="body">
 <div><h4>What it is</h4><p>webinar.fintechcircle.com. One registration is sent to four places at once: WebinarGeek, a Google Sheet, GoHighLevel and the thank-you page.</p></div>
-<div><h4>Claude can</h4><ul><li>Edit the page in Claude Code from a precise change request</li><li>Upload a preview version, not live</li><li>Promote it after a go, and roll back by promoting the previous version</li></ul></div>
-<div><h4>A person does</h4><ul><li>Check the preview, including a test registration</li><li>Say go to publish</li></ul></div></div></details>
+<div><h4>Claude can</h4><ul><li>Write the exact change request: page, section, old text to new text, and why</li><li>Check the registration fields and times are consistent</li></ul></div>
+<div><h4>A person does</h4><ul><li>The operations team applies the change, previews it and publishes it</li></ul></div></div></details>
 
 <details><summary><span class="ico">4</span>WebinarGeek</summary><div class="body">
 <div><h4>What it is</h4><p>Hosts the live broadcast, gives each registrant a join link, and sends the confirmation, reminder, follow-up and replay emails.</p></div>
@@ -258,18 +258,15 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 </div></section>
 
 <section id="workflows" class="alt"><div class="wrap">
-<p class="eyebrow"><span class="n">5</span>Workflows Claude can run</p>
-<h2>Twelve workflows, in the order a webinar runs</h2>
-<p class="intro">From setting up a new webinar to cleaning up afterwards. Each shows who does each step. Filter by where it runs.</p>
+<p class="eyebrow"><span class="n">5</span>Automate it from chat</p>
+<h2>Ten workflows you run by typing</h2>
+<p class="intro">Each card shows what to type, what Claude does behind the scenes, and what you get back. Blue steps run on their own; orange steps stop and wait for your go or send now; purple steps are yours.</p>
 <div class="legend"><span class="a">Claude does</span><span class="g">Waits for your go / send now</span><span class="m">A person does</span></div>
-<div class="chips" id="wfchips">
-<button class="chip on" data-f="all">All 12</button><button class="chip" data-f="chat">In the Claude Project</button><button class="chip" data-f="code">In Claude Code</button><button class="chip" data-f="auto">Runs by itself</button>
-</div>
 <div class="grid" id="wfgrid"></div>
 </div></section>
 
 <section id="automation" class="dark"><div class="wrap">
-<p class="eyebrow"><span class="n">6</span>Runs by itself</p>
+<p class="eyebrow"><span class="n">6</span>Already automatic</p>
 <h2>What happens after someone registers</h2>
 <p class="intro">Two channels that never cross. WebinarGeek owns email. GoHighLevel owns WhatsApp. A Cloudflare Worker is the only thing that writes between them.</p>
 <div class="channels reveal">
@@ -335,8 +332,8 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 </div>
 <div style="display:grid;gap:16px">
 <div class="card"><span class="tag t-person">Approves</span><h3>Founder &amp; Chair</h3><ul><li>Signs off every LinkedIn post</li><li>Sets Accepted or Rejected on Board Programme applications</li><li>Decides which formats and design system are approved</li></ul></div>
-<div class="card"><span class="tag t-read">Operates</span><h3>Operations (GrowthClub)</h3><ul><li>Runs the funnel through Claude Code and the connector</li><li>Holds the connector passphrase and the service accounts</li><li>Loads leads, builds GHL workflows and WebinarGeek content</li></ul></div>
-<div class="card"><span class="tag t-auto">Builds</span><h3>Landing page developer</h3><ul><li>Deploys the landing page from the shared GitHub repo</li><li>Works alongside the preview-then-promote flow</li></ul></div>
+<div class="card"><span class="tag t-read">Operates</span><h3>Operations (GrowthClub)</h3><ul><li>Runs the funnel through the connector and the chat</li><li>Holds the connector passphrase and the service accounts</li><li>Loads leads, builds GHL workflows and WebinarGeek content</li></ul></div>
+<div class="card"><span class="tag t-auto">Builds</span><h3>Landing page developer</h3><ul><li>Applies landing page change requests written in chat</li><li>Previews each change before it goes live</li></ul></div>
 <div class="card"><span class="tag t-go">Assists</span><h3>Claude</h3><ul><li>Answers, plans, drafts and checks</li><li>Runs the tools, always behind a plan card</li></ul></div>
 </div>
 </div>
@@ -344,16 +341,17 @@ footer{background:var(--navy);color:var(--on-dark2);padding:40px 24px;font-size:
 </div></section>
 
 <section id="tasks" class="dark"><div class="wrap">
-<p class="eyebrow"><span class="n">9</span>Notes and tasks</p>
-<h2>Pointers to take away</h2>
+<p class="eyebrow"><span class="n">9</span>Call plan and notes</p>
+<h2>What we cover on the call</h2>
 <div class="grid reveal">
 <div class="card"><h3>Keep in mind</h3><ul><li>Ask for numbers any time; they are read live, not remembered.</li><li>Anything that reaches people waits for a typed "send now".</li><li>The webinar email drafts in GHL stay unpublished.</li><li>Blocking an address is not erasing it. Deletion requests also need the row removed.</li><li>Susanne signs off every post before it is scheduled.</li></ul></div>
 <div class="card"><h3>Good first things to try</h3><ul><li>"What is the next webinar, and how many have registered?"</li><li>"Is there enough unused list for another wave?"</li><li>"Show the plan for the next invite wave."</li><li>"Write a framework carousel on becoming board-ready."</li><li>"Check this draft against the approval checklist."</li></ul></div>
 </div>
-<div class="tasks-head"><h3 style="margin:0;font-size:24px">Open tasks</h3><span id="count" style="color:var(--on-dark2)"></span></div>
+<div class="grid reveal" style="margin-top:26px"><div class="card"><span class="tag t-go">Tantra</span><h3>Subscription renewal</h3><p>Calendar-invite waves are sent through Tantra, so the subscription keeps them running. Confirm the renewal on the call. [Renewal date and plan - to confirm]</p></div><div class="card"><span class="tag t-auto">Support</span><h3>Additional support</h3><p>An offer of extra help alongside the system, so requests have a clear route. [What is included, hours and terms - to confirm]</p></div></div>
+<div class="tasks-head"><h3 style="margin:0;font-size:24px">Call checklist</h3><span id="count" style="color:var(--on-dark2)"></span></div>
 <div class="bar"><i id="bar"></i></div>
 <div id="tasklist" style="color:var(--text)"></div>
-<p class="note reveal" style="margin-top:22px">Ticks are saved in this browser only. They are a personal checklist, not a shared tracker.</p>
+<p class="note reveal" style="margin-top:22px">Tick items off as you go. Ticks are saved in this browser only.</p>
 </div></section>
 
 <footer><div class="wrap">FINTECH Circle · Internal walkthrough · Contains no credentials or live figures. Team details from <a href="https://fintechcircle.com" style="color:var(--sun)">fintechcircle.com</a>.</div></footer>
@@ -413,51 +411,38 @@ document.getElementById("toolsearch").oninput=function(){tq=this.value.toLowerCa
 drawTools();
 
 var WF=[
-{t:"1 · Set up a new webinar",w:["chat"],ask:"Is the next broadcast created, and is there enough list?",s:[["c","Check whether the broadcast for the event date exists in WebinarGeek"],["g","If not, show a plan card and create it after your go"],["c","Check unused leads per tab in the Master Outreach Sheet"],["g","Create the next WEB tab after your go"],["m","Load new leads into the tab, if the pool is short"]]},
-{t:"2 · Send a calendar-invite wave",w:["chat"],ask:"Plan the next wave for the upcoming webinar.",s:[["c","Select leads: unused only, minus RSVPs, attendees, suppressed and blocked domains"],["c","Show the plan card: counts, copy variation, schedule, geo mix, skipped"],["g","On send now, create the campaigns, balanced and in London time, linked to the broadcast"],["c","Confirm each campaign is ready, then mark only those leads as used"]]},
-{t:"3 · Launch the cold email",w:["chat"],ask:"Set up the Instantly campaign for the next webinar.",s:[["c","Read the latest campaign and propose the date and time replacements"],["g","Copy it as a new draft after your go; it refuses if an old date is left"],["c","Preview the leads, with everyone already contacted removed"],["g","Load the leads after your go"],["m","Review the draft together"],["g","Activate only on send now"]]},
-{t:"4 · Report the numbers",w:["chat"],ask:"How many yes or maybe, and how are the campaigns performing?",s:[["c","Read RSVPs from the calendar, attendance from WebinarGeek, analytics from Instantly"],["c","Read revenue and revenue by tier from GoHighLevel"],["c","Report each figure from its source, never from a vendor counter"]]},
-{t:"5 · The daily dashboard",w:["code","auto"],ask:"Did the dashboard update today?",s:[["c","Rebuild runs automatically once a day and publishes the page"],["c","A second check re-runs the pipeline if the day has no successful run"],["c","Claude reads the status file and says which stage failed, if any"]]},
-{t:"6 · Retarget no-shows",w:["chat"],ask:"Tag last webinar's yes and maybe no-shows for retargeting.",s:[["c","Find the no-show group from WebinarGeek and GoHighLevel"],["g","Tag them after your go; the result lists any workflow the tag would fire"],["m","Pick the retarget campaign and message"],["g","Enrol or send only on send now"]]},
-{t:"7 · Protect the list",w:["chat","code"],ask:"This company asked to be removed. Block them everywhere.",s:[["c","Classify replies and find removal requests or hostile text"],["g","Block the whole domain in Instantly and unsubscribe every Tantra record, after your go"],["c","Every later lead preview excludes them automatically"],["m","GDPR deletion also needs the row removed and a reply sent"]]},
-{t:"8 · Create an email template",w:["chat"],ask:"Create an email template for the follow-up.",s:[["c","Draft the copy and HTML in the FINTECH style"],["g","Create it in GoHighLevel after your go"],["m","Build the workflow step that uses it in the GHL screen"]]},
-{t:"9 · Edit the landing page",w:["code"],ask:"Change the headline on the registration page.",s:[["c","Pull the latest version from GitHub and make the edit"],["c","Commit, push, and upload a preview version that is not live"],["m","Check the preview, including a test registration"],["g","Promote to live after your go, then run the page check"],["c","Roll back by promoting the previous version, if needed"]]},
-{t:"10 · Weekly LinkedIn content",w:["chat"],ask:"Write a framework carousel on becoming board-ready.",s:[["m","Susanne sends the brief: format, topic, call to action, date"],["c","Draft the post, first comment, slide text and design brief"],["c","Check against the approval checklist and fix"],["m","Susanne signs off; the team designs and schedules"]]},
-{t:"11 · Application decisions",w:["auto"],ask:"Which applications are waiting for a decision?",s:[["m","Susanne sets Accepted or Rejected in the sheet"],["c","The email goes out automatically and the log is written"],["c","An hourly sweep catches any decision that was missed"]]},
-{t:"12 · Infrastructure checks",w:["code","auto"],ask:"Is this domain free, and how is deliverability?",s:[["c","Check a new domain or mailbox against what already exists"],["g","Show a plan card before changing any domain, mailbox or DNS"],["c","A weekly report scores the sending domains and flags problems"]]}
+{t:"1 · Set up a new webinar",ask:"Is the next webinar set up, and do we have enough list?",s:[["c","Checks WebinarGeek for a broadcast on the event date"],["g","If missing, shows a plan card and creates it after your go"],["c","Counts unused leads per tab in the Master Outreach Sheet"],["g","Creates the next WEB tab after your go"],["m","A person loads new leads if the pool is short"]],get:"A confirmed event date, a ready sheet tab, and a clear yes or no on whether the list is enough."},
+{t:"2 · Send a calendar-invite wave",ask:"Plan the next wave for the upcoming webinar.",s:[["c","Picks unused leads, minus RSVPs, attendees, suppressed and blocked domains"],["c","Shows the plan card: counts, copy variation, schedule, geo mix, skipped leads"],["g","On send now, creates the campaigns, balanced and in London time"],["c","Confirms each campaign is ready, then marks only those leads as used"]],get:"A reviewed plan before anything moves, then invites sent, verified and recorded so nobody is invited twice."},
+{t:"3 · Launch the cold email",ask:"Set up the Instantly campaign for the next webinar.",s:[["c","Reads the latest campaign and proposes the date and time changes"],["g","Copies it as a new draft after your go; refuses if an old date remains"],["c","Previews the leads with everyone already contacted removed"],["g","Loads the leads after your go"],["m","You review the draft together"],["g","Starts sending only on send now"]],get:"A clean, correctly dated campaign built in minutes, with no repeat contacts and nothing live until you say so."},
+{t:"4 · Report the numbers",ask:"How many yes or maybe, how many registered, and how are the campaigns doing?",s:[["c","Reads RSVPs from the calendar, registrations and attendance from WebinarGeek"],["c","Reads campaign analytics from Instantly and revenue from GoHighLevel"],["c","Reports each figure from its own source, not from a vendor counter"]],get:"One plain-language summary with the real figures and where each came from."},
+{t:"5 · Retarget the no-shows",ask:"Tag last webinar's yes and maybe no-shows for retargeting.",s:[["c","Finds the no-show group from WebinarGeek and GoHighLevel"],["g","Tags them after your go; first lists any workflow the tag would trigger"],["m","You choose the retarget message"],["g","Enrols or sends only on send now"]],get:"A tagged, ready-to-contact audience without accidentally firing a workflow."},
+{t:"6 · Protect the list",ask:"This company asked to be removed. Block them everywhere.",s:[["c","Finds the removal request or hostile reply"],["g","Blocks the whole domain in Instantly and unsubscribes every Tantra record, after your go"],["c","Every later lead preview excludes them automatically"],["m","GDPR deletion also needs the row removed and a reply sent"]],get:"The domain blocked in every channel, and a suppression list that grows with each complaint."},
+{t:"7 · Look up a person",ask:"What do we know about jane@example.com?",s:[["c","Looks up the contact in GoHighLevel: tags, source, created date, do-not-disturb"],["c","Checks WebinarGeek for registration and attendance"],["c","Checks the suppression list"]],get:"A one-glance history: where they came from, what they did, and whether they can be contacted."},
+{t:"8 · Register someone to the webinar",ask:"Register this person for the next webinar.",s:[["c","Confirms the broadcast and that the person is not already registered"],["g","Registers them after your go, which triggers their confirmation email"]],get:"The person registered with their own join link, and WebinarGeek's emails start for them."},
+{t:"9 · Create an email template",ask:"Create an email template for the follow-up.",s:[["c","Drafts the copy and HTML in the FINTECH style"],["g","Creates it in GoHighLevel after your go"],["m","A person adds it to the workflow step in the GHL screen"]],get:"A finished, named template waiting in GoHighLevel."},
+{t:"10 · Write a week of LinkedIn content",ask:"Write a framework carousel on becoming board-ready, ending on the webinar.",s:[["m","Susanne gives the format, topic, source notes, call to action and date"],["c","Drafts the post, first comment, slide text and design brief in her voice"],["c","Checks it against the approval checklist and fixes any failure"],["m","Susanne signs off; the team designs and schedules"]],get:"A sign-off-ready post and slide text that already follows her voice rules, plus the design brief."}
 ];
-var wf="all";
 function drawWf(){
- var g=document.getElementById("wfgrid"),h="";
+ var h="";
  WF.forEach(function(x){
-  var show=wf==="all"||x.w.indexOf(wf)>=0;
-  var tags=x.w.map(function(w){return w==="chat"?'<span class="tag t-read">Claude Project</span>':w==="code"?'<span class="tag t-person">Claude Code</span>':'<span class="tag t-auto">Automatic</span>'}).join("");
   var st=x.s.map(function(s){return '<li class="'+(s[0]==="g"?"gate":s[0]==="m"?"me":"")+'">'+s[1]+'</li>'}).join("");
-  h+='<div class="card wf'+(show?" show":"")+'">'+tags+'<h3>'+x.t+'</h3><p class="ask">"'+x.ask+'"</p><ul class="steps">'+st+'</ul></div>';
+  h+='<div class="card wf show"><h3>'+x.t+'</h3><p class="ask">Type: "'+x.ask+'"</p><ul class="steps">'+st+'</ul><p style="margin-top:14px;padding:12px 14px;border-radius:12px;background:#e6f0ff;color:#0b3d91;font-size:16px"><b>You get:</b> '+x.get+'</p></div>';
  });
- g.innerHTML=h;
+ document.getElementById("wfgrid").innerHTML=h;
 }
-document.getElementById("wfchips").onclick=function(e){
- var b=e.target.closest(".chip");if(!b)return;
- [].forEach.call(this.children,function(c){c.classList.remove("on")});b.classList.add("on");wf=b.dataset.f;drawWf();
-};
 drawWf();
 
 var TASKS=[
-["Confirm posts per week from the Slack message","Then update the content section so the weekly rhythm matches."],
-["Upload file 19 to the Claude Project","Automation and workflows. Replace nothing; it adds to files 13, 15 and 18."],
-["Link the content template design files","Format templates are named but the design files are not yet linked. Until then, final design is done in the template."],
-["Approve the content design system","The draft palette and furniture are waiting for Susanne's approval."],
-["Make GHL unsubscribes reach Instantly","The two suppression lists are not synced, so a GHL unsubscriber can still get cold email."],
-["Sweep replies to calendar invites","They land in the sender mailboxes and nobody reads them yet."],
-["Document the consent basis for WhatsApp","Not recorded anywhere yet."],
-["Delete or rename the six unused draft email workflows in GHL","Prefix with zz- so nobody publishes one and double-sends against WebinarGeek."],
-["Resolve the duplicate Courses - Offer Access template","Two copies exist under different ids."],
-["Confirm webinar_broadcast_date on one live contact","The highest-value five minutes: it closes the open question on reminder timing."],
-["Add a weekly check on the automation logs","Nobody currently reviews the Worker logs on a schedule."],
-["Add named team members once they are public on fintechcircle.com","Only Susanne is listed today."]
+["Show examples of tasks Claude can do","Live: a read-only question, the wave plan preview, and a content draft. Nothing is sent."],
+["Walk through the playbook","The documents that record the whole funnel, and the three rules behind them."],
+["Walk through the tools, one system at a time","Tantra, Instantly, GoHighLevel, WebinarGeek, the sheet and suppression, with the safety levels."],
+["Walk through the content workflow","Formats, her voice rules, and the weekly routine, as described in the Slack message."],
+["Agree the weekly content routine","Posts per week, who briefs, who signs off, who designs and schedules."],
+["Tantra: confirm the subscription renewal","[Renewal date and plan - to confirm]. The calendar-invite waves run on Tantra, so the renewal keeps them going."],
+["Offer additional support","[Scope, hours and terms - to confirm]. Agree what is included and how requests reach the team."],
+["Agree next steps and owners","Who does what by when after the call."]
 ];
-var KEY="fc-walkthrough-tasks",st={};
+var KEY="fc-walkthrough-call-plan",st={};
 try{st=JSON.parse(localStorage.getItem(KEY)||"{}")}catch(e){st={}}
 function drawTasks(){
  var el=document.getElementById("tasklist"),h="",d=0;
