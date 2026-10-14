@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>FINTECH Circle - Claude Project Walkthrough</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@400;700&display=swap">
+<style>
+:root{--navy:#1d293d;--navy2:#26354d;--ocean:#0060de;--sun:#fea152;--sky:#2bc7cb;--paper:#f7f6f1;--card:#fffefb;--line:#dfdcd0;--text:#1d293d;--muted:#4a5568;--on-dark:#f7f6f1;--on-dark2:#c5cedd}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font-family:'DM Sans',Arial,sans-serif;font-size:18px;line-height:1.55}
+h1,h2{font-family:'Libre Baskerville',Georgia,serif;line-height:1.2;margin:0}
+h3{margin:0 0 6px;font-size:20px}
+a{color:var(--ocean)}
+nav{position:sticky;top:0;z-index:5;background:var(--navy);padding:10px 24px;display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+nav b{color:var(--sun);margin-right:12px;font-size:15px;letter-spacing:.08em;text-transform:uppercase}
+nav a{color:var(--on-dark2);text-decoration:none;font-size:15px;padding:6px 12px;border-radius:999px}
+nav a:hover{background:var(--navy2);color:#fff}
+header.hero{background:var(--navy);color:var(--on-dark);padding:96px 24px 80px;border-left:12px solid var(--ocean)}
+.wrap{max-width:1040px;margin:0 auto}
+.eyebrow{font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--ocean);margin:0 0 10px}
+.hero .eyebrow{color:var(--sun)}
+.hero h1{font-size:clamp(34px,5vw,60px);max-width:860px}
+.hero p.lead{font-size:22px;color:var(--on-dark2);max-width:700px;margin:20px 0 0}
+section{padding:72px 24px}
+section.dark{background:var(--navy);color:var(--on-dark)}
+section.dark .eyebrow{color:var(--sun)}
+section.dark .card{background:var(--navy2);border-color:#34466a;color:var(--on-dark)}
+section.dark .muted,section.dark .card p{color:var(--on-dark2)}
+h2{font-size:clamp(26px,3.4vw,38px);margin-bottom:12px}
+.intro{color:var(--muted);max-width:760px;margin:0 0 28px}
+section.dark .intro{color:var(--on-dark2)}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.card p{margin:0;color:var(--muted)}
+.card ul{margin:8px 0 0;padding-left:20px}
+.card li{margin:4px 0}
+.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:3px 10px;margin-bottom:10px}
+.t-read{background:#dbeafe;color:#0b3d91}
+.t-go{background:#fde8cf;color:#7a3e00}
+.t-send{background:#1d293d;color:#fea152}
+.steps{list-style:none;padding:0;margin:0;counter-reset:s;display:grid;gap:12px}
+.steps li{counter-increment:s;display:flex;gap:18px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 20px}
+section.dark .steps li{background:var(--navy2);border-color:#34466a}
+.steps li:before{content:counter(s);font-family:'Libre Baskerville',serif;font-weight:700;font-size:26px;color:var(--ocean);min-width:30px}
+section.dark .steps li:before{color:var(--sun)}
+.steps b{display:block}
+.quote{border-left:5px solid var(--sun);padding:6px 0 6px 18px;margin:0 0 22px;font-size:20px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:16px}
+th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:#ece9dc;font-size:14px;letter-spacing:.04em;text-transform:uppercase}
+code{background:#ece9dc;border-radius:5px;padding:1px 6px;font-size:14px}
+section.dark code{background:#34466a;color:#fff}
+.note{margin-top:22px;padding:16px 20px;border-radius:12px;background:#fde8cf;color:#5a2e00}
+.big{font-family:'Libre Baskerville',serif;font-size:72px;font-weight:700;color:var(--sun);line-height:1}
+footer{background:var(--navy);color:var(--on-dark2);padding:36px 24px;font-size:15px}
+@media(max-width:640px){section{padding:48px 18px}nav{padding:8px 14px}}
+</style>
+</head>
+<body>
+<nav><b>FINTECH Circle</b><a href="#inside">Inside</a><a href="#playbook">Playbook</a><a href="#tools">Tools</a><a href="#examples">Examples</a><a href="#automation">Automation</a><a href="#content">Content</a><a href="#limits">Limits</a><a href="#try">Try it</a></nav>
+
+<header class="hero"><div class="wrap">
+<p class="eyebrow">Walkthrough for Susanne</p>
+<h1>Everything the Claude Project can do for FINTECH Circle</h1>
+<p class="lead">Run the funnel, follow the playbook, and publish weekly content - from one place.</p>
+</div></header>
+
+<section id="inside"><div class="wrap">
+<p class="eyebrow">Part 1 · What is inside</p>
+<h2>One project that knows the whole funnel</h2>
+<p class="intro">The Claude Project holds 20 numbered knowledge files (00 to 19). Claude reads them before answering, so every answer follows the same rules, traps and numbers the team uses.</p>
+<div class="grid">
+<div class="card"><h3>The business</h3><p>Offer, persona, funnel map, webinar results.</p></div>
+<div class="card"><h3>Outreach and leads</h3><p>Calendar invites, cold email, targeting, exclusions.</p></div>
+<div class="card"><h3>Money and systems</h3><p>Revenue, CRM, dashboard, domains and mailboxes.</p></div>
+<div class="card"><h3>Rules and how-tos</h3><p>Known traps, access, step-by-step guides, the change protocol.</p></div>
+<div class="card"><h3>Tools</h3><p>The connector and what each tool is allowed to do.</p></div>
+<div class="card"><h3>Content and automation</h3><p>Content Studio, and what runs after a registration.</p></div>
+</div>
+
+<h3 style="margin-top:44px;font-size:24px">Two places to work, one connector</h3>
+<div class="grid" style="margin-top:14px">
+<div class="card"><h3>Claude Project (claude.ai)</h3><p>The everyday chat: ask questions, plan, draft content and run the connector tools.</p><ul><li>Answers from the 20 knowledge files</li><li>Reads live data through the connector</li><li>Writes only after a plan card and a typed go</li></ul></div>
+<div class="card"><h3>Claude Code (operations)</h3><p>The workspace that runs scripts, built from the same documentation.</p><ul><li>Wave, dashboard and monitoring scripts</li><li>Landing page edits, previewed before going live</li><li>Daily dashboard rebuild</li></ul></div>
+<div class="card"><h3>The connector</h3><p>The bridge between chat and the live systems.</p><ul><li>32 tools across five systems</li><li>Safety rules are built into the tools</li></ul></div>
+</div>
+
+<h3 style="margin-top:44px;font-size:24px">The funnel, left to right</h3>
+<ol class="steps" style="margin-top:14px">
+<li><div><b>Leads</b>Cleaned, de-duplicated financial-services pool, minus anyone already engaged.</div></li>
+<li><div><b>Outreach</b>Tantra calendar invites and Instantly cold email, both pointing to the webinar.</div></li>
+<li><div><b>Landing page</b>webinar.fintechcircle.com captures the registration in four places at once.</div></li>
+<li><div><b>WebinarGeek</b>Hosts the broadcast and sends confirmation, reminders, follow-up and replay emails.</div></li>
+<li><div><b>GoHighLevel</b>The CRM: contacts, tags and all WhatsApp reminders.</div></li>
+<li><div><b>Applications</b>Board Programme applications, approval emails, then a Calendly call.</div></li>
+</ol>
+</div></section>
+
+<section id="playbook" class="dark"><div class="wrap">
+<p class="eyebrow">Part 2 · The playbook</p>
+<h2>Everything is written down</h2>
+<p class="intro">Procedure lives in code, not in reminders. If a rule can be enforced by a script, the script enforces it.</p>
+<table>
+<tr><th>Document</th><th>What it answers</th></tr>
+<tr><td>Playbook</td><td>The full funnel process, reusable for any client</td></tr>
+<tr><td>Webinar Funnel Build SOP</td><td>Accounts, domains, inboxes, warm-up, leads, webinar, campaigns, daily ops, CRM</td></tr>
+<tr><td>Tantra Campaign Runbook</td><td>How a calendar wave is created, verified and recorded</td></tr>
+<tr><td>Claude Project pack, files 00 to 19</td><td>What the chat knows, including the traps to avoid</td></tr>
+<tr><td>STATE.md (generated)</td><td>What is live right now, read from the systems and never from prose</td></tr>
+</table>
+<div class="note">Truth rule: a claim about a live system is valid only in the turn it was read. Vendor counters are not proof of delivery, so outcomes are confirmed where the work was done.</div>
+</div></section>
+
+<section id="tools"><div class="wrap">
+<p class="eyebrow">Part 2 · The tools</p>
+<h2>32 tools across five systems</h2>
+<div class="grid" style="margin-top:20px">
+<div class="card"><h3>Tantra waves</h3><p>Preview, send and verify calendar-invite waves. Read RSVPs and sender mailboxes.</p><ul><li><code>wave_preview</code> <code>wave_send</code> <code>wave_status</code></li><li><code>tantra_senders</code> <code>tantra_campaign_rsvps</code></li></ul></div>
+<div class="card"><h3>Instantly</h3><p>List and copy campaigns, plan and load leads, activate, pause, read analytics.</p><ul><li><code>instantly_campaigns</code> <code>instantly_campaign</code></li><li><code>instantly_duplicate_campaign</code> <code>instantly_leads_preview</code></li><li><code>instantly_add_leads</code> <code>instantly_activate</code> <code>instantly_pause</code></li></ul></div>
+<div class="card"><h3>GoHighLevel</h3><p>Contacts, tags, workflows, templates and revenue. Tag and enrol contacts.</p><ul><li><code>ghl_contacts</code> <code>ghl_tags</code> <code>ghl_workflows</code></li><li><code>ghl_email_templates</code> <code>ghl_create_email_template</code></li><li><code>ghl_tag_contacts</code> <code>ghl_add_to_workflow</code></li><li><code>ghl_revenue_summary</code> <code>ghl_revenue_by_tier</code></li></ul></div>
+<div class="card"><h3>WebinarGeek</h3><p>Webinars, broadcasts, attendance, subscribers. Create a broadcast or register someone.</p><ul><li><code>webinargeek_webinars</code> <code>webinargeek_broadcasts</code></li><li><code>webinargeek_attendance</code> <code>webinargeek_subscribers</code></li><li><code>webinargeek_create_broadcast</code> <code>webinargeek_register</code></li></ul></div>
+<div class="card"><h3>Master Outreach Sheet</h3><p>See stamped and available leads per webinar tab. Create the next tab.</p><ul><li><code>sheet_tabs</code> <code>sheet_create_tab</code></li></ul></div>
+<div class="card"><h3>Suppression</h3><p>Block a person or a whole domain in Instantly and Tantra, and list who is blocked.</p><ul><li><code>suppress</code> <code>suppression_list</code></li></ul></div>
+</div>
+
+<h3 style="margin-top:44px;font-size:24px">Safety: nothing reaches people without a typed yes</h3>
+<div class="grid" style="margin-top:14px">
+<div class="card"><span class="tag t-read">Read</span><h3>Just ask</h3><p>Numbers, lists, status, previews. Changes nothing.</p></div>
+<div class="card"><span class="tag t-go">Change</span><h3>Plan card, then "go"</h3><p>Creating a draft, a tab, a tag or a broadcast. Claude shows what it found, what it will change and how to roll back.</p></div>
+<div class="card"><span class="tag t-send">Reaches people</span><h3>Type "send now"</h3><p>Invites, activating a campaign, enrolling contacts into a live workflow. Irreversible, so never assumed.</p></div>
+</div>
+<p class="intro" style="margin-top:18px">Built into every wave: balanced sending, London time, broadcast linked, stale dates blocked, and leads stamped only after the campaign is confirmed ready.</p>
+</div></section>
+
+<section id="examples" class="dark"><div class="wrap">
+<p class="eyebrow">Part 3 · Examples</p>
+<h2>Four tasks Claude can do today</h2>
+
+<h3 style="margin:30px 0 8px;font-size:24px">1 · Send a webinar invite wave</h3>
+<p class="quote">"Plan the next wave for the upcoming webinar."</p>
+<ol class="steps">
+<li><div>Check the broadcast exists for the event date, or create it after a go.</div></li>
+<li><div>Check there are enough unused leads in the Master Outreach Sheet.</div></li>
+<li><div>Show the plan card: counts, copy variation, schedule, geo mix, skipped leads.</div></li>
+<li><div>On "send now", create the campaigns and confirm each one is ready.</div></li>
+<li><div>Mark only the confirmed leads as used, so nobody is invited twice.</div></li>
+</ol>
+
+<h3 style="margin:40px 0 8px;font-size:24px">2 · Launch the cold email for an event</h3>
+<p class="quote">"Set up the Instantly campaign for the next webinar."</p>
+<ol class="steps">
+<li><div>Read the latest campaign and propose the date and time replacements.</div></li>
+<li><div>Copy it as a new draft. It refuses if any old date or time is left in the copy.</div></li>
+<li><div>Preview leads, with suppressed, blocked and previously contacted people removed.</div></li>
+<li><div>Load the leads after a go, then review the draft together.</div></li>
+<li><div>Start sending only on "send now".</div></li>
+</ol>
+
+<h3 style="margin:40px 0 12px;font-size:24px">3 · Ask for the numbers</h3>
+<table>
+<tr><th>Ask Claude</th><th>It reads</th></tr>
+<tr><td>How many have said yes or maybe to the next webinar?</td><td>Calendar RSVPs (Tantra)</td></tr>
+<tr><td>Who registered and who actually attended?</td><td>WebinarGeek attendance</td></tr>
+<tr><td>How is each cold-email campaign performing?</td><td>Instantly analytics</td></tr>
+<tr><td>What is revenue, and by which tier?</td><td>GoHighLevel payments</td></tr>
+<tr><td>Is there enough fresh list for another wave?</td><td>Master Outreach Sheet</td></tr>
+</table>
+
+<h3 style="margin:40px 0 8px;font-size:24px">4 · Keep the list clean</h3>
+<p class="quote">"This company replied asking to be removed. Block them everywhere."</p>
+<div class="grid">
+<div class="card"><h3>What Claude does</h3><ul><li>Blocks the whole domain in Instantly</li><li>Marks every record at that domain as unsubscribed in Tantra</li><li>Adds it to the shared suppression list</li></ul></div>
+<div class="card"><h3>Built-in protection</h3><ul><li>Every lead preview already removes suppressed people</li><li>Never blocks a free email provider or our own sending domains</li><li>Replies are classified before any wave</li></ul></div>
+</div>
+<div class="note">Blocking is not erasure. A GDPR deletion request still needs the row removed from the sheets and a reply sent.</div>
+</div></section>
+
+<section id="automation"><div class="wrap">
+<p class="eyebrow">Part 3 · Runs by itself</p>
+<h2>What happens after someone registers</h2>
+<div class="grid" style="margin-top:20px">
+<div class="card"><h3>Email: WebinarGeek</h3><ul><li>Confirmation</li><li>Reminders before the webinar</li><li>Follow-up and replay link</li></ul><p style="margin-top:10px">Everyone gets this, with or without a phone number.</p></div>
+<div class="card"><h3>WhatsApp: GoHighLevel</h3><ul><li>Join link when they message "send me my join link"</li><li>Four timed reminders before the broadcast</li></ul><p style="margin-top:10px">Only for registrants who gave a phone number.</p></div>
+</div>
+<p class="intro" style="margin-top:20px">A Cloudflare Worker keeps GoHighLevel up to date from WebinarGeek (registered, attended, watched replay, no-show), so WhatsApp and tags always match reality. WebinarGeek owns email, GHL owns WhatsApp, and the two never overlap. Detail: knowledge file 19.</p>
+</div></section>
+
+<section id="content" class="dark"><div class="wrap">
+<p class="eyebrow">Part 4 · Content workflow</p>
+<h2>From idea to scheduled post</h2>
+<ol class="steps" style="margin-top:20px">
+<li><div><b>Brief</b>Susanne or the team: format, topic, source material, call to action, date.</div></li>
+<li><div><b>Claude drafts</b>Post copy in her voice, first comment, slide-by-slide text, design brief.</div></li>
+<li><div><b>Claude checks</b>Runs the approval checklist and fixes anything that fails.</div></li>
+<li><div><b>Susanne signs off</b>Every single post, recorded in the Content Calendar tab.</div></li>
+<li><div><b>Design and schedule</b>Finished in the named template, scheduled in Metricool or LinkedIn.</div></li>
+</ol>
+
+<h3 style="margin:44px 0 12px;font-size:24px">Ten approved formats</h3>
+<div class="grid">
+<div class="card"><h3>4 image formats</h3><ul><li>Experiential: a real moment turned into a lesson</li><li>Thought leadership: one sharp point of view</li><li>Quotes: one quotable line</li><li>Cheatsheet: a dense, save-worthy reference</li></ul></div>
+<div class="card"><h3>6 carousel formats</h3><ul><li>Framework deck: a step-by-step method</li><li>Comparison deck: old thinking against new</li><li>Checklist deck: a practical list</li><li>Illustrated story</li><li>Book or resource list</li><li>Case study, real and permissioned only</li></ul></div>
+</div>
+
+<h3 style="margin:44px 0 12px;font-size:24px">Written as Susanne, checked every time</h3>
+<div class="grid">
+<div class="card"><h3>Always</h3><ul><li>First person, friendly and knowledgeable</li><li>Hook in the first two lines</li><li>One idea per line, short sentences</li><li>One call to action, and end on it</li><li>Webinar link in the first comment</li></ul></div>
+<div class="card"><h3>Never</h3><ul><li>Hype words, urgency, or "comment and I'll DM"</li><li>Anything negative, critical or controversial</li><li>Invented statistics, clients or quotes</li><li>A closing question to the reader</li><li>Naming the listed bank, or investment advice</li></ul></div>
+</div>
+
+<h3 style="margin:44px 0 12px;font-size:24px">The weekly routine</h3>
+<div class="grid">
+<div class="card"><span class="tag t-go">Susanne</span><h3>Sends the brief</h3><p>Format, topic or notes, webinar or follow call to action, date.</p></div>
+<div class="card"><span class="tag t-read">Claude</span><h3>Returns a draft</h3><p>Post, first comment, slide text and design brief, already checked.</p></div>
+<div class="card"><span class="tag t-go">Susanne</span><h3>Approves</h3><p>Edits or signs off. Nothing is scheduled without her approval.</p></div>
+<div class="card"><span class="tag t-read">Team</span><h3>Designs and schedules</h3><p>Template design, then Metricool or LinkedIn, logged in Content Calendar.</p></div>
+</div>
+<p class="intro" style="margin-top:18px">Target volume: [__ posts per week - to confirm]</p>
+</div></section>
+
+<section id="limits"><div class="wrap">
+<p class="eyebrow">Honest limits</p>
+<h2>What still needs a person</h2>
+<div class="grid" style="margin-top:20px">
+<div class="card"><h3>Done by the team in the tools</h3><ul><li>WebinarGeek emails, polls and call-to-action buttons</li><li>Building or editing GoHighLevel workflows</li><li>Loading new leads into a sheet tab</li><li>Final design of each post in the template</li></ul></div>
+<div class="card"><h3>Open items being worked</h3><ul><li>GHL unsubscribes do not yet reach Instantly</li><li>Replies to calendar invites are not yet swept</li><li>Consent basis for WhatsApp is not yet documented</li><li>Six unused draft email workflows in GHL to clean up</li></ul></div>
+</div>
+</div></section>
+
+<section id="try" class="dark"><div class="wrap">
+<p class="eyebrow">Try it</p>
+<h2>Things to ask Claude today</h2>
+<div class="grid" style="margin-top:20px">
+<div class="card">"What is the next webinar, and how many have registered?"</div>
+<div class="card">"Is there enough unused list for another wave?"</div>
+<div class="card">"Show the plan for the next invite wave."</div>
+<div class="card">"How are the cold email campaigns performing?"</div>
+<div class="card">"Write a framework carousel on becoming board-ready."</div>
+<div class="card">"Check this draft against the approval checklist."</div>
+</div>
+<p class="intro" style="margin-top:22px">If it reaches people, it waits for a typed "send now".</p>
+</div></section>
+
+<footer><div class="wrap">FINTECH Circle · Internal walkthrough · Contains no credentials or live figures.</div></footer>
+</body>
+</html>
