@@ -1,6 +1,6 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>FINTECH Circle Funnel Playbook</title><script>document.documentElement.classList.add("js")</script><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@400;700&display=swap"><style>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><meta name="color-scheme" content="light dark"><title>FINTECH Circle Funnel Playbook</title><script>document.documentElement.classList.add("js");(function(){try{var t=localStorage.getItem('fc-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}})();</script><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Libre+Baskerville:wght@400;700&display=swap"><style>
 :root{--navy:#1d293d;--ocean:#0060de;--dusk:#6f46b7;--sky:#2bc7cb;--sun:#fea152;--paper:#f7f6f1;--card:#fffefb;--line:#dfdcd0;--mute:#5a667a;--soft:#ece9dc;--good:#1e7a46;--bad:#b3261e;--code:#16202f}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--navy:#e8ecf3;--paper:#0f1623;--card:#172033;--line:#2a3650;--mute:#9aa7bd;--soft:#1f2a42;--ocean:#6aa8ff;--good:#5fd08c;--bad:#ff8a80;--code:#0a101b}}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--navy:#e8ecf3;--paper:#0f1623;--card:#172033;--line:#2a3650;--mute:#9aa7bd;--soft:#1f2a42;--ocean:#6aa8ff;--good:#5fd08c;--bad:#ff8a80;--code:#0a101b}}:root[data-theme=dark]{--navy:#e8ecf3;--paper:#0f1623;--card:#172033;--line:#2a3650;--mute:#9aa7bd;--soft:#1f2a42;--ocean:#6aa8ff;--good:#5fd08c;--bad:#ff8a80;--code:#0a101b}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:20px}
 body{margin:0;font-family:'DM Sans',Arial,sans-serif;background:var(--paper);color:var(--navy);line-height:1.65;font-size:16.5px}
@@ -61,7 +61,7 @@ tr:last-child td{border-bottom:none}
 .chip.lvl-go{background:#fdeccf;color:#7a4300}
 .chip.lvl-send{background:#fbd9d6;color:#7a1410}
 .chip.lvl-person{background:#e5e0f5;color:#3b2a73}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .chip.lvl-read{background:#16402a;color:#bff0d1}:root:not([data-theme=light]) .chip.lvl-go{background:#4a3410;color:#ffe2b0}:root:not([data-theme=light]) .chip.lvl-send{background:#4d1d1a;color:#ffc9c4}:root:not([data-theme=light]) .chip.lvl-person{background:#2f2757;color:#d9d0ff}}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .chip.lvl-read{background:#16402a;color:#bff0d1}:root:not([data-theme=light]) .chip.lvl-go{background:#4a3410;color:#ffe2b0}:root:not([data-theme=light]) .chip.lvl-send{background:#4d1d1a;color:#ffc9c4}:root:not([data-theme=light]) .chip.lvl-person{background:#2f2757;color:#d9d0ff}}:root[data-theme=dark] .chip.lvl-read{background:#16402a;color:#bff0d1}:root[data-theme=dark] .chip.lvl-go{background:#4a3410;color:#ffe2b0}:root[data-theme=dark] .chip.lvl-send{background:#4d1d1a;color:#ffc9c4}:root[data-theme=dark] .chip.lvl-person{background:#2f2757;color:#d9d0ff}
 .why,.how,.steps,.good,.bad{margin-bottom:16px}
 .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .cols>div{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
@@ -78,7 +78,7 @@ tr:last-child td{border-bottom:none}
 .lessons ul{margin:0}
 .prompt{border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:18px 0;background:var(--card)}
 .prompt .ph{display:flex;justify-content:space-between;align-items:center;gap:10px;background:var(--navy);color:var(--paper);padding:8px 14px;font-size:14px}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .prompt .ph{background:#24314d;color:#e8ecf3}}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .prompt .ph{background:#24314d;color:#e8ecf3}}:root[data-theme=dark] .prompt .ph{background:#24314d;color:#e8ecf3}
 .prompt button{background:var(--ocean);color:#fff;border:0;border-radius:6px;padding:4px 12px;font:inherit;font-size:13px;cursor:pointer}
 .prompt pre{margin:0;padding:14px 16px;background:var(--code);color:#e6edf7;font-size:13px;line-height:1.55;white-space:pre-wrap;word-break:break-word;max-height:520px;overflow:auto}
 pre.eq{background:var(--code);color:#e6edf7;padding:14px 16px;border-radius:10px;font-size:13.5px;line-height:1.6;white-space:pre-wrap;word-break:break-word;margin:14px 0}
@@ -329,12 +329,331 @@ ul.check li.on::after{transform:rotate(45deg) scale(1)}
 .js .chartf:not(.in) .hb-t i{transform:scaleX(0)}
 .hb-v{min-width:90px;text-align:right}
 @media(max-width:640px){.hb{grid-template-columns:1fr auto}.hb-t{grid-column:1/-1;order:3}.fl-dot em{display:none}.fl-dot.on em{display:block;position:absolute;left:50%;transform:translateX(-50%);white-space:nowrap}}
-@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .seg.pend,:root:not([data-theme=light]) .sw.pend{background:#8a8466}:root:not([data-theme=light]) .hb-t i,:root:not([data-theme=light]) .seg.yes{background:#6aa8ff}}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .seg.pend,:root:not([data-theme=light]) .sw.pend{background:#8a8466}:root:not([data-theme=light]) .hb-t i,:root:not([data-theme=light]) .seg.yes{background:#6aa8ff}}:root[data-theme=dark] .seg.pend,:root[data-theme=dark] .sw.pend{background:#8a8466}:root[data-theme=dark] .hb-t i,:root[data-theme=dark] .seg.yes{background:#6aa8ff}
 @media(prefers-reduced-motion:reduce){.strip .seg,.hb-t i{transition:none!important;transform:none!important}.fl-card{transition:none}}
-</style></head><body><div class="prog"></div><button class="menu" type="button" aria-label="Contents">Contents</button><div class="layout"><nav class="side"><div class="brand">FINTECH Circle<br>Funnel Playbook</div><div class="sub">Version 17 October 2026</div><input id="navq" type="search" placeholder="Search the contents" aria-label="Search the contents"><details><summary><span class="n">Start Here</span><a href="#start-here" style="color:inherit;text-decoration:none">Start Here</a></summary><ul><li><a href="#s-problem">The Problem This Playbook Fixes</a></li><li><a href="#s-whole">The Whole Funnel, End to End</a></li><li><a href="#s-motion">The Funnel in Motion</a></li><li><a href="#s-network">The Ecosystem, Live</a></li><li><a href="#s-nine">All Nine Funnels</a></li><li><a href="#s-map">What We Do, How We Do It, What Comes Later</a></li><li><a href="#s-use">How to Use This Playbook</a></li></ul></details><details><summary><span class="n">Part 1</span><a href="#part-1" style="color:inherit;text-decoration:none">Foundations</a></summary><ul><li><a href="#f-offer">The Offer and the Buyer</a></li><li><a href="#f-why">Why This Funnel Fits This Audience</a></li><li><a href="#f-equation">The Funnel Equation</a></li><li><a href="#f-traps">Reading Results Without Fooling Yourself</a></li></ul></details><details><summary><span class="n">Part 2</span><a href="#part-2" style="color:inherit;text-decoration:none">Plan the Event</a></summary><ul><li><a href="#c-plan-intro">Before You Start</a></li><li><a href="#t-2-1">2.1 Pick the Date From the Cohort Calendar</a></li><li><a href="#t-2-2">2.2 Create the Broadcast and the Sheet Tab</a></li><li><a href="#t-2-3">2.3 Update the Page Copy, Banners and Deck</a></li><li><a href="#t-2-4">2.4 Check the Landing Page, the Replay and the Emails</a></li><li><a href="#t-2-5">2.5 Repoint the Event Configuration</a></li></ul></details><details><summary><span class="n">Part 3</span><a href="#part-3" style="color:inherit;text-decoration:none">Leads</a></summary><ul><li><a href="#l-intro">The Rules Behind Every List</a></li><li><a href="#t-3-1">3.1 Check Whether the Pool Is Big Enough</a></li><li><a href="#t-3-2">3.2 Decide Whether to Buy New Data</a></li><li><a href="#t-3-3">3.3 Clean a New List</a></li><li><a href="#t-3-4">3.4 Run the Suppression Sweep</a></li><li><a href="#t-3-5">3.5 Load the Tab</a></li></ul></details><details><summary><span class="n">Part 4</span><a href="#part-4" style="color:inherit;text-decoration:none">Traffic: Calendar, Email and LinkedIn Retargeting</a></summary><ul><li><a href="#tr-intro">The Order of Channels and the Rules</a></li><li><a href="#t-4-1">4.1 Plan a Calendar Wave (Tantra)</a></li><li><a href="#t-4-2">4.2 Send and Verify a Wave</a></li><li><a href="#t-4-3">4.3 Launch the Cold Email (Instantly)</a></li><li><a href="#t-4-4">4.4 Send Warm Re-Invites</a></li><li><a href="#t-4-5">4.5 Fix or Cancel a Wave</a></li><li><a href="#t-4-6">4.6 Set Up LinkedIn Retargeting</a></li><li><a href="#t-4-7">4.7 Read the Outreach at Day 3 to 4</a></li></ul></details><details><summary><span class="n">Part 5</span><a href="#part-5" style="color:inherit;text-decoration:none">The Content Engine</a></summary><ul><li><a href="#ce-intro">The Engine at a Glance</a></li><li><a href="#t-5-1">5.1 Build the Context Bucket</a></li><li><a href="#t-5-2">5.2 Susanne's Voice and the Hard Rules</a></li><li><a href="#t-5-3">5.3 Choose the Formats</a></li><li><a href="#t-5-4">5.4 Run the Setup Prompt and the First ODT Week</a></li><li><a href="#t-5-5">5.5 Run the Weekly Batch</a></li><li><a href="#t-5-6">5.6 Susanne's Approval Gate</a></li><li><a href="#t-5-7">5.7 Design, Schedule and Boost</a></li><li><a href="#t-5-8">5.8 Read the Content Results</a></li><li><a href="#t-5-9">5.9 Run the Media Craft Loop Before Anything Reaches Susanne</a></li><li><a href="#ce-rules">The Non-Negotiable Rules and the Definition of Done</a></li></ul></details><details><summary><span class="n">Part 6</span><a href="#part-6" style="color:inherit;text-decoration:none">Landing, Registration and Tracking</a></summary><ul><li><a href="#lr-intro">Why One Page</a></li><li><a href="#t-6-1">6.1 Test a Registration End to End</a></li><li><a href="#t-6-2">6.2 Know the Registration Path</a></li><li><a href="#t-6-3">6.3 Change the Landing Page Safely</a></li><li><a href="#t-6-4">6.4 Set Up Website Tracking in GHL</a></li></ul></details><details><summary><span class="n">Part 7</span><a href="#part-7" style="color:inherit;text-decoration:none">Nurture: Reminders and Join Links</a></summary><ul><li><a href="#nu-intro">The Two Channels</a></li><li><a href="#t-7-1">7.1 Check the Confirmation and Reminder Emails</a></li><li><a href="#t-7-2">7.2 Check the WhatsApp Join Link and Reminders</a></li><li><a href="#t-7-3">7.3 Specify and Build a GHL Workflow</a></li><li><a href="#t-7-4">7.4 Keep the Tags Clean</a></li></ul></details><details><summary><span class="n">Part 8</span><a href="#part-8" style="color:inherit;text-decoration:none">The Live Webinar</a></summary><ul><li><a href="#lw-intro">The Hour That Converts</a></li><li><a href="#t-8-1">8.1 Prepare the Polls, Calls to Action and Chat Prompts</a></li><li><a href="#t-8-2">8.2 Run the Dry Run</a></li><li><a href="#t-8-3">8.3 Run the Live Session</a></li><li><a href="#t-8-4">8.4 Test Zoom for the Mid-November Webinar</a></li></ul></details><details><summary><span class="n">Part 9</span><a href="#part-9" style="color:inherit;text-decoration:none">After the Event: Follow-Up, Applications, Calls and Payment</a></summary><ul><li><a href="#af-intro">From Webinar to Paying Member</a></li><li><a href="#t-9-1">9.1 Send the Attendee and No-Show Follow-Ups</a></li><li><a href="#t-9-2">9.2 Tag the No-Shows for Retargeting</a></li><li><a href="#t-9-3">9.3 Enter the Manual Numbers</a></li><li><a href="#t-9-4">9.4 Process the Applications</a></li><li><a href="#t-9-5">9.5 Book the Call: Calendly Now, GHL Later</a></li><li><a href="#t-9-6">9.6 Take Payment and Onboard</a></li><li><a href="#t-9-7">9.7 Use the GHL Pipeline and Conversation View</a></li></ul></details><details><summary><span class="n">Part 10</span><a href="#part-10" style="color:inherit;text-decoration:none">Review and Learn</a></summary><ul><li><a href="#rv-intro">Where the Numbers Come From</a></li><li><a href="#t-10-1">10.1 Read the Dashboard</a></li><li><a href="#t-10-2">10.2 Run the Post-Event Review</a></li><li><a href="#t-10-3">10.3 Choose the Next Wave Mix</a></li><li><a href="#t-10-4">10.4 Know the Daily Run and the Manual Tasks</a></li></ul></details><details><summary><span class="n">Part 11</span><a href="#part-11" style="color:inherit;text-decoration:none">Infrastructure and Deliverability</a></summary><ul><li><a href="#in-intro">The Rule and the Estate</a></li><li><a href="#t-11-1">11.1 Add or Check DNS Records</a></li><li><a href="#t-11-2">11.2 Add a New Sending Domain in GHL</a></li><li><a href="#t-11-3">11.3 Add a Calendar Sender Mailbox</a></li><li><a href="#t-11-4">11.4 Add a Cold-Email Domain and Mailboxes</a></li><li><a href="#t-11-5">11.5 Raise DMARC Enforcement</a></li><li><a href="#t-11-6">11.6 Read the Deliverability Report</a></li></ul></details><details><summary><span class="n">Part 12</span><a href="#part-12" style="color:inherit;text-decoration:none">Operating the System Safely</a></summary><ul><li><a href="#op-intro">Requests, Plan Cards and Safety</a></li><li><a href="#t-12-1">12.1 Keep One Version of Every Document</a></li><li><a href="#t-12-2">12.2 Move the Codebase to GitHub and Add Claude Code</a></li><li><a href="#t-12-3">12.3 Security and Backups</a></li><li><a href="#t-12-4">12.4 Know the Rules the Chat Answers By</a></li></ul></details><details><summary><span class="n">Part 13</span><a href="#part-13" style="color:inherit;text-decoration:none">Other Funnel Shapes</a></summary><ul><li><a href="#fs-intro">The Four Jobs of Any Funnel</a></li><li><a href="#fs-three">Three Shapes Compared</a></li><li><a href="#fs-17">Seventeen More, With a Fit Rating</a></li><li><a href="#t-13-1">13.1 Choose the Next Funnel</a></li><li><a href="#t-13-2">13.2 Test a Skip-the-Wait Door on the Thank-You Page</a></li><li><a href="#t-13-3">13.3 Run the Downsell to Declined Applicants</a></li><li><a href="#t-13-4">13.4 Turn a FINTECH Book Into a Lead Door</a></li><li><a href="#t-13-5">13.5 Extend the Partner Funnel</a></li><li><a href="#t-13-6">13.6 Pilot a Three-Day Board-Readiness Challenge</a></li><li><a href="#t-13-7">13.7 Build a Reverse Squeeze Page From the Best Replay</a></li><li><a href="#t-13-8">13.8 Place the Summit, the Angel Network and the Book Series in the Funnel</a></li></ul></details><details><summary><span class="n">Part 14</span><a href="#part-14" style="color:inherit;text-decoration:none">The Later Stage: Scale, Automate and Grow</a></summary><ul><li><a href="#ls-intro">What Later Means</a></li><li><a href="#t-14-1">14.1 Write the Funnel Spec</a></li><li><a href="#t-14-2">14.2 Connect Claude to Every Tool, and Prove It</a></li><li><a href="#t-14-3">14.3 Launch a Small Test Run Before a Big One</a></li><li><a href="#t-14-4">14.4 Find the Worst Step</a></li><li><a href="#t-14-5">14.5 Run One Experiment a Week</a></li><li><a href="#t-14-6">14.6 Set the Operating Rhythm</a></li><li><a href="#t-14-7">14.7 Write the Scale Plan</a></li><li><a href="#t-14-8">14.8 Build the 52-Week Engine</a></li><li><a href="#t-14-9">14.9 Host the Automation 24/7</a></li><li><a href="#t-14-10">14.10 Set Guardrails for Unattended Running</a></li><li><a href="#t-14-11">14.11 Decide Who Does What as Volume Grows</a></li><li><a href="#ls-ready">Readiness Checklist for Hands-Off Running</a></li></ul></details><details><summary><span class="n">Part 15</span><a href="#part-15" style="color:inherit;text-decoration:none">Technical Reference: How It Is Wired</a></summary><ul><li><a href="#tx-intro">What This Part Is</a></li><li><a href="#tr-seven">The Seven Systems, One Job Each</a></li><li><a href="#tr-reg">Registration Capture in Detail</a></li><li><a href="#tr-worker">The Worker in Detail</a></li><li><a href="#tr-wf">Every GHL Workflow</a></li><li><a href="#tr-wa">WhatsApp Automation in Detail</a></li><li><a href="#tr-send">Who Sends What</a></li><li><a href="#tr-apps">The Application Scripts and Decision Emails</a></li><li><a href="#tr-fields">Custom Fields, Tags and Templates</a></li><li><a href="#tr-conn">The Connector: What It Enforces</a></li><li><a href="#tr-lp">The Landing Page Repository</a></li><li><a href="#tr-levels">The Change Levels, Plan Card and Change Log</a></li><li><a href="#tr-camp">How Instantly and the Outreach Sheet Are Organised</a></li><li><a href="#tr-risk">Risks, Ordered by Damage</a></li><li><a href="#t-15-1">15.1 Add a New Automation the Safe Way</a></li><li><a href="#t-15-2">15.2 Create a Funnel Variant</a></li><li><a href="#t-15-3">15.3 Build a Landing Page Variant</a></li><li><a href="#t-15-4">15.4 Handle a GDPR Deletion Request</a></li><li><a href="#t-15-5">15.5 Rotate a Key or a Shared Credential</a></li></ul></details><details><summary><span class="n">Part 16</span><a href="#part-16" style="color:inherit;text-decoration:none">The Build Method: Stand Up, Extend and Protect the Estate</a></summary><ul><li><a href="#bm-intro">The Phases and the Rule That Keeps Them Reusable</a></li><li><a href="#t-16-1">16.1 Provision in the Right Order</a></li><li><a href="#t-16-2">16.2 Fill the Ownership Register</a></li><li><a href="#t-16-3">16.3 Keep a Cost Register</a></li><li><a href="#t-16-4">16.4 Choose Domains and Authenticate Them</a></li><li><a href="#t-16-5">16.5 Warm Up and Set the Limits</a></li><li><a href="#t-16-6">16.6 Approve the Persona and ICP in Writing</a></li><li><a href="#t-16-7">16.7 Clean, Validate and Apply the Exclusion Stack</a></li><li><a href="#t-16-8">16.8 Write the Copy Under the Rules</a></li><li><a href="#t-16-9">16.9 Pass the Pre-Launch Gate</a></li><li><a href="#t-16-10">16.10 Run the Daily Loop</a></li><li><a href="#t-16-11">16.11 Use the Reporting Language Rules</a></li><li><a href="#t-16-12">16.12 Audit the CRM Before Anyone Reports From It</a></li><li><a href="#t-16-13">16.13 Add a LinkedIn Outreach Channel (If Wanted)</a></li><li><a href="#t-16-14">16.14 Point Every Sending Domain at a Real Page and Check Its Reputation</a></li><li><a href="#t-16-15">16.15 Pace the Send Under the Real Ceiling and Judge at Day 3 to 4</a></li><li><a href="#t-16-16">16.16 Use the Cold-Outreach Benchmarks Only as a Starting Line</a></li><li><a href="#bm-risk">The Risk Register</a></li></ul></details><details><summary><span class="n">Part 17</span><a href="#part-17" style="color:inherit;text-decoration:none">Reference</a></summary><ul><li><a href="#rf-tools">17.1 The Chat's Tools, by System</a></li><li><a href="#rf-tasks">17.2 The 14 Tasks the Team Runs From Chat</a></li><li><a href="#rf-cannot">17.3 What the Chat Cannot Do Yet</a></li><li><a href="#rf-prompts">17.4 The Prompt Library</a></li><li><a href="#rf-check">17.5 The New-Event Checklist</a></li><li><a href="#rf-open">17.6 Open Decisions, Actions and Known Inconsistencies</a></li><li><a href="#rf-templates">17.7 Templates</a></li><li><a href="#rf-gloss">17.8 Glossary</a></li><li><a href="#rf-kfiles">17.9 The Claude Project Knowledge Files</a></li><li><a href="#rf-inv">17.10 The Tool Inventory and What the Claude Project Can Reach</a></li><li><a href="#rf-where">17.11 Where Things Live: Files, Tabs and Links</a></li><li><a href="#rf-cover">17.12 The Coverage Register</a></li><li><a href="#rf-keep">17.13 How This Playbook Stays Complete</a></li><li><a href="#rf-pending">17.14 What Is Still Pending</a></li><li><a href="#rf-conn">17.15 Connector Settings and Reach</a></li><li><a href="#rf-dash">17.16 The Dashboard: Schedule, Stages, Provenance and Corrections</a></li><li><a href="#rf-crm">17.17 The CRM Pipelines as Configured</a></li></ul></details></nav><main><header class="hero" id="top"><h1>The FINTECH Circle Funnel Playbook</h1>
-<p class="lead">One place that explains the whole funnel: how a senior financial-services leader goes from a cold invite to a registration, a live webinar, an application, a call and a paid Board Programme place, and exactly what to do at every step.</p>
-<p class="meta"><b>Version:</b> 17 October 2026 &nbsp; <b>For:</b> Susanne Chishti and anyone hired to run the funnel &nbsp; <b>Contains:</b> no passwords, keys or live figures</p>
-<div class="stats"><div><b data-count="6">6</b><span>stages from cold lead to paying member</span></div><div><b data-count="2">2</b><span>outreach channels, plus LinkedIn content</span></div><div><b data-count="3">3</b><span>safety levels before anything reaches people</span></div><div><b data-count="1">1</b><span>dashboard that reads every system</span></div></div></header><section class="part" id="start-here"><div class="phead reveal"><span class="pnum">Start Here</span><h2>Start Here</h2><p class="pblurb">The problem this fixes, the whole funnel on one page, the funnel in motion, and how to use this playbook.</p></div>
+
+/* ===== Design tokens: light ("paper") ===== */
+:root{
+ --paper:#f5f3ec;--card:#fffefb;--soft:#ece9de;--line:#dcd7c8;--navy:#161f2d;--mute:#556075;
+ --ocean:#0060de;--ocean-ink:#0050b8;--dusk:#6f46b7;--sky:#2bc7cb;--sun:#fea152;--good:#17683a;--bad:#b3261e;--code:#16202f;--on-ocean:#fff;--on-good:#fff;--on-bad:#fff;
+ --focus:#0060de;--shadow:0 1px 2px rgba(22,31,45,.06),0 8px 24px rgba(22,31,45,.06);--scrim:rgba(22,31,45,.45);
+ --f-serif:'Libre Baskerville',Georgia,serif;--f-sans:'DM Sans',Arial,sans-serif;
+ --t-hero:clamp(2.2rem,5.2vw,3.5rem);--t-h2:clamp(1.75rem,3.4vw,2.35rem);--t-h3:1.45rem;--t-card:1.2rem;--t-body:1.0625rem;--t-small:.875rem;--t-label:.75rem;
+ --sp1:4px;--sp2:8px;--sp3:12px;--sp4:16px;--sp5:24px;--sp6:40px;--sp7:72px;
+ --r1:6px;--r2:10px;--r3:14px;--top-h:56px;--nav-w:300px;--measure:68ch;--ease:cubic-bezier(.22,.7,.2,1);--dur:.22s;
+ color-scheme:light;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+ --paper:#0b111c;--card:#121a2a;--soft:#192238;--line:#25314a;--navy:#e7ebf2;--mute:#9aa6bb;
+ --ocean:#6aa8ff;--ocean-ink:#8bbcff;--dusk:#a78bec;--sky:#34d0d6;--sun:#ffab66;--good:#5fd08c;--bad:#ff8a80;--code:#080d16;--on-ocean:#06101f;--on-good:#04150b;--on-bad:#2a0a07;
+ --focus:#8bbcff;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);--scrim:rgba(2,5,10,.65);color-scheme:dark}}:root[data-theme=dark]{
+ --paper:#0b111c;--card:#121a2a;--soft:#192238;--line:#25314a;--navy:#e7ebf2;--mute:#9aa6bb;
+ --ocean:#6aa8ff;--ocean-ink:#8bbcff;--dusk:#a78bec;--sky:#34d0d6;--sun:#ffab66;--good:#5fd08c;--bad:#ff8a80;--code:#080d16;--on-ocean:#06101f;--on-good:#04150b;--on-bad:#2a0a07;
+ --focus:#8bbcff;--shadow:0 1px 2px rgba(0,0,0,.4),0 10px 30px rgba(0,0,0,.35);--scrim:rgba(2,5,10,.65);color-scheme:dark}
+:root[data-theme=light]{color-scheme:light}
+
+/* ===== Base ===== */
+html{scroll-padding-top:calc(var(--top-h) + 18px)}
+body{font-family:var(--f-sans);font-size:var(--t-body);line-height:1.7;background:var(--paper);color:var(--navy);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:var(--ocean-ink);text-underline-offset:3px;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:2px solid var(--focus);outline-offset:3px;border-radius:4px}
+::selection{background:var(--ocean);color:var(--on-ocean)}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ocean);color:var(--on-ocean);padding:8px 14px;border-radius:8px;z-index:200}
+.skip:focus{left:8px}
+kbd{font:inherit;font-size:.8em;padding:1px 7px;border:1px solid var(--line);border-bottom-width:2px;border-radius:5px;background:var(--card)}
+.btn,.tbtn{font:inherit;cursor:pointer}
+
+/* ===== Top bar ===== */
+.prog{top:var(--top-h);height:2px;background:var(--ocean)!important;z-index:61}
+.topbar{position:fixed;inset:0 0 auto 0;height:var(--top-h);z-index:60;display:flex;align-items:center;gap:var(--sp4);padding:0 var(--sp5);background:color-mix(in srgb,var(--card) 94%,transparent);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.2) blur(8px)}
+.tb-brand{display:flex;align-items:baseline;gap:10px;color:var(--navy);text-decoration:none;white-space:nowrap}
+.tb-brand b{font-family:var(--f-serif);font-size:1.02rem;font-weight:700}
+.tb-brand span{font-size:var(--t-small);color:var(--mute)}
+.tb-crumb{flex:1;min-width:0;font-size:var(--t-small);color:var(--mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-left:var(--sp4);border-left:1px solid var(--line)}
+.tb-crumb b{color:var(--navy);font-weight:500}
+.tb-r{display:flex;align-items:center;gap:var(--sp3);margin-left:auto}
+.tb-btn{display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 12px;border:1px solid var(--line);border-radius:var(--r2);background:var(--card);color:var(--navy);font:inherit;font-size:var(--t-small);cursor:pointer;transition:border-color var(--dur),background var(--dur)}
+.tb-btn:hover{border-color:var(--ocean)}
+.tb-btn kbd{margin-left:6px;color:var(--mute)}
+.tb-btn svg{width:16px;height:16px;flex:0 0 16px}
+.tb-ico{width:36px;padding:0;justify-content:center}
+.menu{display:none!important}
+.tb-menu{display:none}
+.tb-done{display:flex;align-items:center;gap:8px;font-size:var(--t-small);color:var(--mute);white-space:nowrap}
+.ring{width:22px;height:22px;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:3.2}
+.ring .rt{stroke:var(--line)}.ring .rf{stroke:var(--ocean);stroke-linecap:round;transition:stroke-dashoffset .5s var(--ease)}
+.seg3{display:inline-flex;border:1px solid var(--line);border-radius:var(--r2);overflow:hidden;background:var(--card)}
+.seg3 button{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border:0;background:none;color:var(--mute);cursor:pointer;transition:background var(--dur),color var(--dur)}
+.seg3 button svg{width:16px;height:16px}
+.seg3 button[aria-pressed=true]{background:var(--ocean);color:var(--on-ocean)}
+.seg3 button:not([aria-pressed=true]):hover{background:var(--soft);color:var(--navy)}
+
+/* ===== Layout ===== */
+.layout{display:grid;grid-template-columns:var(--nav-w) minmax(0,1fr);min-height:100vh;padding-top:var(--top-h)}
+nav.side{position:sticky;top:var(--top-h);align-self:start;height:calc(100vh - var(--top-h));width:auto;flex:none;overflow:auto;background:var(--paper);border-right:1px solid var(--line);padding:var(--sp5) var(--sp4) var(--sp6);scrollbar-width:thin}
+nav.side .ngroup{margin-bottom:var(--sp5)}
+nav.side .gname{font-size:var(--t-label);letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:0 0 6px 8px;font-weight:700}
+nav.side .prow{margin:0}
+nav.side summary{display:grid;grid-template-columns:28px 1fr 16px;align-items:center;gap:6px;cursor:pointer;list-style:none;padding:7px 8px;border-radius:var(--r2);font-size:.93rem;font-weight:500;line-height:1.3}
+nav.side summary::-webkit-details-marker{display:none}
+nav.side summary:hover{background:var(--soft)}
+nav.side summary .n{font-size:var(--t-label);font-weight:700;color:var(--mute);font-variant-numeric:tabular-nums}
+nav.side summary a.pt{color:var(--navy);text-decoration:none}
+nav.side .chev{width:8px;height:8px;border:solid var(--mute);border-width:0 2px 2px 0;transform:rotate(-45deg);transition:transform var(--dur);justify-self:center}
+nav.side details[open] .chev{transform:rotate(45deg)}
+nav.side .prow.cur>summary{background:var(--soft)}
+nav.side .prow.cur>summary .n,nav.side .prow.cur>summary a.pt{color:var(--ocean-ink)}
+nav.side .prow.cur>summary a.pt{font-weight:700}
+nav.side ul{list-style:none;margin:2px 0 8px 14px;padding:0 0 0 14px;border-left:1px solid var(--line)}
+nav.side li{margin:0}
+nav.side li a{display:block;color:var(--mute);text-decoration:none;font-size:.83rem;padding:4px 8px;line-height:1.35;border-radius:6px;margin-left:-1px}
+nav.side li a:hover{color:var(--navy);background:var(--soft)}
+nav.side li a.on{color:var(--ocean-ink);font-weight:700}
+nav.side li a.dn::after{content:"\2713";margin-left:6px;color:var(--good);font-size:.8em}
+html[data-role] nav.side .prow:not([data-roles~=x]){opacity:.5}
+nav.side .ndrawer{display:none}
+.scrim{display:none}
+main{max-width:none;width:100%;margin:0;padding:var(--sp6) clamp(16px,4vw,56px) 120px}
+main>*{max-width:900px;margin-left:auto;margin-right:auto}
+main>.hero,main>.part{max-width:900px}
+footer.end{margin-top:var(--sp7);padding-top:var(--sp4);border-top:1px solid var(--line);color:var(--mute);font-size:var(--t-small)}
+
+/* ===== Typography ===== */
+.part p,.part li,.hero p{max-width:var(--measure)}
+.part .tw,.part table,.part .task p,.part .task li,.part .callout p,.part .callout li{max-width:none}
+.part p,.part li{line-height:1.72}
+h4{font-size:var(--t-label);letter-spacing:.1em;color:var(--mute);margin:0 0 6px}
+h5{font-size:.95rem;margin:0 0 4px}
+code{background:var(--soft);border:1px solid var(--line);padding:0 5px;border-radius:5px;font-size:.84em}
+strong,b{font-weight:700}
+
+/* ===== Hero ===== */
+.hero{border-top:0;padding-top:var(--sp4)}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:var(--t-label);letter-spacing:.14em;text-transform:uppercase;color:var(--ocean-ink);font-weight:700}
+.eyebrow i{width:4px;height:4px;border-radius:50%;background:var(--mute)}
+.hero h1{font-family:var(--f-serif);font-size:var(--t-hero);line-height:1.08;letter-spacing:-.01em;margin:14px 0 18px;font-weight:700;max-width:16ch}
+.hero .lead{font-size:1.25rem;line-height:1.6;color:var(--mute);max-width:46ch}
+.hero .meta{display:flex;flex-wrap:wrap;gap:6px 26px;font-size:var(--t-small);color:var(--mute);margin:18px 0 28px}
+.hero .meta b{color:var(--navy);margin-right:6px;font-size:var(--t-label);letter-spacing:.1em;text-transform:uppercase}
+.hstats{list-style:none;margin:0 0 20px;padding:0;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hstats li{padding:18px 18px 16px 0;margin:0;max-width:none;border-right:1px solid var(--line);padding-left:18px}
+.hstats li:first-child{padding-left:0}.hstats li:last-child{border-right:0}
+.hstats b{display:block;font-family:var(--f-serif);font-size:2.4rem;line-height:1;color:var(--ocean-ink)}
+.hstats .sl{display:block;font-weight:700;font-size:.92rem;margin-top:8px;color:var(--navy)}
+.hstats .sm{display:block;font-size:.8rem;line-height:1.4;color:var(--mute);margin-top:2px}
+.howto{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:var(--t-small);color:var(--mute);margin-bottom:var(--sp6)}
+.howto span::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--ocean);margin-right:9px;vertical-align:2px}
+.howto kbd{margin-right:4px}
+.ov-h h2{font-family:var(--f-serif);font-size:1.5rem;margin:0 0 4px;line-height:1.25}
+.ov-h p{color:var(--mute);margin:0 0 18px;font-size:.97rem}
+.overview{margin:0 0 var(--sp6)}
+.journey{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative;counter-reset:j}
+.journey::before{content:"";position:absolute;left:8%;right:8%;top:22px;height:2px;background:var(--line)}
+.journey::after{content:"";position:absolute;left:8%;top:18px;width:10px;height:10px;border-radius:50%;background:var(--ocean);box-shadow:0 0 0 5px color-mix(in srgb,var(--ocean) 25%,transparent);animation:travel 7s var(--ease) .8s 2 both}
+@keyframes travel{0%{left:8%;opacity:0}8%{opacity:1}92%{opacity:1}100%{left:calc(92% - 10px);opacity:0}}
+.jn{margin:0;max-width:none;text-align:center;padding:0 6px;position:relative}
+.jn a{display:block;text-decoration:none;color:var(--navy);padding-top:0}
+.jn a::before{counter-increment:j;content:counter(j);display:block;width:44px;height:44px;line-height:40px;border-radius:50%;background:var(--card);border:2px solid var(--ocean);color:var(--ocean-ink);font-weight:700;margin:0 auto 12px;position:relative;z-index:1;transition:all var(--dur)}
+.jn a:hover::before,.jn a:focus-visible::before{background:var(--ocean);color:var(--on-ocean);transform:scale(1.08)}
+.jn-k{display:block;font-size:var(--t-label);letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.jn b{display:block;font-family:var(--f-serif);font-size:1.15rem;margin:2px 0}
+.jn-l{display:block;font-size:.85rem;line-height:1.4;color:var(--navy)}
+.jn-t{display:block;font-size:.78rem;color:var(--mute);margin-top:2px}
+.around{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:24px;padding-top:16px;border-top:1px dashed var(--line)}
+.ar-l{font-size:var(--t-label);letter-spacing:.1em;text-transform:uppercase;color:var(--mute);margin-right:6px}
+.ar{display:inline-flex;gap:8px;align-items:baseline;padding:5px 12px;border:1px solid var(--line);border-radius:99px;text-decoration:none;color:var(--navy);font-size:.88rem;background:var(--card);transition:all var(--dur)}
+.ar i{font-style:normal;font-size:.75rem;color:var(--mute)}
+.ar:hover{border-color:var(--ocean)}
+html[data-role] .jn:not([data-roles~=x]) a,html[data-role] .ar:not([data-roles~=x]){opacity:.38}
+.rolesec{margin:0 0 var(--sp6)}
+.roles{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp4)}
+.role{padding:18px 18px 16px;border:1px solid var(--line);border-radius:var(--r3);background:var(--card);transition:border-color var(--dur),box-shadow var(--dur)}
+.role p{margin:10px 0 0;font-size:.92rem;line-height:1.55;max-width:none}
+.role .role-r{color:var(--mute)}.role .role-r b{color:var(--navy);margin-right:6px}
+.role.on{border-color:var(--ocean);box-shadow:var(--shadow)}
+.role-b{display:block;width:100%;text-align:left;background:none;border:0;padding:0;cursor:pointer;font:inherit;color:var(--navy)}
+.role-n{display:block;font-family:var(--f-serif);font-size:1.3rem;font-weight:700}
+.role-t{display:block;font-size:.85rem;color:var(--ocean-ink);font-weight:500}
+.role-p{list-style:none;margin:12px 0 0;padding:0;counter-reset:rp;font-size:.88rem}
+.role-p li{margin:0;padding:0 0 0 26px;position:relative;max-width:none;line-height:1.35}
+.role-p li::before{counter-increment:rp;content:counter(rp);position:absolute;left:0;top:2px;width:18px;height:18px;border-radius:50%;background:var(--soft);font-size:.7rem;font-weight:700;text-align:center;line-height:18px;color:var(--navy);z-index:1}
+.role-p li:not(:last-child)::after{content:"";position:absolute;left:8px;top:22px;bottom:-4px;width:1.5px;background:var(--line)}
+.role-p li{padding-bottom:9px}
+.role-p a{color:var(--navy);text-decoration:none}.role-p a:hover{color:var(--ocean-ink);text-decoration:underline}
+
+/* ===== Part header ===== */
+.part{margin-top:var(--sp7)}
+.phead{border-top:1px solid var(--line);padding-top:var(--sp5);margin-bottom:var(--sp4)}
+.pnum{font-size:var(--t-label);letter-spacing:.16em;color:var(--ocean-ink)}
+.phead h2{font-family:var(--f-serif);font-size:var(--t-h2);line-height:1.15;margin:8px 0 12px;letter-spacing:-.01em;max-width:22ch}
+.pblurb{font-size:1.1rem;line-height:1.6;color:var(--mute);max-width:56ch}
+.srail{display:flex;flex-wrap:wrap;gap:4px 0;margin:6px 0 14px;max-width:none}
+.srail .sr{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;color:var(--mute);text-decoration:none;padding:3px 0}
+.srail .sr i{width:9px;height:9px;border-radius:50%;border:2px solid var(--line);background:var(--paper)}
+.srail .sr::after{content:"";width:22px;height:2px;background:var(--line);margin:0 4px 0 2px}
+.srail .sr:last-child::after{display:none}
+.srail .sr.on{color:var(--navy);font-weight:700}.srail .sr.on i{background:var(--ocean);border-color:var(--ocean);box-shadow:0 0 0 4px color-mix(in srgb,var(--ocean) 22%,transparent)}
+.pfacts{display:flex;flex-wrap:wrap;gap:4px 18px;font-size:var(--t-small);color:var(--mute);margin:0 0 6px}
+.pfacts span+span::before{content:"";display:inline-block;width:3px;height:3px;border-radius:50%;background:var(--mute);margin-right:18px;vertical-align:3px}
+h3.sec{font-family:var(--f-serif);font-size:var(--t-h3);color:var(--navy);margin:var(--sp6) 0 var(--sp3);padding-top:var(--sp4);border-top:1px solid var(--line);line-height:1.3}
+h3.sec::before{content:"";display:inline-block;width:8px;height:8px;border-radius:2px;background:var(--ocean);margin-right:12px;vertical-align:2px}
+
+/* ===== Task cards: editorial rows that open ===== */
+.task{background:transparent;border:0;border-top:1px solid var(--line);border-radius:0;padding:0;margin:0}
+.task:last-of-type{border-bottom:1px solid var(--line)}
+.task>header{position:relative;padding:18px 44px 6px 0;cursor:pointer}
+.task>header h3{font-family:var(--f-sans);font-size:var(--t-card);font-weight:700;line-height:1.3;margin:0 0 8px;color:var(--navy)}
+.task>header h3 .tn{background:transparent;color:var(--ocean-ink);border:1px solid var(--ocean);font-size:.8rem;padding:1px 8px;border-radius:99px;margin-right:10px;vertical-align:3px;font-weight:700}
+.task .why{padding:0 44px 14px 0;margin:0}
+.task .why h4{display:none}
+.task .why p{color:var(--mute);margin:0}
+.task.is-c .why p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.task.is-c .why p+p,.task.is-c .why ul,.task.is-c .why ol{display:none}
+.tg{position:absolute;right:0;top:16px;width:32px;height:32px;border:1px solid var(--line);border-radius:50%;background:var(--card);color:var(--navy);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--dur)}
+.tg::before{content:"";width:8px;height:8px;border:solid currentColor;border-width:0 2px 2px 0;transform:rotate(45deg) translate(-1px,-1px);transition:transform var(--dur)}
+.task:not(.is-c) .tg::before{transform:rotate(-135deg) translate(-1px,-1px)}
+.tg:hover{border-color:var(--ocean);color:var(--ocean-ink)}
+.task>header:hover .tg{border-color:var(--ocean)}
+.tbody{display:grid;grid-template-rows:1fr;transition:grid-template-rows .28s var(--ease)}
+.tin{min-height:0;overflow:hidden}
+.task.is-c .tbody{grid-template-rows:0fr}
+.task.is-c .tin{visibility:hidden}
+.task:not(.is-c){background:color-mix(in srgb,var(--card) 70%,transparent);margin:0 calc(-1 * var(--sp4));padding:0 var(--sp4);border-radius:var(--r3);border-top-color:transparent;box-shadow:inset 0 0 0 1px var(--line)}
+.task:not(.is-c)+.task{border-top-color:transparent}
+.tin{padding-bottom:var(--sp3);font-size:1rem}
+.chips{margin-bottom:10px}
+.chip{background:var(--soft);font-size:.76rem;padding:2px 10px;border:1px solid transparent}
+.chip b{color:var(--mute);font-weight:500}
+.tdone{position:absolute;right:44px;top:20px;font:inherit;font-size:.78rem;color:var(--mute);background:none;border:1px solid var(--line);border-radius:99px;padding:3px 12px;cursor:pointer;transition:all var(--dur)}
+.tdone:hover{border-color:var(--ocean);color:var(--navy)}
+.task.is-done .tdone{background:var(--good);border-color:var(--good);color:var(--on-good)}
+.task.is-done>header h3::after{content:"Done";margin-left:12px;font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;color:var(--good);font-family:var(--f-sans)}
+.task.is-done:not(.is-open)>header h3{opacity:.7}
+.why,.how,.steps,.good,.bad{margin-bottom:var(--sp4)}
+.how h4,.steps h4,.good h4,.bad h4{margin-bottom:10px}
+.cols{gap:var(--sp3)}
+.cols>div{background:var(--card);border:1px solid var(--line);border-radius:var(--r2);padding:12px 16px}
+.cols>div:first-child{border-top:3px solid var(--ocean)}
+.cols>div:last-child{border-top:3px solid var(--mute)}
+.steps ol{padding:0}
+.steps ol li{padding:0 0 18px 46px;margin:0;max-width:none;position:relative}
+.steps ol li::before{width:30px;height:30px;left:0;top:-1px;background:var(--card);color:var(--ocean-ink);border:2px solid var(--ocean);z-index:1;font-size:.82rem}
+.steps ol li::after{content:"";position:absolute;left:14px;top:30px;bottom:-1px;width:2px;background:var(--line);transform-origin:top;transition:transform .5s var(--ease)}
+.steps ol li:last-child::after{display:none}
+.steps ol li:last-child{padding-bottom:6px}
+.task.is-c .steps ol li::after{transform:scaleY(0)}
+.done{background:var(--soft);border-left:3px solid var(--good);border-radius:0 var(--r2) var(--r2) 0}
+.done b{color:var(--good)}
+.good,.bad{background:var(--card);border:1px solid var(--line);border-radius:var(--r2);padding:12px 16px}
+.good{border-left:3px solid var(--good)}.bad{border-left:3px solid var(--bad)}
+.good ul,.bad ul{margin:0}
+
+/* ===== Tables, callouts, figures ===== */
+.tw{border:1px solid var(--line);border-radius:var(--r2);background:var(--card);margin:var(--sp4) 0 var(--sp5)}
+table{font-size:.92rem}
+th{background:var(--soft);font-size:var(--t-label);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:700;white-space:nowrap}
+td,th{padding:10px 14px}
+tbody tr:hover td{background:color-mix(in srgb,var(--soft) 55%,transparent)}
+.callout{border:0;border-left:3px solid var(--sun);background:color-mix(in srgb,var(--sun) 10%,var(--card));border-radius:0 var(--r2) var(--r2) 0;padding:14px 20px}
+.callout.warn{border-left-color:var(--bad);background:color-mix(in srgb,var(--bad) 8%,var(--card))}
+.callout.rule{border-left-color:var(--ocean);background:color-mix(in srgb,var(--ocean) 8%,var(--card))}
+.callout b{font-size:var(--t-label);letter-spacing:.1em;text-transform:uppercase;color:var(--navy)}
+.lessons{background:transparent;border:1px solid var(--line);border-radius:var(--r3);padding:var(--sp4) var(--sp5)}
+.lessons ul{padding-left:20px}
+.statusline{background:transparent;border:1px solid var(--line);font-size:.78rem;color:var(--mute)}
+figure.diagram,.flowp,.chartf{border-radius:var(--r3);background:var(--card)}
+.stats div{border-radius:var(--r3);background:var(--card)}
+.prompt{border-radius:var(--r3)}
+.prompt .ph{background:var(--navy);color:var(--paper)}
+dl.defs{border-radius:var(--r2)}
+
+.flowp .cin-kicker,.chartf .cin-kicker{color:var(--ocean-ink)!important}
+.flowp h4{font-family:var(--f-serif);text-transform:none;letter-spacing:0;font-size:1.25rem;color:var(--navy);margin:2px 0 6px}
+.chartf figcaption b{font-family:var(--f-serif);font-weight:700}
+
+.fl-dot.on i,.fl-dot.done i,.fl-ctl .fl-play,.prompt button,.ps.on i,.tn{color:var(--on-ocean)!important}
+.flowp.alt .fl-dot.on i,.flowp.alt .fl-dot.done i{color:var(--on-bad)!important}
+.task>header h3 .tn{color:var(--ocean-ink)!important}
+
+/* ===== Search ===== */
+.srch{position:fixed;inset:0;z-index:100;display:none;align-items:flex-start;justify-content:center;padding:12vh 16px 16px;background:var(--scrim)}
+.srch.open{display:flex}
+.srch-p{width:100%;max-width:680px;max-height:72vh;display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:var(--r3);box-shadow:var(--shadow);overflow:hidden}
+.srch-i{display:flex;align-items:center;gap:12px;padding:14px 18px;border-bottom:1px solid var(--line)}
+.srch-i svg{width:18px;height:18px;color:var(--mute);flex:0 0 18px}
+.srch-i input{flex:1;border:0;background:none;font:inherit;font-size:1.05rem;color:var(--navy);outline:none}
+.srch-i kbd{color:var(--mute)}
+.srch-r{overflow:auto;padding:6px}
+.srch-r a{display:block;padding:10px 14px;border-radius:var(--r2);text-decoration:none;color:var(--navy)}
+.srch-r a.sel,.srch-r a:hover{background:var(--soft)}
+.srch-r .rt{font-weight:700;font-size:.98rem}
+.srch-r .rp{font-size:var(--t-label);letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin-left:8px;font-weight:500}
+.srch-r .rs{display:block;font-size:.86rem;line-height:1.45;color:var(--mute);margin-top:2px}
+.srch-r mark{background:color-mix(in srgb,var(--sun) 45%,transparent);color:inherit;border-radius:3px;padding:0 1px}
+.srch-e{padding:26px 18px;text-align:center;color:var(--mute);font-size:.95rem}
+.srch-f{padding:8px 18px;border-top:1px solid var(--line);font-size:.78rem;color:var(--mute);display:flex;gap:16px}
+
+/* ===== Motion: short, purposeful ===== */
+.js .reveal{transition:opacity .45s var(--ease),transform .45s var(--ease);transform:translateY(10px)}
+.js .task.reveal{transform:none}
+@media(prefers-reduced-motion:reduce){.tbody,.steps ol li::after,.journey::after,.ring .rf{transition:none!important;animation:none!important}.journey::after{display:none}}
+
+/* ===== Responsive ===== */
+@media(max-width:1100px){.hstats{grid-template-columns:repeat(2,1fr)}.hstats li:nth-child(2){border-right:0}.hstats li:nth-child(3){padding-left:0}.hstats li:nth-child(n+3){border-top:1px solid var(--line)}.roles{grid-template-columns:1fr}}
+@media(max-width:960px){
+ :root{--nav-w:0px}
+ .layout{display:block}
+ .tb-menu{display:inline-flex}
+ .tb-crumb{display:none}.tb-brand span{display:none}
+ nav.side{position:fixed;z-index:70;left:0;top:0;height:100vh;width:88%;max-width:340px;transform:translateX(-102%);transition:transform .25s var(--ease);padding-top:20px;background:var(--card)}
+ body.open nav.side{transform:none;box-shadow:var(--shadow)}
+ body.open .scrim{display:block;position:fixed;inset:0;z-index:65;background:var(--scrim)}
+ nav.side .ndrawer{display:flex;gap:8px;margin:0 0 var(--sp4);flex-wrap:wrap}
+ main{padding:var(--sp5) 16px 90px}
+ .tb-done .tdl{display:none}
+ .journey{grid-template-columns:1fr;gap:6px}
+ .journey::before{left:21px;right:auto;top:22px;bottom:22px;width:2px;height:auto}
+ .journey::after{left:17px;top:0;animation:travelv 7s var(--ease) .8s 2 both}
+ @keyframes travelv{0%{top:0;opacity:0}8%{opacity:1}92%{opacity:1}100%{top:calc(100% - 10px);opacity:0}}
+ .jn{text-align:left;padding:0}
+ .jn a{display:grid;grid-template-columns:44px 1fr;column-gap:14px;align-items:start;padding:8px 0}
+ .jn a::before{grid-row:1/5;margin:0;text-align:center}
+ .tb-btn .lbl,.tb-btn kbd{display:none}
+}
+@media(max-width:640px){
+ .topbar{padding:0 12px;gap:8px}.tb-r{gap:8px}
+ .tb-done{display:none}
+ .hstats{grid-template-columns:1fr 1fr}
+ .hero .lead{font-size:1.1rem}
+ .task>header{padding-right:40px}.tdone{position:static;margin:0 0 10px;display:inline-block}
+ .task:not(.is-c){margin:0 -12px;padding:0 12px}
+ .cols{grid-template-columns:1fr}
+ .srch{padding:8vh 10px 10px}
+}
+
+/* ===== Print ===== */
+@media print{
+ .topbar,.prog,nav.side,.scrim,.srch,.tg,.tdone,.skip,.howto,.srail,.roles,.rolesec,.around,.fl-ctl,.cinema,.eco,.nine,.ros,.eqm,.flowp,.pipe,.cad,.loopfig,button,.fl-track{display:none!important}
+ .layout{display:block;padding:0}
+ main{padding:0}main>*{max-width:none}
+ html,body{background:#fff!important;color:#111;font-size:11.5px;line-height:1.5}
+ :root{--paper:#fff;--card:#fff;--soft:#f1f1ee;--line:#cfcfc8;--navy:#111;--mute:#444;--ocean:#0050b8;--ocean-ink:#0050b8}
+ .part{page-break-before:always;margin-top:0}
+ .tbody{display:block!important}.tin{visibility:visible!important;overflow:visible}
+ .task.is-c .why p{display:block;-webkit-line-clamp:unset}
+ .task{break-inside:avoid-page;box-shadow:none!important;margin:0!important;padding:0!important}
+ .task>header{padding:10px 0 4px}
+ h2,h3,h4{break-after:avoid}.tw,figure,.callout,.chartf{break-inside:avoid}
+ .journey::after,.journey::before{display:none}
+ .journey{grid-template-columns:repeat(3,1fr)!important;gap:12px}
+ .jn{text-align:left;padding:0}.jn a{display:block!important}.jn a::before{width:26px;height:26px;line-height:22px;margin:0 0 6px!important}
+ .hstats{grid-template-columns:repeat(4,1fr)}
+ a{color:inherit;text-decoration:none}
+ .reveal{opacity:1!important;transform:none!important}
+}
+</style></head><body><a class="skip" href="#top">Skip to the playbook</a><div class="prog"></div><header class="topbar"><button class="tb-btn tb-ico tb-menu" type="button" aria-label="Open contents"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg></button><a class="tb-brand" href="#top"><b>FINTECH Circle</b><span>Funnel Playbook</span></a><div class="tb-crumb" aria-live="polite"></div><div class="tb-r"><div class="tb-done" title="Task cards marked done"><svg class="ring" viewBox="0 0 24 24"><circle class="rt" cx="12" cy="12" r="9"/><circle class="rf" cx="12" cy="12" r="9"/></svg><span class="tdl"></span></div><button class="tb-btn" type="button" data-act="search" aria-label="Search the playbook"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="9" r="5.5"/><path d="M13.5 13.5L17 17"/></svg><span class="lbl">Search</span><kbd>/</kbd></button><div class="seg3" role="group" aria-label="Theme"><button type="button" data-m="light" aria-pressed="false" aria-label="Light theme" title="Light"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="10" cy="10" r="3.4"/><path d="M10 2.5v2M10 15.5v2M2.5 10h2M15.5 10h2M4.7 4.7l1.4 1.4M13.9 13.9l1.4 1.4M4.7 15.3l1.4-1.4M13.9 6.1l1.4-1.4"/></svg></button><button type="button" data-m="dark" aria-pressed="false" aria-label="Dark theme" title="Dark"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M16.5 11.8A6.8 6.8 0 018.2 3.5a6.8 6.8 0 108.3 8.3z"/></svg></button><button type="button" data-m="system" aria-pressed="true" aria-label="Match system theme" title="System"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="2.5" y="3.5" width="15" height="10" rx="1.5"/><path d="M7 17h6M10 13.5V17"/></svg></button></div></div></header><div class="scrim"></div><div class="layout"><nav class="side" aria-label="Contents"><div class="ndrawer"><button class="tb-btn" type="button" data-act="expand">Expand all cards</button><button class="tb-btn" type="button" data-act="collapse">Collapse all</button></div><div class="ngroup"><div class="gname">Orientation</div><details class="prow" data-part="start-here" data-roles=""><summary><span class="n">0</span><a class="pt" href="#start-here">Start Here</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#s-problem" data-t="s-problem">The Problem This Playbook Fixes</a></li><li><a href="#s-whole" data-t="s-whole">The Whole Funnel, End to End</a></li><li><a href="#s-motion" data-t="s-motion">The Funnel in Motion</a></li><li><a href="#s-network" data-t="s-network">The Ecosystem, Live</a></li><li><a href="#s-nine" data-t="s-nine">All Nine Funnels</a></li><li><a href="#s-map" data-t="s-map">What We Do, How We Do It, What Comes Later</a></li><li><a href="#s-use" data-t="s-use">How to Use This Playbook</a></li></ul></details><details class="prow" data-part="part-1" data-roles="susanne"><summary><span class="n">1</span><a class="pt" href="#part-1">Foundations</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#f-offer" data-t="f-offer">The Offer and the Buyer</a></li><li><a href="#f-why" data-t="f-why">Why This Funnel Fits This Audience</a></li><li><a href="#f-equation" data-t="f-equation">The Funnel Equation</a></li><li><a href="#f-traps" data-t="f-traps">Reading Results Without Fooling Yourself</a></li></ul></details></div><div class="ngroup"><div class="gname">Run the funnel</div><details class="prow" data-part="part-2" data-roles="operator"><summary><span class="n">2</span><a class="pt" href="#part-2">Plan the Event</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#c-plan-intro" data-t="c-plan-intro">Before You Start</a></li><li><a href="#t-2-1" data-t="t-2-1">2.1 Pick the Date From the Cohort Calendar</a></li><li><a href="#t-2-2" data-t="t-2-2">2.2 Create the Broadcast and the Sheet Tab</a></li><li><a href="#t-2-3" data-t="t-2-3">2.3 Update the Page Copy, Banners and Deck</a></li><li><a href="#t-2-4" data-t="t-2-4">2.4 Check the Landing Page, the Replay and the Emails</a></li><li><a href="#t-2-5" data-t="t-2-5">2.5 Repoint the Event Configuration</a></li></ul></details><details class="prow" data-part="part-3" data-roles="operator"><summary><span class="n">3</span><a class="pt" href="#part-3">Leads</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#l-intro" data-t="l-intro">The Rules Behind Every List</a></li><li><a href="#t-3-1" data-t="t-3-1">3.1 Check Whether the Pool Is Big Enough</a></li><li><a href="#t-3-2" data-t="t-3-2">3.2 Decide Whether to Buy New Data</a></li><li><a href="#t-3-3" data-t="t-3-3">3.3 Clean a New List</a></li><li><a href="#t-3-4" data-t="t-3-4">3.4 Run the Suppression Sweep</a></li><li><a href="#t-3-5" data-t="t-3-5">3.5 Load the Tab</a></li></ul></details><details class="prow" data-part="part-4" data-roles="operator"><summary><span class="n">4</span><a class="pt" href="#part-4">Traffic: Calendar, Email and LinkedIn Retargeting</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#tr-intro" data-t="tr-intro">The Order of Channels and the Rules</a></li><li><a href="#t-4-1" data-t="t-4-1">4.1 Plan a Calendar Wave (Tantra)</a></li><li><a href="#t-4-2" data-t="t-4-2">4.2 Send and Verify a Wave</a></li><li><a href="#t-4-3" data-t="t-4-3">4.3 Launch the Cold Email (Instantly)</a></li><li><a href="#t-4-4" data-t="t-4-4">4.4 Send Warm Re-Invites</a></li><li><a href="#t-4-5" data-t="t-4-5">4.5 Fix or Cancel a Wave</a></li><li><a href="#t-4-6" data-t="t-4-6">4.6 Set Up LinkedIn Retargeting</a></li><li><a href="#t-4-7" data-t="t-4-7">4.7 Read the Outreach at Day 3 to 4</a></li></ul></details><details class="prow" data-part="part-6" data-roles="operator"><summary><span class="n">6</span><a class="pt" href="#part-6">Landing, Registration and Tracking</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#lr-intro" data-t="lr-intro">Why One Page</a></li><li><a href="#t-6-1" data-t="t-6-1">6.1 Test a Registration End to End</a></li><li><a href="#t-6-2" data-t="t-6-2">6.2 Know the Registration Path</a></li><li><a href="#t-6-3" data-t="t-6-3">6.3 Change the Landing Page Safely</a></li><li><a href="#t-6-4" data-t="t-6-4">6.4 Set Up Website Tracking in GHL</a></li></ul></details><details class="prow" data-part="part-7" data-roles="operator"><summary><span class="n">7</span><a class="pt" href="#part-7">Nurture: Reminders and Join Links</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#nu-intro" data-t="nu-intro">The Two Channels</a></li><li><a href="#t-7-1" data-t="t-7-1">7.1 Check the Confirmation and Reminder Emails</a></li><li><a href="#t-7-2" data-t="t-7-2">7.2 Check the WhatsApp Join Link and Reminders</a></li><li><a href="#t-7-3" data-t="t-7-3">7.3 Specify and Build a GHL Workflow</a></li><li><a href="#t-7-4" data-t="t-7-4">7.4 Keep the Tags Clean</a></li></ul></details><details class="prow" data-part="part-8" data-roles="operator"><summary><span class="n">8</span><a class="pt" href="#part-8">The Live Webinar</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#lw-intro" data-t="lw-intro">The Hour That Converts</a></li><li><a href="#t-8-1" data-t="t-8-1">8.1 Prepare the Polls, Calls to Action and Chat Prompts</a></li><li><a href="#t-8-2" data-t="t-8-2">8.2 Run the Dry Run</a></li><li><a href="#t-8-3" data-t="t-8-3">8.3 Run the Live Session</a></li><li><a href="#t-8-4" data-t="t-8-4">8.4 Test Zoom for the Mid-November Webinar</a></li></ul></details><details class="prow" data-part="part-9" data-roles="operator"><summary><span class="n">9</span><a class="pt" href="#part-9">After the Event: Follow-Up, Applications, Calls and Payment</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#af-intro" data-t="af-intro">From Webinar to Paying Member</a></li><li><a href="#t-9-1" data-t="t-9-1">9.1 Send the Attendee and No-Show Follow-Ups</a></li><li><a href="#t-9-2" data-t="t-9-2">9.2 Tag the No-Shows for Retargeting</a></li><li><a href="#t-9-3" data-t="t-9-3">9.3 Enter the Manual Numbers</a></li><li><a href="#t-9-4" data-t="t-9-4">9.4 Process the Applications</a></li><li><a href="#t-9-5" data-t="t-9-5">9.5 Book the Call: Calendly Now, GHL Later</a></li><li><a href="#t-9-6" data-t="t-9-6">9.6 Take Payment and Onboard</a></li><li><a href="#t-9-7" data-t="t-9-7">9.7 Use the GHL Pipeline and Conversation View</a></li></ul></details><details class="prow" data-part="part-10" data-roles="operator"><summary><span class="n">10</span><a class="pt" href="#part-10">Review and Learn</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#rv-intro" data-t="rv-intro">Where the Numbers Come From</a></li><li><a href="#t-10-1" data-t="t-10-1">10.1 Read the Dashboard</a></li><li><a href="#t-10-2" data-t="t-10-2">10.2 Run the Post-Event Review</a></li><li><a href="#t-10-3" data-t="t-10-3">10.3 Choose the Next Wave Mix</a></li><li><a href="#t-10-4" data-t="t-10-4">10.4 Know the Daily Run and the Manual Tasks</a></li></ul></details></div><div class="ngroup"><div class="gname">Content and growth</div><details class="prow" data-part="part-5" data-roles="susanne"><summary><span class="n">5</span><a class="pt" href="#part-5">The Content Engine</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#ce-intro" data-t="ce-intro">The Engine at a Glance</a></li><li><a href="#t-5-1" data-t="t-5-1">5.1 Build the Context Bucket</a></li><li><a href="#t-5-2" data-t="t-5-2">5.2 Susanne's Voice and the Hard Rules</a></li><li><a href="#t-5-3" data-t="t-5-3">5.3 Choose the Formats</a></li><li><a href="#t-5-4" data-t="t-5-4">5.4 Run the Setup Prompt and the First ODT Week</a></li><li><a href="#t-5-5" data-t="t-5-5">5.5 Run the Weekly Batch</a></li><li><a href="#t-5-6" data-t="t-5-6">5.6 Susanne's Approval Gate</a></li><li><a href="#t-5-7" data-t="t-5-7">5.7 Design, Schedule and Boost</a></li><li><a href="#t-5-8" data-t="t-5-8">5.8 Read the Content Results</a></li><li><a href="#t-5-9" data-t="t-5-9">5.9 Run the Media Craft Loop Before Anything Reaches Susanne</a></li><li><a href="#ce-rules" data-t="ce-rules">The Non-Negotiable Rules and the Definition of Done</a></li></ul></details><details class="prow" data-part="part-13" data-roles=""><summary><span class="n">13</span><a class="pt" href="#part-13">Other Funnel Shapes</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#fs-intro" data-t="fs-intro">The Four Jobs of Any Funnel</a></li><li><a href="#fs-three" data-t="fs-three">Three Shapes Compared</a></li><li><a href="#fs-17" data-t="fs-17">Seventeen More, With a Fit Rating</a></li><li><a href="#t-13-1" data-t="t-13-1">13.1 Choose the Next Funnel</a></li><li><a href="#t-13-2" data-t="t-13-2">13.2 Test a Skip-the-Wait Door on the Thank-You Page</a></li><li><a href="#t-13-3" data-t="t-13-3">13.3 Run the Downsell to Declined Applicants</a></li><li><a href="#t-13-4" data-t="t-13-4">13.4 Turn a FINTECH Book Into a Lead Door</a></li><li><a href="#t-13-5" data-t="t-13-5">13.5 Extend the Partner Funnel</a></li><li><a href="#t-13-6" data-t="t-13-6">13.6 Pilot a Three-Day Board-Readiness Challenge</a></li><li><a href="#t-13-7" data-t="t-13-7">13.7 Build a Reverse Squeeze Page From the Best Replay</a></li><li><a href="#t-13-8" data-t="t-13-8">13.8 Place the Summit, the Angel Network and the Book Series in the Funnel</a></li></ul></details><details class="prow" data-part="part-14" data-roles="susanne"><summary><span class="n">14</span><a class="pt" href="#part-14">The Later Stage: Scale, Automate and Grow</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#ls-intro" data-t="ls-intro">What Later Means</a></li><li><a href="#t-14-1" data-t="t-14-1">14.1 Write the Funnel Spec</a></li><li><a href="#t-14-2" data-t="t-14-2">14.2 Connect Claude to Every Tool, and Prove It</a></li><li><a href="#t-14-3" data-t="t-14-3">14.3 Launch a Small Test Run Before a Big One</a></li><li><a href="#t-14-4" data-t="t-14-4">14.4 Find the Worst Step</a></li><li><a href="#t-14-5" data-t="t-14-5">14.5 Run One Experiment a Week</a></li><li><a href="#t-14-6" data-t="t-14-6">14.6 Set the Operating Rhythm</a></li><li><a href="#t-14-7" data-t="t-14-7">14.7 Write the Scale Plan</a></li><li><a href="#t-14-8" data-t="t-14-8">14.8 Build the 52-Week Engine</a></li><li><a href="#t-14-9" data-t="t-14-9">14.9 Host the Automation 24/7</a></li><li><a href="#t-14-10" data-t="t-14-10">14.10 Set Guardrails for Unattended Running</a></li><li><a href="#t-14-11" data-t="t-14-11">14.11 Decide Who Does What as Volume Grows</a></li><li><a href="#ls-ready" data-t="ls-ready">Readiness Checklist for Hands-Off Running</a></li></ul></details></div><div class="ngroup"><div class="gname">Systems and safety</div><details class="prow" data-part="part-11" data-roles="operator tech"><summary><span class="n">11</span><a class="pt" href="#part-11">Infrastructure and Deliverability</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#in-intro" data-t="in-intro">The Rule and the Estate</a></li><li><a href="#t-11-1" data-t="t-11-1">11.1 Add or Check DNS Records</a></li><li><a href="#t-11-2" data-t="t-11-2">11.2 Add a New Sending Domain in GHL</a></li><li><a href="#t-11-3" data-t="t-11-3">11.3 Add a Calendar Sender Mailbox</a></li><li><a href="#t-11-4" data-t="t-11-4">11.4 Add a Cold-Email Domain and Mailboxes</a></li><li><a href="#t-11-5" data-t="t-11-5">11.5 Raise DMARC Enforcement</a></li><li><a href="#t-11-6" data-t="t-11-6">11.6 Read the Deliverability Report</a></li></ul></details><details class="prow" data-part="part-12" data-roles="operator"><summary><span class="n">12</span><a class="pt" href="#part-12">Operating the System Safely</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#op-intro" data-t="op-intro">Requests, Plan Cards and Safety</a></li><li><a href="#t-12-1" data-t="t-12-1">12.1 Keep One Version of Every Document</a></li><li><a href="#t-12-2" data-t="t-12-2">12.2 Move the Codebase to GitHub and Add Claude Code</a></li><li><a href="#t-12-3" data-t="t-12-3">12.3 Security and Backups</a></li><li><a href="#t-12-4" data-t="t-12-4">12.4 Know the Rules the Chat Answers By</a></li></ul></details><details class="prow" data-part="part-15" data-roles="operator tech"><summary><span class="n">15</span><a class="pt" href="#part-15">Technical Reference: How It Is Wired</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#tx-intro" data-t="tx-intro">What This Part Is</a></li><li><a href="#tr-seven" data-t="tr-seven">The Seven Systems, One Job Each</a></li><li><a href="#tr-reg" data-t="tr-reg">Registration Capture in Detail</a></li><li><a href="#tr-worker" data-t="tr-worker">The Worker in Detail</a></li><li><a href="#tr-wf" data-t="tr-wf">Every GHL Workflow</a></li><li><a href="#tr-wa" data-t="tr-wa">WhatsApp Automation in Detail</a></li><li><a href="#tr-send" data-t="tr-send">Who Sends What</a></li><li><a href="#tr-apps" data-t="tr-apps">The Application Scripts and Decision Emails</a></li><li><a href="#tr-fields" data-t="tr-fields">Custom Fields, Tags and Templates</a></li><li><a href="#tr-conn" data-t="tr-conn">The Connector: What It Enforces</a></li><li><a href="#tr-lp" data-t="tr-lp">The Landing Page Repository</a></li><li><a href="#tr-levels" data-t="tr-levels">The Change Levels, Plan Card and Change Log</a></li><li><a href="#tr-camp" data-t="tr-camp">How Instantly and the Outreach Sheet Are Organised</a></li><li><a href="#tr-risk" data-t="tr-risk">Risks, Ordered by Damage</a></li><li><a href="#t-15-1" data-t="t-15-1">15.1 Add a New Automation the Safe Way</a></li><li><a href="#t-15-2" data-t="t-15-2">15.2 Create a Funnel Variant</a></li><li><a href="#t-15-3" data-t="t-15-3">15.3 Build a Landing Page Variant</a></li><li><a href="#t-15-4" data-t="t-15-4">15.4 Handle a GDPR Deletion Request</a></li><li><a href="#t-15-5" data-t="t-15-5">15.5 Rotate a Key or a Shared Credential</a></li></ul></details><details class="prow" data-part="part-16" data-roles="tech"><summary><span class="n">16</span><a class="pt" href="#part-16">The Build Method: Stand Up, Extend and Protect the Estate</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#bm-intro" data-t="bm-intro">The Phases and the Rule That Keeps Them Reusable</a></li><li><a href="#t-16-1" data-t="t-16-1">16.1 Provision in the Right Order</a></li><li><a href="#t-16-2" data-t="t-16-2">16.2 Fill the Ownership Register</a></li><li><a href="#t-16-3" data-t="t-16-3">16.3 Keep a Cost Register</a></li><li><a href="#t-16-4" data-t="t-16-4">16.4 Choose Domains and Authenticate Them</a></li><li><a href="#t-16-5" data-t="t-16-5">16.5 Warm Up and Set the Limits</a></li><li><a href="#t-16-6" data-t="t-16-6">16.6 Approve the Persona and ICP in Writing</a></li><li><a href="#t-16-7" data-t="t-16-7">16.7 Clean, Validate and Apply the Exclusion Stack</a></li><li><a href="#t-16-8" data-t="t-16-8">16.8 Write the Copy Under the Rules</a></li><li><a href="#t-16-9" data-t="t-16-9">16.9 Pass the Pre-Launch Gate</a></li><li><a href="#t-16-10" data-t="t-16-10">16.10 Run the Daily Loop</a></li><li><a href="#t-16-11" data-t="t-16-11">16.11 Use the Reporting Language Rules</a></li><li><a href="#t-16-12" data-t="t-16-12">16.12 Audit the CRM Before Anyone Reports From It</a></li><li><a href="#t-16-13" data-t="t-16-13">16.13 Add a LinkedIn Outreach Channel (If Wanted)</a></li><li><a href="#t-16-14" data-t="t-16-14">16.14 Point Every Sending Domain at a Real Page and Check Its Reputation</a></li><li><a href="#t-16-15" data-t="t-16-15">16.15 Pace the Send Under the Real Ceiling and Judge at Day 3 to 4</a></li><li><a href="#t-16-16" data-t="t-16-16">16.16 Use the Cold-Outreach Benchmarks Only as a Starting Line</a></li><li><a href="#bm-risk" data-t="bm-risk">The Risk Register</a></li></ul></details></div><div class="ngroup"><div class="gname">Reference</div><details class="prow" data-part="part-17" data-roles=""><summary><span class="n">17</span><a class="pt" href="#part-17">Reference</a><span class="chev" aria-hidden="true"></span></summary><ul><li><a href="#rf-tools" data-t="rf-tools">17.1 The Chat's Tools, by System</a></li><li><a href="#rf-tasks" data-t="rf-tasks">17.2 The 14 Tasks the Team Runs From Chat</a></li><li><a href="#rf-cannot" data-t="rf-cannot">17.3 What the Chat Cannot Do Yet</a></li><li><a href="#rf-prompts" data-t="rf-prompts">17.4 The Prompt Library</a></li><li><a href="#rf-check" data-t="rf-check">17.5 The New-Event Checklist</a></li><li><a href="#rf-open" data-t="rf-open">17.6 Open Decisions, Actions and Known Inconsistencies</a></li><li><a href="#rf-templates" data-t="rf-templates">17.7 Templates</a></li><li><a href="#rf-gloss" data-t="rf-gloss">17.8 Glossary</a></li><li><a href="#rf-kfiles" data-t="rf-kfiles">17.9 The Claude Project Knowledge Files</a></li><li><a href="#rf-inv" data-t="rf-inv">17.10 The Tool Inventory and What the Claude Project Can Reach</a></li><li><a href="#rf-where" data-t="rf-where">17.11 Where Things Live: Files, Tabs and Links</a></li><li><a href="#rf-cover" data-t="rf-cover">17.12 The Coverage Register</a></li><li><a href="#rf-keep" data-t="rf-keep">17.13 How This Playbook Stays Complete</a></li><li><a href="#rf-pending" data-t="rf-pending">17.14 What Is Still Pending</a></li><li><a href="#rf-conn" data-t="rf-conn">17.15 Connector Settings and Reach</a></li><li><a href="#rf-dash" data-t="rf-dash">17.16 The Dashboard: Schedule, Stages, Provenance and Corrections</a></li><li><a href="#rf-crm" data-t="rf-crm">17.17 The CRM Pipelines as Configured</a></li></ul></details></div></nav><main id="main"><header class="hero" id="top"><div class="eyebrow">Funnel Playbook <i></i> Version 19 October 2026</div><h1>The FINTECH Circle Funnel Playbook</h1><p class="lead">One place that explains the whole funnel: how a senior financial-services leader goes from a cold invite to a registration, a live webinar, an application, a call and a paid Board Programme place, and exactly what to do at every step.</p><p class="meta"><span><b>For</b> Susanne Chishti and anyone hired to run the funnel</span><span><b>Contains</b> no passwords, keys or live figures</span></p><ul class="hstats"><li><b>17</b><span class="sl">Parts</span><span class="sm">From planning an event to how it is wired</span></li><li><b>99</b><span class="sl">Task cards</span><span class="sm">Each with an owner and a safety level</span></li><li><b>6</b><span class="sl">Funnel stages</span><span class="sm">From a cold lead to a paying member</span></li><li><b>3</b><span class="sl">Safety levels</span><span class="sm">Read, Go, Send now. A typed word releases anything that reaches people</span></li></ul><div class="howto"><span><kbd>/</kbd> Search everything</span><span>Tap a card title to open it</span><span>Tick a card as done to track progress</span><span>Light, dark or system, top right</span></div><section class="overview" aria-labelledby="ov-h"><div class="ov-h"><h2 id="ov-h">The Journey on One Line</h2><p>Click a stage to jump to its part. The pulse shows the direction people travel.</p></div><ol class="journey"><li class="jn" data-roles="operator" style="--i:0"><a href="#part-3"><span class="jn-k">Part 3</span><b>Lead</b><span class="jn-l">Find and clean the pool</span><span class="jn-t">Apollo, cleaning rules</span></a></li><li class="jn" data-roles="operator" style="--i:1"><a href="#part-4"><span class="jn-k">Part 4</span><b>Traffic</b><span class="jn-l">Invites, email, LinkedIn</span><span class="jn-t">Tantra, Instantly</span></a></li><li class="jn" data-roles="operator" style="--i:2"><a href="#part-6"><span class="jn-k">Part 6</span><b>Landing</b><span class="jn-l">One page, one registration</span><span class="jn-t">WebinarGeek, GHL</span></a></li><li class="jn" data-roles="operator" style="--i:3"><a href="#part-7"><span class="jn-k">Part 7</span><b>Nurture</b><span class="jn-l">Reminders and join links</span><span class="jn-t">Email, WhatsApp</span></a></li><li class="jn" data-roles="operator" style="--i:4"><a href="#part-8"><span class="jn-k">Part 8</span><b>Live</b><span class="jn-l">Sixty minutes with Susanne</span><span class="jn-t">Polls, offer, Q and A</span></a></li><li class="jn" data-roles="operator" style="--i:5"><a href="#part-9"><span class="jn-k">Part 9</span><b>After</b><span class="jn-l">Apply, call, pay</span><span class="jn-t">Follow-up, GHL</span></a></li></ol><div class="around"><span class="ar-l">Around the journey</span><a class="ar" data-roles="operator" href="#part-2">Plan<i>Part 2</i></a><a class="ar" data-roles="susanne" href="#part-5">Content<i>Part 5</i></a><a class="ar" data-roles="operator" href="#part-10">Review<i>Part 10</i></a><a class="ar" data-roles="operator tech" href="#part-11">Infrastructure<i>Part 11</i></a><a class="ar" data-roles="operator" href="#part-12">Safety<i>Part 12</i></a><a class="ar" data-roles="susanne" href="#part-14">Later stage<i>Part 14</i></a></div></section><section class="rolesec" aria-labelledby="rl-h"><div class="ov-h"><h2 id="rl-h">Start From Your Role</h2><p>Choose a role to light up its parts in the journey and the contents. Each shows what the role owns and a recommended path.</p></div><div class="roles"><article class="role" data-role="susanne"><button type="button" class="role-b" aria-pressed="false"><span class="role-n">Susanne</span><span class="role-t">Understands and approves</span></button><p>Owns the voice and the approval gate for every post (5.6), the offer, and the decisions about the later stage.</p><p class="role-r"><b>Review</b> Parts 1, 5, 14</p><ol class="role-p"><li><a href="#start-here">Start Here</a></li><li><a href="#part-1">Foundations</a></li><li><a href="#part-5">The Content Engine</a></li><li><a href="#part-14">The Later Stage</a></li><li><a href="#rf-pending">17.14 What is pending</a></li></ol></article><article class="role" data-role="operator"><button type="button" class="role-b" aria-pressed="false"><span class="role-n">Operator</span><span class="role-t">Runs the cycle</span></button><p>Plans and runs each webinar cycle, shows plan cards, and types the go or send now that releases anything to people.</p><p class="role-r"><b>Review</b> Parts 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 15</p><ol class="role-p"><li><a href="#part-2">Plan the Event</a></li><li><a href="#part-3">Leads</a></li><li><a href="#part-4">Traffic</a></li><li><a href="#part-8">The Live Webinar</a></li><li><a href="#part-9">After the Event</a></li><li><a href="#part-10">Review and Learn</a></li></ol></article><article class="role" data-role="tech"><button type="button" class="role-b" aria-pressed="false"><span class="role-n">Technical owner</span><span class="role-t">Keeps it reliable</span></button><p>Keeps the domains, mailboxes, automation, connector and dashboard working, and reviews every change before it goes live.</p><p class="role-r"><b>Review</b> Parts 11, 15, 16</p><ol class="role-p"><li><a href="#part-11">Infrastructure</a></li><li><a href="#part-15">Technical Reference</a></li><li><a href="#part-16">The Build Method</a></li><li><a href="#part-12">Operating Safely</a></li><li><a href="#rf-dash">17.16 The dashboard</a></li></ol></article></div></section></header><section class="part" id="start-here"><div class="phead reveal"><span class="pnum">Start Here</span><h2>Start Here</h2><p class="pblurb">The problem this fixes, the whole funnel on one page, the funnel in motion, and how to use this playbook.</p></div>
 <h3 class="sec" id="s-problem">The Problem This Playbook Fixes</h3>
 
 <p><b>Here is the problem this fixes.</b> The funnel is made of a dozen tools, three automation layers and two outreach channels, and the knowledge of how it fits together has lived in a few people's heads and a few scattered documents. When a person is added, a campaign is changed, or a number looks wrong, nobody has one place to look.</p>
@@ -502,7 +821,7 @@ YRR = RMB + CEB + DSB         (re-marketing, cohort emails, downsell)</pre><div 
 <p>Several obvious-looking numbers in this funnel are wrong. These cost real time when they are trusted.</p>
 <div class="tw"><table class=""><thead><tr><th>Trap</th><th>Reality</th><th>Do instead</th></tr></thead><tbody><tr><td>Tantra campaign list</td><td>Returns only campaigns that still exist, which was roughly half of the invites actually sent when it was last compared. Deleted campaigns' invites are invisible. <code>sentCount</code> is always 0 for calendar campaigns.</td><td>Read calendar RSVPs: yes, maybe, no, waiting. Never derive Pending.</td></tr><tr><td>Instantly analytics</td><td>Reply counts under-report badly. Open counts are 0 because tracking is off.</td><td>Do not quote either as real. Read replies in the inbox.</td></tr><tr><td>Day-1 results</td><td>RSVPs accrue over days.</td><td>Judge at day 3 to 4.</td></tr><tr><td>Early master sheets (WEB #1 to #6)</td><td>Lead lists with an empty tracking scaffold. They show who was targeted, never what was sent.</td><td>Use Tantra contacts as the record of who was contacted.</td></tr><tr><td>Applications and paid customers files</td><td>Stale exports.</td><td>Read revenue live from GHL payments.</td></tr><tr><td>Reversed names</td><td>Some raw lists store first and last names swapped for lastname.firstname addresses.</td><td>Check the first name against the email before personalising.</td></tr><tr><td>Calendar campaign link</td><td>The WebinarGeek link and auto-register field are create-only. A campaign made without them can never be linked.</td><td>Create waves only through the tool that sets them.</td></tr><tr><td>Campaign name vs status</td><td>A name can say DRAFT while the status is active.</td><td>Trust the status field, never the name.</td></tr><tr><td>GHL not-watched tag</td><td>Watched equals false is not the same as no-show. Attendance tags under-count.</td><td>Build no-show lists from WebinarGeek.</td></tr></tbody></table></div><div class="lessons"><h4>The Lessons in This Section</h4><ul><li>Counters from tools that did not do the work are not outcomes.</li><li>Time matters: a number read on day 1 is not the same number on day 4.</li><li>If a number looks too good or too bad, check it at its source before acting.</li></ul></div>
 </section>
-<section class="part" id="part-2"><div class="phead reveal"><span class="pnum">Part 2</span><h2>Plan the Event</h2><p class="pblurb">From four weeks out: the date, the broadcast, the sheet tab, the copy and the checks that make every later step safe.</p></div>
+<section class="part" id="part-2"><div class="phead reveal"><span class="pnum">Part 2</span><h2>Plan the Event</h2><p class="pblurb">From four weeks out: the date, the broadcast, the sheet tab, the copy and the checks that make every later step safe.</p><p class="pfacts"><span>5 task cards</span><span>1 section</span><span>Reviewed by Operator</span></p></div>
 <h3 class="sec" id="c-plan-intro">Before You Start</h3>
 <p>This part is done once per webinar, three to four weeks before the event. Nothing here reaches people, so most steps are reads or low-risk changes. It is also where most late errors are born, so it is worth doing in order.</p>
 <article class="task reveal" id="t-2-1"><header><h3><span class="tn">2.1</span> Pick the Date From the Cohort Calendar</h3><div class="chips"><span class="chip"><b>Owner</b> Susanne and operations</span><span class="chip"><b>Time</b> 20 min</span><span class="chip"><b>System</b> Consolidated Document</span><span class="chip lvl-read"><b>Safety</b> Read</span></div></header>
@@ -567,7 +886,7 @@ YRR = RMB + CEB + DSB         (re-marketing, cohort emails, downsell)</pre><div 
 </article>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>Do these once, in order, three to four weeks out.</li><li>The broadcast and the sheet tab are the two objects everything else hangs off.</li><li>A stale date on any surface costs registrations. Check them all.</li></ul></div>
 </section>
-<section class="part" id="part-3"><div class="phead reveal"><span class="pnum">Part 3</span><h2>Leads</h2><p class="pblurb">The persona, the cleaning rules and the five steps that turn a list into a safe queue.</p></div>
+<section class="part" id="part-3"><div class="phead reveal"><span class="pnum">Part 3</span><h2>Leads</h2><p class="pblurb">The persona, the cleaning rules and the five steps that turn a list into a safe queue.</p><div class="srail" aria-label="Funnel stage 1 of 6"><a class="sr on" href="#part-3" aria-current="step"><i></i>Lead</a><a class="sr" href="#part-4"><i></i>Traffic</a><a class="sr" href="#part-6"><i></i>Landing</a><a class="sr" href="#part-7"><i></i>Nurture</a><a class="sr" href="#part-8"><i></i>Live</a><a class="sr" href="#part-9"><i></i>After</a></div><p class="pfacts"><span>5 task cards</span><span>1 section</span><span>Reviewed by Operator</span></p></div>
 <h3 class="sec" id="l-intro">The Rules Behind Every List</h3>
 <p class="statusline"><b>STATUS:</b> TARGETING SPEC CURRENT &nbsp; <b>AS OF:</b> 2026-09-24</p>
 <p>Leads are the fuel for the two outreach channels. The persona and the cleaning rules below are fixed, and they are enforced by tools wherever a tool exists.</p>
@@ -639,7 +958,7 @@ YRR = RMB + CEB + DSB         (re-marketing, cohort emails, downsell)</pre><div 
 </article>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>The nine industries, the exclusions and the opt-out guard are not preferences. They are what keeps the sending domains alive.</li><li>Count the real unused pool before planning, not the unstamped rows.</li><li>A stamp means consumed. It is written only after the campaign is verified.</li></ul></div>
 </section>
-<section class="part" id="part-4"><div class="phead reveal"><span class="pnum">Part 4</span><h2>Traffic: Calendar, Email and LinkedIn Retargeting</h2><p class="pblurb">The order of channels, the sending rules, and seven cards that cover planning, sending, fixing and reading outreach.</p></div>
+<section class="part" id="part-4"><div class="phead reveal"><span class="pnum">Part 4</span><h2>Traffic: Calendar, Email and LinkedIn Retargeting</h2><p class="pblurb">The order of channels, the sending rules, and seven cards that cover planning, sending, fixing and reading outreach.</p><div class="srail" aria-label="Funnel stage 2 of 6"><a class="sr" href="#part-3"><i></i>Lead</a><a class="sr on" href="#part-4" aria-current="step"><i></i>Traffic</a><a class="sr" href="#part-6"><i></i>Landing</a><a class="sr" href="#part-7"><i></i>Nurture</a><a class="sr" href="#part-8"><i></i>Live</a><a class="sr" href="#part-9"><i></i>After</a></div><p class="pfacts"><span>7 task cards</span><span>1 section</span><span>Reviewed by Operator</span></p></div>
 <h3 class="sec" id="tr-intro">The Order of Channels and the Rules</h3>
 
 <p>Several channels run side by side on purpose, because one channel alone is a risk. The order is fixed: cold outreach validates the funnel quickly, organic content builds the reputation and shows what resonates, and the best posts are then promoted with paid ads. The long-term direction is to make organic content the largest share of traffic.</p>
@@ -735,7 +1054,7 @@ YRR = RMB + CEB + DSB         (re-marketing, cohort emails, downsell)</pre><div 
 </article>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>Every wave is planned, then sent, then verified, in that order. Verification comes before stamping.</li><li>Calendar invites are the largest channel. The V2 title and the UK are the proven combination.</li><li>Warm re-invites are the cheapest traffic. Never include attendees or customers.</li><li>Judge at day 3 to 4. Never judge on day 1.</li></ul></div>
 </section>
-<section class="part" id="part-5"><div class="phead reveal"><span class="pnum">Part 5</span><h2>The Content Engine</h2><p class="pblurb">The system that turns Susanne's experience into a week of reviewed LinkedIn posts, with two human gates and a loop that compounds.</p></div>
+<section class="part" id="part-5"><div class="phead reveal"><span class="pnum">Part 5</span><h2>The Content Engine</h2><p class="pblurb">The system that turns Susanne's experience into a week of reviewed LinkedIn posts, with two human gates and a loop that compounds.</p><p class="pfacts"><span>9 task cards</span><span>2 sections</span><span>Reviewed by Susanne</span></p></div>
 <h3 class="sec" id="ce-intro">The Engine at a Glance</h3>
 <p class="statusline"><b>STATUS:</b> ODT LOADED WITH CONTEXT, NOT YET USED FOR A POST &nbsp; <b>AS OF:</b> 2026-10-14</p>
 <p><b>Here is the problem this fixes.</b> Good content takes a researcher, a writer, a designer and an editor, and it still comes out uneven. Content produced so far was about 80% good: not perfect enough to post. And the audience is the most discerning one the brand can reach, a board-level reader who spots two things instantly: anything that reads as AI slop, and any statement so generic that anyone could have written it. Either one costs credibility.</p>
@@ -951,7 +1270,7 @@ FORMAT_WISHES:     (optional, e.g. "two carousels", "one quote card")
 <h3 class="sec" id="ce-rules">The Non-Negotiable Rules and the Definition of Done</h3>
 <div class="tw"><table class=""><thead><tr><th>Rule</th><th>What it means</th></tr></thead><tbody><tr><td><b>Truth</b></td><td>No claim without a source. Every number, fact and date traces to the verified-facts file. Unverifiable claims are dropped.</td></tr><tr><td><b>Punctuation</b></td><td>No long dashes anywhere. A short hyphen, full stop, comma, colon or the word "to" for ranges.</td></tr><tr><td><b>Clarity</b></td><td>Write for a cold reader. Introduce every person on first mention. No insider names, and no relative dates that will be wrong on the publish day.</td></tr><tr><td><b>Freshness</b></td><td>No duplicate angles. Check the used-content registry. A fact may return only with a new hook, argument and takeaway.</td></tr><tr><td><b>Design</b></td><td>Match the named template. Brand furniture on every slide. No filler.</td></tr><tr><td><b>People</b></td><td>Real photos. Clients named only with written permission.</td></tr><tr><td><b>Reach</b></td><td>Keep the link out of the post body. Put it in the first comment. Tag company pages instead of linking them.</td></tr><tr><td><b>Call to action</b></td><td>One per post, end on it. Webinar or follow. Never promote an event that has passed.</td></tr><tr><td><b>Humility</b></td><td>Positive and measured. Nothing negative, critical or controversial. Nothing market-sensitive or confidential.</td></tr></tbody></table></div><h4>Definition of Done for a Week</h4><div class="tw"><table class=""><thead><tr><th>Check</th><th>What good looks like</th></tr></thead><tbody><tr><td>Count and split</td><td>The number asked for, spread across the two profiles</td></tr><tr><td>Dates and times</td><td>One per profile per day, UK time, nothing after a past event</td></tr><tr><td>Call to action</td><td>Webinar posts carry the first comment and the link; the rest use the follow line</td></tr><tr><td>Sources</td><td>Every claim sourced; numbers listed for Susanne; no registry duplicates</td></tr><tr><td>Rules</td><td>Zero long dashes, no hype words, no closing question, the listed bank unnamed</td></tr><tr><td>Approval</td><td>Every post approved by Susanne, recorded in the Content Calendar</td></tr><tr><td>Closed out</td><td>Registry updated, results read, next week's prompt ready</td></tr></tbody></table></div><aside class="callout tip"><b>The One Test That Matters</b><div><p>Open the schedule on a phone. If every post looks like it belongs to a brand that knows exactly what it is doing, and Susanne would be happy to see it in her own feed, the week is done. If one post makes her wince, it is not.</p></div></aside>
 </section>
-<section class="part" id="part-6"><div class="phead reveal"><span class="pnum">Part 6</span><h2>Landing, Registration and Tracking</h2><p class="pblurb">One page, four places, and the rule that keeps email and WhatsApp from crossing.</p></div>
+<section class="part" id="part-6"><div class="phead reveal"><span class="pnum">Part 6</span><h2>Landing, Registration and Tracking</h2><p class="pblurb">One page, four places, and the rule that keeps email and WhatsApp from crossing.</p><div class="srail" aria-label="Funnel stage 3 of 6"><a class="sr" href="#part-3"><i></i>Lead</a><a class="sr" href="#part-4"><i></i>Traffic</a><a class="sr on" href="#part-6" aria-current="step"><i></i>Landing</a><a class="sr" href="#part-7"><i></i>Nurture</a><a class="sr" href="#part-8"><i></i>Live</a><a class="sr" href="#part-9"><i></i>After</a></div><p class="pfacts"><span>4 task cards</span><span>1 section</span><span>Reviewed by Operator</span></p></div>
 <h3 class="sec" id="lr-intro">Why One Page</h3>
 
 <p>The registration page is the single destination for every invite, email, post and ad. Sending everything to one page keeps the system simple, even if some registrations are lost compared with one-click registration on LinkedIn. It also means a captured email is a work email, a phone number is captured, and every registration is tracked the same way.</p>
@@ -1011,7 +1330,7 @@ FORMAT_WISHES:     (optional, e.g. "two carousels", "one quote card")
 </article>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>Every invite goes to one page, so every registration is tracked the same way.</li><li>Walk the path yourself. A form that says success is not proof.</li><li>The WhatsApp ask on the thank-you page is load-bearing. Do not remove it.</li></ul></div>
 </section>
-<section class="part" id="part-7"><div class="phead reveal"><span class="pnum">Part 7</span><h2>Nurture: Reminders and Join Links</h2><p class="pblurb">Two channels, each with one owner, and the four checks that keep both working.</p></div>
+<section class="part" id="part-7"><div class="phead reveal"><span class="pnum">Part 7</span><h2>Nurture: Reminders and Join Links</h2><p class="pblurb">Two channels, each with one owner, and the four checks that keep both working.</p><div class="srail" aria-label="Funnel stage 4 of 6"><a class="sr" href="#part-3"><i></i>Lead</a><a class="sr" href="#part-4"><i></i>Traffic</a><a class="sr" href="#part-6"><i></i>Landing</a><a class="sr on" href="#part-7" aria-current="step"><i></i>Nurture</a><a class="sr" href="#part-8"><i></i>Live</a><a class="sr" href="#part-9"><i></i>After</a></div><p class="pfacts"><span>4 task cards</span><span>1 section</span><span>Reviewed by Operator</span></p></div>
 <h3 class="sec" id="nu-intro">The Two Channels</h3>
 <p class="statusline"><b>STATUS:</b> AS WRITTEN 14 OCTOBER; RE-READ THE WORKFLOW LIST BEFORE RELYING ON IT &nbsp; <b>AS OF:</b> 2026-10-14</p>
 <p>Registration is not attendance. Show-up rate is the single link in the chain that nurture controls, and it is the one that multiplies everything after it. Two channels do the work, each with one owner.</p>
@@ -1065,7 +1384,7 @@ FORMAT_WISHES:     (optional, e.g. "two carousels", "one quote card")
 </article>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>Email is WebinarGeek's. WhatsApp is GHL's. The Worker is the only bridge.</li><li>Subject lines hold the time as text. Check them every event.</li><li>GHL workflows are designed by Claude and built by a person. A draft stays a draft until it is tested.</li></ul></div>
 </section>
-<section class="part" id="part-8"><div class="phead reveal"><span class="pnum">Part 8</span><h2>The Live Webinar</h2><p class="pblurb">The run of show, the preparation, the dry run, and the Zoom test.</p></div>
+<section class="part" id="part-8"><div class="phead reveal"><span class="pnum">Part 8</span><h2>The Live Webinar</h2><p class="pblurb">The run of show, the preparation, the dry run, and the Zoom test.</p><div class="srail" aria-label="Funnel stage 5 of 6"><a class="sr" href="#part-3"><i></i>Lead</a><a class="sr" href="#part-4"><i></i>Traffic</a><a class="sr" href="#part-6"><i></i>Landing</a><a class="sr" href="#part-7"><i></i>Nurture</a><a class="sr on" href="#part-8" aria-current="step"><i></i>Live</a><a class="sr" href="#part-9"><i></i>After</a></div><p class="pfacts"><span>4 task cards</span><span>1 section</span><span>Reviewed by Operator</span></p></div>
 <h3 class="sec" id="lw-intro">The Hour That Converts</h3>
 
 <p>The webinar is the conversion mechanism. Every other stage exists to fill it or to follow up on it. It is a 60-minute live masterclass hosted by Susanne, teaching the 6-step insider board roadmap, then inviting attendees to apply for the Board Programme or book a call.</p>
@@ -1143,7 +1462,7 @@ FORMAT_WISHES:     (optional, e.g. "two carousels", "one quote card")
 </article>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>Polls, buttons and replay are set before going live, never after.</li><li>The dry run proves every hand-off. It is not the night before.</li><li>A platform switch changes the registration, reminder and reporting paths. Plan all three.</li></ul></div>
 </section>
-<section class="part" id="part-9"><div class="phead reveal"><span class="pnum">Part 9</span><h2>After the Event: Follow-Up, Applications, Calls and Payment</h2><p class="pblurb">Most of the revenue is decided in the first week after the webinar. These cards cover follow-up, applications, the call and the payment.</p></div>
+<section class="part" id="part-9"><div class="phead reveal"><span class="pnum">Part 9</span><h2>After the Event: Follow-Up, Applications, Calls and Payment</h2><p class="pblurb">Most of the revenue is decided in the first week after the webinar. These cards cover follow-up, applications, the call and the payment.</p><div class="srail" aria-label="Funnel stage 6 of 6"><a class="sr" href="#part-3"><i></i>Lead</a><a class="sr" href="#part-4"><i></i>Traffic</a><a class="sr" href="#part-6"><i></i>Landing</a><a class="sr" href="#part-7"><i></i>Nurture</a><a class="sr" href="#part-8"><i></i>Live</a><a class="sr on" href="#part-9" aria-current="step"><i></i>After</a></div><p class="pfacts"><span>7 task cards</span><span>1 section</span><span>Reviewed by Operator</span></p></div>
 <h3 class="sec" id="af-intro">From Webinar to Paying Member</h3>
 
 <p>The webinar does not close anything on its own. The sale is made in the weeks after it: an application, a short call, an acceptance, a payment. Most of the revenue is decided by how well the first week after the event is run, and by whether the people who did not attend are followed up.</p>
@@ -1235,7 +1554,7 @@ FORMAT_WISHES:     (optional, e.g. "two carousels", "one quote card")
 </article>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>The first three days decide most of the revenue. Schedule the sequences before the event.</li><li>A no-show list comes from WebinarGeek, never from a GHL tag.</li><li>The only manual decision in the application step is Susanne's. The email and the log are automatic.</li></ul></div>
 </section>
-<section class="part" id="part-10"><div class="phead reveal"><span class="pnum">Part 10</span><h2>Review and Learn</h2><p class="pblurb">The dashboard, the post-event review, and the next wave mix.</p></div>
+<section class="part" id="part-10"><div class="phead reveal"><span class="pnum">Part 10</span><h2>Review and Learn</h2><p class="pblurb">The dashboard, the post-event review, and the next wave mix.</p><p class="pfacts"><span>4 task cards</span><span>1 section</span><span>Reviewed by Operator</span></p></div>
 <h3 class="sec" id="rv-intro">Where the Numbers Come From</h3>
 
 <p>A funnel improves only if someone reads the numbers, decides what to change, and checks the next webinar to see if it worked. The dashboard does the reading every day. The review is where a person turns it into a decision.</p>
@@ -1308,7 +1627,7 @@ Do not change anything. This is a read.</pre></div>
 </article>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>The dashboard reads. A person decides.</li><li>Ask the same seven questions every webinar so results can be compared.</li><li>Name the weakest link, run one experiment, and read the result next time.</li></ul></div>
 </section>
-<section class="part" id="part-11"><div class="phead reveal"><span class="pnum">Part 11</span><h2>Infrastructure and Deliverability</h2><p class="pblurb">Domains, mailboxes, DNS and the health report, with the rule that every change is checked first and made once.</p></div>
+<section class="part" id="part-11"><div class="phead reveal"><span class="pnum">Part 11</span><h2>Infrastructure and Deliverability</h2><p class="pblurb">Domains, mailboxes, DNS and the health report, with the rule that every change is checked first and made once.</p><p class="pfacts"><span>6 task cards</span><span>1 section</span><span>Reviewed by Operator, Technical owner</span></p></div>
 <h3 class="sec" id="in-intro">The Rule and the Estate</h3>
 <p class="statusline"><b>STATUS:</b> CURRENT &nbsp; <b>AS OF:</b> 2026-09-25</p>
 <p>Infrastructure is where a small mistake damages every later send. A broken DNS record, a duplicated SPF record, or a domain that cold email sends from the main brand domain can cost weeks of deliverability. This part exists so every change is checked first, and made once.</p>
@@ -1384,7 +1703,7 @@ Do not change anything. This is a read.</pre></div>
 </article>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>Add beside, never overwrite. Pre-flight every name.</li><li>Warm-up is not optional. A cold mailbox harms the domain.</li><li>Score deliverability on the domains that send, in rates.</li></ul></div>
 </section>
-<section class="part" id="part-12"><div class="phead reveal"><span class="pnum">Part 12</span><h2>Operating the System Safely</h2><p class="pblurb">How a request becomes an action, the rules the chat answers by, one version of every document, the move to GitHub, and security and backups.</p></div>
+<section class="part" id="part-12"><div class="phead reveal"><span class="pnum">Part 12</span><h2>Operating the System Safely</h2><p class="pblurb">How a request becomes an action, the rules the chat answers by, one version of every document, the move to GitHub, and security and backups.</p><p class="pfacts"><span>4 task cards</span><span>1 section</span><span>Reviewed by Operator</span></p></div>
 <h3 class="sec" id="op-intro">Requests, Plan Cards and Safety</h3>
 
 <p>This part covers how the system is run safely: how a request becomes an action, where the code lives, how the team stays on one version of every document, and how it is protected.</p>
@@ -1434,7 +1753,7 @@ Do not change anything. This is a read.</pre></div>
 </article>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>A plan card comes before anything that reaches people, goes live, or costs money.</li><li>One home per kind of file, and a status line on every dated one.</li><li>Keys never enter a repository, a chat or a document.</li></ul></div>
 </section>
-<section class="part" id="part-13"><div class="phead reveal"><span class="pnum">Part 13</span><h2>Other Funnel Shapes</h2><p class="pblurb">The three shapes in depth, seventeen more at a glance with a fit rating for FINTECH, and seven small tests worth running.</p></div>
+<section class="part" id="part-13"><div class="phead reveal"><span class="pnum">Part 13</span><h2>Other Funnel Shapes</h2><p class="pblurb">The three shapes in depth, seventeen more at a glance with a fit rating for FINTECH, and seven small tests worth running.</p><p class="pfacts"><span>8 task cards</span><span>3 sections</span></p></div>
 <h3 class="sec" id="fs-intro">The Four Jobs of Any Funnel</h3>
 
 <p>FINTECH Circle runs one funnel shape today: the webinar. It is the right first shape, because one live session shows which message lands. But it is not the only shape, and a funnel that has a clear weakest link may be better fixed by changing the shape than by tuning it. This part explains the shapes that exist, and which are worth testing next. It is the "what else could we run" part of the playbook.</p>
@@ -1559,7 +1878,7 @@ CR = share of calls that close</pre><p>Compare WR × GR with the webinar's visit
 </article>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>The webinar is the right first funnel. A new shape must earn its place by fixing a named weak link.</li><li>The High fit shapes reuse assets that already exist: the application, the call, the books, the partner pattern, the declined-applicant draft.</li><li>Test one new shape at a time, small, with a deciding number and a date.</li></ul></div>
 </section>
-<section class="part" id="part-14"><div class="phead reveal"><span class="pnum">Part 14</span><h2>The Later Stage: Scale, Automate and Grow</h2><p class="pblurb">How the funnel grows without getting heavier: a spec, proven connections, a weekly rhythm, one experiment a week, a 52-week engine, and hosted automation.</p></div>
+<section class="part" id="part-14"><div class="phead reveal"><span class="pnum">Part 14</span><h2>The Later Stage: Scale, Automate and Grow</h2><p class="pblurb">How the funnel grows without getting heavier: a spec, proven connections, a weekly rhythm, one experiment a week, a 52-week engine, and hosted automation.</p><p class="pfacts"><span>11 task cards</span><span>2 sections</span><span>Reviewed by Susanne</span></p></div>
 <h3 class="sec" id="ls-intro">What Later Means</h3>
 
 <p>This is the part for after the funnel runs reliably. The first thirteen parts explain how the funnel works and how to run one webinar. This part explains how it grows without getting heavier: how to put Claude in charge of the routine work, how to find and fix the weakest step every week, how to look after everyone who did not buy, and how to move the automation off a single laptop.</p>
@@ -1715,7 +2034,7 @@ CR = share of calls that close</pre><p>Compare WR × GR with the webinar's visit
 <ul class="check"><li>The funnel has run end to end for several webinars with the same process</li><li>The funnel spec is approved and every tool's test answer matched</li><li>Experiments run weekly, with a log</li><li>The code is in a private repository with two owners and a review flow</li><li>Keys are in a secret store, not a file, and none has ever been committed</li><li>Read-only jobs have run in the cloud for a week and agree with the local runs</li><li>Alerts reach a person, and a kill switch exists</li><li>Sends remain behind a typed word</li></ul>
 <div class="lessons"><h4>The Lessons in This Section</h4><ul><li>Change the spec first and let Claude apply it everywhere.</li><li>A tool is connected when its answer matches the tool's own screen.</li><li>One worst step, one experiment, one number, every week.</li><li>Everyone who did not buy is a future customer. Keep them warm and lawful.</li><li>Host the automation last. Reading is automated before acting is.</li></ul></div>
 </section>
-<section class="part" id="part-15"><div class="phead reveal"><span class="pnum">Part 15</span><h2>Technical Reference: How It Is Wired</h2><p class="pblurb">The seven systems, registration capture, the Worker, every GHL workflow, WhatsApp, who sends what, the application scripts, fields and tags, the connector, the change rules and the risks.</p></div>
+<section class="part" id="part-15"><div class="phead reveal"><span class="pnum">Part 15</span><h2>Technical Reference: How It Is Wired</h2><p class="pblurb">The seven systems, registration capture, the Worker, every GHL workflow, WhatsApp, who sends what, the application scripts, fields and tags, the connector, the change rules and the risks.</p><p class="pfacts"><span>5 task cards</span><span>14 sections</span><span>Reviewed by Operator, Technical owner</span></p></div>
 <h3 class="sec" id="tx-intro">What This Part Is</h3>
 <p class="statusline"><b>STATUS:</b> CURRENT UNLESS A TABLE SAYS OTHERWISE; LIVE STATE DRIFTS, RE-READ IT &nbsp; <b>AS OF:</b> 2026-10-14</p>
 <p>Parts 1 to 14 explain what the funnel does and how to run it. This part is the engineering detail underneath: which system owns which step, exactly what happens when someone registers, what each automation does, what the tags and fields mean, and the rules for changing any of it. It is the part to read when something behaves unexpectedly, when a new person takes over the technical side, or before changing anything that is live.</p>
@@ -1817,7 +2136,7 @@ CR = share of calls that close</pre><p>Compare WR × GR with the webinar's visit
 <div class="bad"><h4>Common Mistakes</h4><ul><li>Revoking the old key before the new one is tested.</li></ul></div>
 </article>
 </section>
-<section class="part" id="part-16"><div class="phead reveal"><span class="pnum">Part 16</span><h2>The Build Method: Stand Up, Extend and Protect the Estate</h2><p class="pblurb">The phases that built the sending estate, and the rules for extending, repairing and handing it over.</p></div>
+<section class="part" id="part-16"><div class="phead reveal"><span class="pnum">Part 16</span><h2>The Build Method: Stand Up, Extend and Protect the Estate</h2><p class="pblurb">The phases that built the sending estate, and the rules for extending, repairing and handing it over.</p><p class="pfacts"><span>16 task cards</span><span>2 sections</span><span>Reviewed by Technical owner</span></p></div>
 <h3 class="sec" id="bm-intro">The Phases and the Rule That Keeps Them Reusable</h3>
 
 <p>This part is the method that built the sending estate and that extends or repairs it. It is client-agnostic: the same phases apply to any funnel, and each client's own values live in its configuration file and knowledge folder, never in a script. For FINTECH Circle the estate already exists, so this part matters in three situations: adding capacity (a new domain, mailbox or channel), replacing something that has worn out, and handing the system to someone new.</p>
@@ -2102,32 +2421,137 @@ CR = share of calls that close</pre><p>Compare WR × GR with the webinar's visit
 <h3 class="sec" id="rf-crm">17.17 The CRM Pipelines as Configured</h3>
 <p class="statusline"><b>STATUS:</b> READ LIVE FROM GHL ON 2026-10-18. RE-READ BEFORE QUOTING &nbsp; <b>AS OF:</b> 2026-10-18</p>
 <p>GHL holds two pipelines. Both are empty of opportunities, so revenue and progress are read from payments and contact fields instead (16.12). The stages below are the configured ones.</p><div class="tw"><table class=""><thead><tr><th>Pipeline</th><th>Stages, in order</th></tr></thead><tbody><tr><td>Marketing Pipeline</td><td>New Lead, Hot Lead, New Booking, Visit Attended, Sale, Left a Review</td></tr><tr><td>Sales Pipeline</td><td>Call Booked, Call Reminder Sent, Call Completed, No Show, Follow-Up Sent, Won</td></tr></tbody></table></div><p><b>What this means.</b> The Marketing Pipeline reads like a stock template for a booking business, and its stage names do not match this funnel. The Sales Pipeline fits the call stage. Neither is populated. The funnel's own stages in this playbook are registered, attended, applied, call and paid. A decision is needed on whether to rename the Marketing Pipeline stages to those, and whether to start moving contacts through the Sales Pipeline by workflow. Until then, no report should be built from pipeline stages. Whether the call's 52-week stage exists as a pipeline is not known from this read.</p>
-</section><footer class="end">FINTECH Circle Funnel Playbook. Contains no passwords, keys or live figures. Live numbers are read from the dashboard or the chat each time.</footer></main></div><script>
+</section><footer class="end">FINTECH Circle Funnel Playbook. Contains no passwords, keys or live figures. Live numbers are read from the dashboard or the chat each time.</footer></main></div><div class="srch" role="dialog" aria-modal="true" aria-label="Search the playbook"><div class="srch-p"><div class="srch-i"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="9" r="5.5"/><path d="M13.5 13.5L17 17"/></svg><input type="search" placeholder="Search titles, steps, tables and tools" aria-label="Search" autocomplete="off"><kbd>Esc</kbd></div><div class="srch-r" role="listbox"></div><div class="srch-f"><span>Up and down to move</span><span>Enter to open</span><span>Opens the card for you</span></div></div></div><script>
 (function(){
- var b=document.body;
- var m=document.querySelector('.menu');
- if(m)m.addEventListener('click',function(){b.classList.toggle('open')});
- document.querySelectorAll('nav.side a').forEach(function(a){a.addEventListener('click',function(){b.classList.remove('open')})});
- document.querySelectorAll('button.copy').forEach(function(btn){
-  btn.addEventListener('click',function(){
-   var el=document.getElementById(btn.getAttribute('data-target'));
-   var t=el?el.innerText:'';
-   function ok(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o},1400)}
-   try{navigator.clipboard.writeText(t).then(ok,function(){})}catch(e){}
-  });
- });
- var q=document.getElementById('navq');
- if(q)q.addEventListener('input',function(){
-  var v=q.value.toLowerCase().trim();
-  document.querySelectorAll('nav.side li').forEach(function(li){li.classList.toggle('hide',v&&li.textContent.toLowerCase().indexOf(v)<0)});
-  document.querySelectorAll('nav.side details').forEach(function(d){if(v)d.open=true});
- });
- var links=[].slice.call(document.querySelectorAll('nav.side li a'));
- var map={};links.forEach(function(a){map[a.getAttribute('href').slice(1)]=a});
- if('IntersectionObserver' in window){
-  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){links.forEach(function(a){a.classList.remove('on')});var a=map[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'0px 0px -75% 0px'});
-  Object.keys(map).forEach(function(id){var el=document.getElementById(id);if(el)io.observe(el)});
- }
+'use strict';
+var $=function(s,r){return (r||document).querySelector(s)};
+var $$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
+var root=document.documentElement,body=document.body;
+function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---- theme: light / dark / system ---- */
+var tbtns=$$('.seg3 button');
+function applyTheme(m,save){if(m==='light'||m==='dark')root.setAttribute('data-theme',m);else root.removeAttribute('data-theme');
+ tbtns.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-m')===m)});if(save)store('fc-theme',m)}
+applyTheme(store('fc-theme')||'system',false);
+tbtns.forEach(function(b){b.addEventListener('click',function(){applyTheme(b.getAttribute('data-m'),true)})});
+
+/* ---- drawer ---- */
+function drawer(o){body.classList.toggle('open',o)}
+$$('.tb-menu').forEach(function(b){b.addEventListener('click',function(){drawer(!body.classList.contains('open'))})});
+var sc=$('.scrim');if(sc)sc.addEventListener('click',function(){drawer(false)});
+
+/* ---- cards: collapsible, done, expand all ---- */
+var cards=$$('article.task');
+var done={};try{done=JSON.parse(store('fc-done')||'{}')}catch(e){done={}}
+function saveDone(){store('fc-done',JSON.stringify(done))}
+function setOpen(c,o){c.classList.toggle('is-c',!o);c.classList.toggle('is-open',o);var t=$('.tg',c);if(t){t.setAttribute('aria-expanded',o);t.setAttribute('aria-label',(o?'Collapse ':'Expand ')+($('h3',c).textContent.replace(/\s+/g,' ').trim()))}}
+cards.forEach(function(c,i){
+ var h=$('header',c),why=$('.why',c);if(!h)return;
+ var kids=[].slice.call(c.children).filter(function(k){return k!==h&&k!==why});
+ var tb=document.createElement('div');tb.className='tbody';var tin=document.createElement('div');tin.className='tin';tb.appendChild(tin);
+ tin.id='tb-'+c.id;kids.forEach(function(k){tin.appendChild(k)});c.appendChild(tb);
+ var tg=document.createElement('button');tg.type='button';tg.className='tg';tg.setAttribute('aria-controls',tin.id);h.appendChild(tg);
+ var dn=document.createElement('button');dn.type='button';dn.className='tdone';dn.textContent='Mark done';h.appendChild(dn);
+ c.classList.add('is-c');setOpen(c,false);
+ function toggle(){setOpen(c,c.classList.contains('is-c'))}
+ tg.addEventListener('click',function(e){e.stopPropagation();toggle()});
+ h.addEventListener('click',function(e){if(e.target.closest('a,button'))return;toggle()});
+ function paint(){var d=!!done[c.id];c.classList.toggle('is-done',d);dn.textContent=d?'Done':'Mark done';dn.setAttribute('aria-pressed',d)}
+ dn.addEventListener('click',function(e){e.stopPropagation();if(done[c.id])delete done[c.id];else done[c.id]=1;saveDone();paint();progress()});
+ paint();
+});
+function allOpen(o){cards.forEach(function(c){setOpen(c,o)})}
+$$('[data-act=expand]').forEach(function(b){b.addEventListener('click',function(){allOpen(true)})});
+$$('[data-act=collapse]').forEach(function(b){b.addEventListener('click',function(){allOpen(false)})});
+addEventListener('beforeprint',function(){allOpen(true)});
+
+/* ---- progress ---- */
+var ringF=$('.ring .rf'),cnt=$('.tb-done .tdl');var C=2*Math.PI*9;
+function progress(){var n=Object.keys(done).filter(function(k){return document.getElementById(k)}).length,t=cards.length;
+ if(ringF){ringF.style.strokeDasharray=C;ringF.style.strokeDashoffset=C*(1-(t?n/t:0))}
+ var l=$('.tb-done');if(l){l.setAttribute('title',n+' of '+t+' task cards marked done');}
+ if(cnt)cnt.textContent=n+' of '+t+' done';
+ $$('nav.side li a').forEach(function(a){a.classList.toggle('dn',!!done[a.getAttribute('data-t')])})}
+progress();
+
+/* ---- navigate to anything, opening its card ---- */
+function openTo(id,push){var el=document.getElementById(id);if(!el)return;var c=el.closest('article.task');if(c)setOpen(c,true);
+ if(push!==false&&location.hash!=='#'+id)history.pushState(null,'','#'+id);
+ setTimeout(function(){el.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'})},c?60:0)}
+addEventListener('hashchange',function(){var id=decodeURIComponent(location.hash.slice(1));if(id)openTo(id,false)});
+if(location.hash)setTimeout(function(){openTo(decodeURIComponent(location.hash.slice(1)),false)},120);
+document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]');if(!a)return;var id=a.getAttribute('href').slice(1);
+ if(!id||!document.getElementById(id))return;if(a.closest('nav.side'))drawer(false);
+ if(a.closest('summary')){/* part title link inside summary: open the group too */}
+ e.preventDefault();openTo(id)});
+
+/* ---- current location: nav highlight + breadcrumb ---- */
+var parts=$$('section.part');var crumb=$('.tb-crumb');var rows={};$$('nav.side .prow').forEach(function(r){rows[r.getAttribute('data-part')]=r});
+var links={};$$('nav.side li a').forEach(function(a){links[a.getAttribute('data-t')]=a});
+var secEls=$$('section.part h3.sec, article.task').filter(function(el){return links[el.id]});
+var curPart=null;
+function setPart(p){if(!p||curPart===p.id)return;curPart=p.id;
+ Object.keys(rows).forEach(function(k){rows[k].classList.toggle('cur',k===p.id)});
+ var r=rows[p.id];if(r&&!r.open){$$('nav.side .prow[open]').forEach(function(o){if(o!==r&&!o.classList.contains('cur'))o.open=false});r.open=true}
+ if(crumb){var h=$('.phead',p);var n=h?$('.pnum',h).textContent:'';var t=h?$('h2',h).textContent:'';crumb.innerHTML='<b>'+n+'</b> '+t}
+ if(r&&r.scrollIntoView&&!matchMedia('(max-width:960px)').matches){var nv=$('nav.side');var rr=r.getBoundingClientRect(),nr=nv.getBoundingClientRect();if(rr.top<nr.top||rr.bottom>nr.bottom)nv.scrollTo({top:r.offsetTop-80,behavior:'auto'})}}
+if('IntersectionObserver' in window){
+ var po=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)setPart(e.target)})},{rootMargin:'-20% 0px -70% 0px'});parts.forEach(function(p){po.observe(p)});
+ var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){$$('nav.side li a.on').forEach(function(a){a.classList.remove('on')});var a=links[e.target.id];if(a)a.classList.add('on')}})},{rootMargin:'-18% 0px -75% 0px'});secEls.forEach(function(el){so.observe(el)})}
+
+/* ---- roles ---- */
+var rolesEl=$$('.role');
+function setRole(k){if(!k){root.removeAttribute('data-role')}else{root.setAttribute('data-role',k)}
+ rolesEl.forEach(function(r){var on=r.getAttribute('data-role')===k;r.classList.toggle('on',on);$('.role-b',r).setAttribute('aria-pressed',on)});
+ $$('[data-roles]').forEach(function(el){var rs=(el.getAttribute('data-roles')||'').split(' ');if(k&&rs.indexOf(k)>-1)el.setAttribute('data-roles',rs.filter(function(x){return x!=='x'}).concat('x').join(' '));else el.setAttribute('data-roles',rs.filter(function(x){return x!=='x'}).join(' '))})}
+rolesEl.forEach(function(r){$('.role-b',r).addEventListener('click',function(){var k=r.getAttribute('data-role');setRole(root.getAttribute('data-role')===k?null:k)})});
+
+/* ---- search ---- */
+var panel=$('.srch'),inp=$('.srch-i input'),res=$('.srch-r');var index=null,sel=0,hits=[];
+function txt(n){var w=document.createTreeWalker(n,NodeFilter.SHOW_TEXT,{acceptNode:function(x){var p=x.parentNode;while(p&&p!==n){if(p.nodeName==='SCRIPT'||p.nodeName==='STYLE')return NodeFilter.FILTER_REJECT;p=p.parentNode}return NodeFilter.FILTER_ACCEPT}});var o=[],c;while((c=w.nextNode()))o.push(c.nodeValue);return o.join(' ').replace(/\s+/g,' ').trim()}
+function build(){index=[];
+ parts.forEach(function(p){var pn=($('.pnum',p)||{}).textContent||'';var pt=($('.phead h2',p)||{}).textContent||'';
+  index.push({id:p.id,t:pt,p:pn,x:(($('.pblurb',p)||{}).textContent||''),k:'part'});
+  var cur=null;[].slice.call(p.children).forEach(function(ch){
+   if(ch.classList.contains('phead'))return;
+   if(ch.tagName==='H3'&&ch.classList.contains('sec')){cur={id:ch.id,t:ch.textContent,p:pn+' '+pt,x:'',k:'section'};index.push(cur);return}
+   if(ch.tagName==='ARTICLE'&&ch.classList.contains('task')){index.push({id:ch.id,t:($('h3',ch)||ch).textContent.replace(/\s+/g,' ').trim(),p:pn+' '+pt,x:txt(ch),k:'card'});return}
+   if(cur&&cur.x.length<5000)cur.x+=' '+txt(ch)})})}
+function esc(s){return s.replace(/[&<>]/g,function(m){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[m]})}
+function snip(x,q){var i=x.toLowerCase().indexOf(q);if(i<0)return esc(x.slice(0,120));var a=Math.max(0,i-60),b=Math.min(x.length,i+q.length+90);
+ return (a?'... ':'')+esc(x.slice(a,i))+'<mark>'+esc(x.slice(i,i+q.length))+'</mark>'+esc(x.slice(i+q.length,b))+(b<x.length?' ...':'')}
+function run(){var q=inp.value.toLowerCase().trim();sel=0;hits=[];
+ if(q.length<2){res.innerHTML='<div class="srch-e">Type at least two letters. Titles, card text and tables are all searched.</div>';return}
+ var ws=q.split(/\s+/);
+ index.forEach(function(it){var tl=it.t.toLowerCase(),xl=it.x.toLowerCase(),sc=0,ok=true;
+  ws.forEach(function(w){var a=tl.indexOf(w)>-1,b=xl.indexOf(w)>-1;if(!a&&!b)ok=false;sc+=a?10:0;sc+=b?1:0});
+  if(ok){if(it.k==='card')sc+=1;hits.push({it:it,s:sc})}});
+ hits.sort(function(a,b){return b.s-a.s});hits=hits.slice(0,30);
+ if(!hits.length){res.innerHTML='<div class="srch-e">No matches for “'+esc(inp.value)+'”.</div>';return}
+ res.innerHTML=hits.map(function(h,i){var it=h.it;var s=it.x?snip(it.x,ws[0]):'';return '<a href="#'+it.id+'" data-i="'+i+'" class="'+(i===0?'sel':'')+'"><span class="rt">'+esc(it.t)+'</span><span class="rp">'+esc(it.p)+'</span>'+(s?'<span class="rs">'+s+'</span>':'')+'</a>'}).join('')}
+function openS(){if(!index)build();panel.classList.add('open');inp.value='';run();setTimeout(function(){inp.focus()},20)}
+function closeS(){panel.classList.remove('open')}
+function mark(){$$('a',res).forEach(function(a,i){a.classList.toggle('sel',i===sel)});var s=$('a.sel',res);if(s&&s.scrollIntoView)s.scrollIntoView({block:'nearest'})}
+$$('[data-act=search]').forEach(function(b){b.addEventListener('click',openS)});
+panel.addEventListener('click',function(e){if(e.target===panel)closeS()});
+inp.addEventListener('input',run);
+res.addEventListener('click',function(e){var a=e.target.closest('a');if(a){closeS()}});
+document.addEventListener('keydown',function(e){
+ var typing=/INPUT|TEXTAREA|SELECT/.test((document.activeElement||{}).tagName);
+ if(e.key==='/'&&!typing&&!e.metaKey&&!e.ctrlKey){e.preventDefault();openS();return}
+ if((e.key==='k'||e.key==='K')&&(e.metaKey||e.ctrlKey)){e.preventDefault();panel.classList.contains('open')?closeS():openS();return}
+ if(!panel.classList.contains('open'))return;
+ if(e.key==='Escape'){closeS();return}
+ if(e.key==='ArrowDown'){e.preventDefault();sel=Math.min(hits.length-1,sel+1);mark()}
+ if(e.key==='ArrowUp'){e.preventDefault();sel=Math.max(0,sel-1);mark()}
+ if(e.key==='Enter'&&hits[sel]){e.preventDefault();closeS();openTo(hits[sel].it.id)}});
+
+/* ---- copy buttons ---- */
+$$('button.copy').forEach(function(btn){btn.addEventListener('click',function(){var el=document.getElementById(btn.getAttribute('data-target'));var t=el?el.innerText:'';
+ function ok(){var o=btn.textContent;btn.textContent='Copied';setTimeout(function(){btn.textContent=o},1400)}
+ try{navigator.clipboard.writeText(t).then(ok,function(){})}catch(e){}})});
 })();
 
 (function(){
